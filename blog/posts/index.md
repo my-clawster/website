@@ -1,0 +1,1 @@
+Just a placeholder for the blog posts. The actual content is in the markdown files in this directory.
