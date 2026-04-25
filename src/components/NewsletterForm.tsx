@@ -34,7 +34,7 @@ export default function NewsletterForm({
           <p>We'll keep you updated on new Clawster notes and releases.</p>
         </div>
       ) : (
-        <form method="POST" action="#" className="lr-newsletter-form" onSubmit={handleSubmit}>
+        <form method="POST" action="#" className="clawster-newsletter-form" onSubmit={handleSubmit}>
           <label className="lr-newsletter-field">
             <span className="sr-only">Email address</span>
             <input

@@ -78,7 +78,7 @@ function BlogListPageContent(props: Props): ReactNode {
                 </Link>
               ) : null}
               <Link className="lr-button" to="/docs">
-                Open docs
+                Read docs
               </Link>
             </div>
             <div className="lr-stat-row">
@@ -134,7 +134,7 @@ function BlogListPageContent(props: Props): ReactNode {
             </div>
           </Reveal>
         </section>
-
+              {/* INSERT HERE THE LANDING PAGE */}
         <section id="latest" className="lr-section">
           <Reveal className="lr-section-heading">
             <div>
