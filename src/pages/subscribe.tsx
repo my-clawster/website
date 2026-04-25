@@ -9,16 +9,16 @@ export default function SubscribePage() {
 
   return (
     <Layout
-      title="Newsletter"
-      description="Subscribe to La Rebelion Labs for practical essays on AI, DevOps, cloud-native architecture, and systems thinking.">
+      title="Updates"
+      description="Subscribe to My Clawster for release notes, architecture guides, and practical field notes on self-hosted agent infrastructure.">
       <main className="lr-subscribe-page">
         <div className="lr-site-shell">
           <Reveal className="lr-subscribe-hero">
-            <span className="lr-eyebrow">Newsletter</span>
-            <h1>Follow the field notes, not the noise.</h1>
+            <span className="lr-eyebrow">[UPDATES]</span>
+            <h1>Follow the cluster notes, not the noise.</h1>
             <p>
-              {brand.summary} New essays land here first, then travel to the inbox for
-              readers who want the deeper thread.
+              {brand.summary} New release notes and architecture guides land here first,
+              then travel to the inbox for operators who want the deeper thread.
             </p>
           </Reveal>
           <div className="lr-subscribe-grid">
@@ -27,13 +27,13 @@ export default function SubscribePage() {
               <div className="lr-surface-card">
                 <span className="lr-eyebrow">What you get</span>
                 <ul className="lr-bullet-list">
-                  <li>Hands-on posts about AI tooling, MCP, DevOps, and cloud-native workflows.</li>
-                  <li>Opinionated breakdowns of systems, products, and engineering tradeoffs.</li>
-                  <li>Direct links to new articles, videos, and experiments from La Rebelion Labs.</li>
+                  <li>Hands-on posts about agent gateways, providers, workspaces, and deployment patterns.</li>
+                  <li>Opinionated breakdowns of self-hosting tradeoffs, security, and cost controls.</li>
+                  <li>Direct links to new field notes, docs, and product updates from My Clawster.</li>
                 </ul>
                 <p>
                   Prefer a pull-based workflow? <Link href={social.rss}>Subscribe by RSS</Link> or
-                  go back to the <Link to="/">latest writing</Link>.
+                  go back to the <Link to="/">latest field notes</Link>.
                 </p>
               </div>
             </Reveal>

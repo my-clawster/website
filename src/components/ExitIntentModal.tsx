@@ -84,11 +84,11 @@ export default function ExitIntentModal() {
         <button
           type="button"
           className="lr-modal__close"
-          aria-label="Close newsletter popup"
+          aria-label="Close updates popup"
           onClick={dismiss}>
           <CloseIcon width={18} height={18} />
         </button>
-        <span className="lr-eyebrow">Before you go</span>
+        <span className="lr-eyebrow">[BEFORE YOU GO]</span>
         <h2 id="lr-exit-title">{newsletter.title}</h2>
         <p>{newsletter.description}</p>
         <NewsletterForm onSuccess={dismiss} />

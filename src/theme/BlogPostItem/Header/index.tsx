@@ -41,7 +41,7 @@ export default function BlogPostItemHeader() {
   return (
     <header className="lr-post-hero">
       <Link className="lr-back-link" to="/">
-        Latest writing
+        Field notes
       </Link>
       <div className="lr-post-kicker">
         {primaryTag ? <Link to={primaryTag.permalink}>{primaryTag.label}</Link> : <span>Essay</span>}

@@ -8,16 +8,16 @@ export default function Footer() {
     <footer className="lr-footer">
       <div className="lr-site-shell lr-footer__inner">
         <div className="lr-footer__brand">
-          <img src="/img/brand/logo-wordmark.svg" alt="La Rebelion Labs" />
+          <img src="/img/brand/my-clawster-logo.png" alt="My Clawster" />
           <p>{brand.summary}</p>
         </div>
         <div className="lr-footer__links">
           <div>
             <span className="lr-eyebrow">Browse</span>
-            <Link to="/">Latest</Link>
+            <Link to="/">Field Notes</Link>
+            <Link to="/docs">Docs</Link>
             <Link to="/archive">Archive</Link>
-            <Link to="/tags">Topics</Link>
-            <Link to="/subscribe">Newsletter</Link>
+            <Link to="/subscribe">Updates</Link>
           </div>
           <div>
             <span className="lr-eyebrow">Follow</span>

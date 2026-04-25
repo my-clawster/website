@@ -18,7 +18,7 @@ export default function BlogSidebar({sidebar}: Props) {
   const archiveList = (
     <div className="lr-sidebar-stack">
       <div className="lr-surface-card">
-        <span className="lr-eyebrow">Archive</span>
+        <span className="lr-eyebrow">[ARCHIVE]</span>
         <div className="lr-archive-group-list">
           {groups.map(([year, items]) => (
             <section key={year} className="lr-archive-group">
@@ -35,16 +35,16 @@ export default function BlogSidebar({sidebar}: Props) {
         </div>
       </div>
       <div className="lr-surface-card lr-sidebar-links">
-        <span className="lr-eyebrow">Feeds</span>        
+        <span className="lr-eyebrow">[FEEDS]</span>
           <ul>
             <li>
             <Link href={social.rss}>RSS feed</Link>
             </li>
             <li>
-            <Link to="/subscribe">Newsletter</Link>
+            <Link to="/subscribe">Updates</Link>
             </li>
              <li>
-            <Link to="/tags">Browse topics</Link>
+            <Link to="/archive">Browse archive</Link>
             </li>
           </ul>
       </div>
@@ -55,7 +55,7 @@ export default function BlogSidebar({sidebar}: Props) {
   if (windowSize === 'mobile') {
     return (
       <details className="lr-mobile-sidebar">
-        <summary>Archive, feeds, and newsletter</summary>
+        <summary>Archive, feeds, and updates</summary>
         {archiveList}
       </details>
     );

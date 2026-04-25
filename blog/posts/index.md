@@ -1,1 +1,3 @@
-Just a placeholder for the blog posts. The actual content is in the markdown files in this directory.
+Field notes, launch updates, and deployment writeups for My Clawster.
+
+The actual articles live in this directory as Markdown posts.

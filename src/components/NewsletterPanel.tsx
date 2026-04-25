@@ -22,7 +22,7 @@ export default function NewsletterPanel({
         .filter(Boolean)
         .join(' ')}>
       <div className="lr-newsletter__copy">
-        <span className="lr-eyebrow">Newsletter</span>
+        <span className="lr-eyebrow">[UPDATES]</span>
         {!compact ? (
           <>
             <h2>{newsletter.title}</h2>

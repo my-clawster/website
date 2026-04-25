@@ -31,7 +31,7 @@ export default function NewsletterForm({
       {showThankYou ? (
         <div className="mcpExitThanks">
           <h3>Thank you for subscribing!</h3>
-          <p>We'll keep you updated on the latest news and insights.</p>
+          <p>We'll keep you updated on new Clawster notes and releases.</p>
         </div>
       ) : (
         <form method="POST" action="#" className="lr-newsletter-form" onSubmit={handleSubmit}>
@@ -47,7 +47,7 @@ export default function NewsletterForm({
             />
           </label>
           <button type="submit" className="lr-button lr-button--primary">
-            <span>{compact ? 'Subscribe' : 'Join the newsletter'}</span>
+            <span>{compact ? 'Subscribe' : 'Get Clawster updates'}</span>
             <ArrowTipIcon width={16} height={16} />
           </button>
         </form>

@@ -60,8 +60,8 @@ export default function NavbarContent(): ReactNode {
           'navbar__items navbar__items--right lr-navbar__items lr-navbar__items--right',
         )}>
         <NavbarItems items={rightItems} />
-        <Link className="lr-nav-cta" to="/subscribe">
-          <span>Get updates</span>
+        <Link className="lr-nav-cta" to="/docs">
+          <span>Start docs</span>
           <ArrowTipIcon width={16} height={16} />
         </Link>
       </div>

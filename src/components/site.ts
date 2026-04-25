@@ -30,21 +30,21 @@ export type SiteData = {
 
 const defaults: SiteData = {
   brand: {
-    phrase: 'Question defaults. Explore everything. Create what’s next.',
+    phrase: 'Run the agents. Keep the keys. Own the cluster.',
     summary:
-      'A content-first field guide for AI systems, DevOps, cloud-native architecture, and product-minded engineering.',
+      'Self-hostable cluster management for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.',
     foundedYear: 2022,
   },
   newsletter: {
     subscribeUrl: 'https://go.rebelion.la/subscribe',
     emailParam: 'email',
-    title: 'Stay close to the experiments',
+    title: 'Stay close to the cluster',
     description:
-      'Get new essays, practical guides, and hands-on field notes from La Rebelion Labs.',
+      'Get release notes, architecture guides, and field-tested patterns for self-hosted agent infrastructure.',
     cooldownDays: 14,
   },
   social: {
-    rss: 'https://rebelion.la/rss.xml',
+    rss: 'https://clawster.my/rss.xml',
     github: 'https://github.com/la-rebelion',
     linkedin: 'https://www.linkedin.com/in/adrianescutia/',
     x: 'https://twitter.com/LaRebelionLabs',

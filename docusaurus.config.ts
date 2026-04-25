@@ -8,20 +8,20 @@ const hubspot = {
 };
 
 const config: Config = {
-  title: 'La Rebelion Labs TEMPLATE',
-  tagline: "Question defaults. Build what's next.",
-  favicon: 'img/brand/favicon.svg',
+  title: 'My Clawster',
+  tagline: 'Self-hostable cluster management for agent infrastructure.',
+  favicon: 'img/brand/my-clawster.png',
 
   future: {
     v4: true,
   },
 
-  url: 'https://rebelion.la',
+  url: 'https://clawster.my',
   baseUrl: '/',
   trailingSlash: false,
 
   organizationName: 'la-rebelion',
-  projectName: 'PROJECT_NAME',
+  projectName: 'clawster-website',
 
   onBrokenLinks: 'throw',
   markdown: {
@@ -47,9 +47,9 @@ const config: Config = {
           archiveBasePath: 'archive',
           tagsBasePath: 'tags',
           authorsMapPath: 'authors.yml',
-          blogTitle: 'La Rebelion Labs',
+          blogTitle: 'My Clawster',
           blogDescription:
-            'Essays on AI, DevOps, cloud-native systems, developer tooling, and the discipline of building what is next.',
+            'Field notes, release writing, and practical guides for teams self-hosting AI agent infrastructure.',
           postsPerPage: 9,
           blogSidebarTitle: 'Archive',
           blogSidebarCount: 'ALL',
@@ -114,7 +114,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/brand/og-cover.png',
+    image: 'img/brand/clawsters-overview.png',
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
@@ -126,20 +126,17 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'La Rebelion Labs',
+      title: 'My Clawster',
       logo: {
-        alt: 'La Rebelion Labs',
-        src: 'img/brand/la-rebelion-neon.png',
-        srcDark: 'img/brand/favicon.svg',
-        // src: 'img/brand/logo-wordmark.svg',
-        // srcDark: 'img/brand/logo-wordmark.svg',
+        alt: 'My Clawster',
+        src: 'img/brand/my-clawster.png',
+        srcDark: 'img/brand/my-clawster.png',
       },
       items: [
-        {to: '/', label: 'Latest', position: 'left'},
-        {to: '/tags', label: 'Topics', position: 'left'},
-        {to: '/archive', label: 'Archive', position: 'left'},
+        {to: '/', label: 'Field Notes', position: 'left'},
         {to: '/docs', label: 'Docs', position: 'left'},
-        {to: '/subscribe', label: 'Newsletter', position: 'right'},
+        {to: '/archive', label: 'Archive', position: 'left'},
+        {to: '/subscribe', label: 'Updates', position: 'right'},
         {
           href: 'https://github.com/la-rebelion',
           label: 'GitHub',
@@ -152,7 +149,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     metadata: [
-      {name: 'theme-color', content: '#000000'},
+      {name: 'theme-color', content: '#08080d'},
       {name: 'twitter:card', content: 'summary_large_image'},
     ],
     /** Algolia search configuration (if needed)
@@ -200,21 +197,21 @@ const config: Config = {
 
   customFields: {
     brand: {
-      phrase: 'Question defaults. Explore everything. Create what is next.',
+      phrase: 'Run the agents. Keep the keys. Own the cluster.',
       summary:
-        'A content-first field guide for AI systems, DevOps, cloud-native architecture, and product-minded engineering.',
+        'Self-hostable cluster management for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.',
       foundedYear: 2021,
     },
     newsletter: {
       subscribeUrl: 'https://go.rebelion.la/subscribe',
       emailParam: 'email',
-      title: 'Stay close to the experiments',
+      title: 'Stay close to the cluster',
       description:
-        'Get new essays, practical guides, and hands-on field notes from La Rebelion Labs.',
+        'Get release notes, architecture guides, and field-tested patterns for self-hosted agent infrastructure.',
       cooldownDays: 14,
     },
     social: {
-      rss: 'https://rebelion.la/rss.xml',
+      rss: 'https://clawster.my/rss.xml',
       github: 'https://github.com/la-rebelion',
       linkedin: 'https://www.linkedin.com/in/adrianescutia/',
       x: 'https://twitter.com/LaRebelionLabs',
