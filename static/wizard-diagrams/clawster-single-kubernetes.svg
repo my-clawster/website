@@ -1,0 +1,54 @@
+<svg width="960" height="560" viewBox="0 0 960 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Single-provider Kubernetes clawster</title>
+  <desc id="desc">A clawster deployed through one Kubernetes provider where every claw runs as a pod on the same cluster path.</desc>
+  <defs>
+    <linearGradient id="bg" x1="76" y1="34" x2="882" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#112335" />
+      <stop offset="1" stop-color="#0B111A" />
+    </linearGradient>
+    <linearGradient id="k8s" x1="154" y1="122" x2="810" y2="452" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162742" />
+      <stop offset="1" stop-color="#101A27" />
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="912" height="512" rx="28" fill="url(#bg)" stroke="#23334D" />
+  <rect x="64" y="56" width="232" height="34" rx="17" fill="#17354E" stroke="#2C617C" />
+  <text x="180" y="78" text-anchor="middle" fill="#BDEAF5" font-family="Arial, sans-serif" font-size="14">Single provider · Kubernetes</text>
+
+  <rect x="154" y="122" width="656" height="332" rx="28" fill="url(#k8s)" stroke="#34536E" stroke-dasharray="10 8" />
+  <text x="188" y="158" fill="#E7F2FB" font-family="Arial, sans-serif" font-size="22" font-weight="700">Kubernetes provider path</text>
+  <text x="188" y="182" fill="#8EA6BC" font-family="Arial, sans-serif" font-size="14">Example: managed K3s, AKS, EKS, GKE, or an on-prem cluster binding.</text>
+
+  <rect x="194" y="210" width="192" height="160" rx="18" fill="#10263B" stroke="#1193B0" stroke-width="2" />
+  <text x="290" y="248" text-anchor="middle" fill="#F8FBFF" font-family="Arial, sans-serif" font-size="20" font-weight="700">Cluster binding</text>
+  <text x="290" y="276" text-anchor="middle" fill="#96ADC3" font-family="Arial, sans-serif" font-size="13">one kube context</text>
+  <text x="290" y="298" text-anchor="middle" fill="#96ADC3" font-family="Arial, sans-serif" font-size="13">namespace + deploy rules</text>
+  <rect x="226" y="326" width="128" height="26" rx="13" fill="#17354E" stroke="#2D597A" />
+  <text x="290" y="344" text-anchor="middle" fill="#C1EBF5" font-family="Arial, sans-serif" font-size="12">shared cluster path</text>
+
+  <rect x="438" y="196" width="138" height="222" rx="20" fill="#192D44" stroke="#345877" />
+  <rect x="593" y="196" width="138" height="222" rx="20" fill="#192D44" stroke="#345877" />
+  <text x="507" y="226" text-anchor="middle" fill="#AFC5D8" font-family="Arial, sans-serif" font-size="13">Worker node A</text>
+  <text x="662" y="226" text-anchor="middle" fill="#AFC5D8" font-family="Arial, sans-serif" font-size="13">Worker node B</text>
+
+  <rect x="458" y="248" width="98" height="42" rx="14" fill="#0F3D57" stroke="#35BAD7" />
+  <rect x="458" y="300" width="98" height="42" rx="14" fill="#15334D" stroke="#2E5D7D" />
+  <rect x="458" y="352" width="98" height="42" rx="14" fill="#15334D" stroke="#2E5D7D" />
+  <rect x="613" y="248" width="98" height="42" rx="14" fill="#15334D" stroke="#2E5D7D" />
+  <rect x="613" y="300" width="98" height="42" rx="14" fill="#15334D" stroke="#2E5D7D" />
+  <rect x="613" y="352" width="98" height="42" rx="14" fill="#0F3D57" stroke="#35BAD7" />
+
+  <text x="507" y="274" text-anchor="middle" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="12">gateway pod</text>
+  <text x="507" y="326" text-anchor="middle" fill="#D7E3EE" font-family="Arial, sans-serif" font-size="12">worker pod</text>
+  <text x="507" y="378" text-anchor="middle" fill="#D7E3EE" font-family="Arial, sans-serif" font-size="12">planner pod</text>
+  <text x="662" y="274" text-anchor="middle" fill="#D7E3EE" font-family="Arial, sans-serif" font-size="12">memory pod</text>
+  <text x="662" y="326" text-anchor="middle" fill="#D7E3EE" font-family="Arial, sans-serif" font-size="12">monitor pod</text>
+  <text x="662" y="378" text-anchor="middle" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="12">content pod</text>
+
+  <path d="M386 292H414C426 292 432 284 438 266" stroke="#38BCD7" stroke-width="4" stroke-linecap="round" />
+  <path d="M386 292H414C426 292 432 300 438 330" stroke="#38BCD7" stroke-width="4" stroke-linecap="round" />
+  <path d="M386 292H414C426 292 432 306 438 384" stroke="#38BCD7" stroke-width="4" stroke-linecap="round" />
+
+  <rect x="194" y="476" width="538" height="34" rx="17" fill="#0D1C2B" stroke="#1F3854" />
+  <text x="463" y="498" text-anchor="middle" fill="#A4BCD1" font-family="Arial, sans-serif" font-size="14">Best when every claw should stay on one Kubernetes control surface</text>
+</svg>

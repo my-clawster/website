@@ -1,0 +1,49 @@
+<svg width="960" height="560" viewBox="0 0 960 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Single-provider clawster architecture</title>
+  <desc id="desc">A single provider layout where every claw runs through one provider offering and inherits the same network and provisioning path.</desc>
+  <defs>
+    <linearGradient id="bg" x1="88" y1="56" x2="872" y2="504" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#142033" />
+      <stop offset="1" stop-color="#0C1320" />
+    </linearGradient>
+    <linearGradient id="provider" x1="156" y1="148" x2="804" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#182843" />
+      <stop offset="1" stop-color="#101A2A" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1193B0" />
+      <stop offset="1" stop-color="#44C6E3" />
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="912" height="512" rx="28" fill="url(#bg)" stroke="#22314B" />
+  <rect x="64" y="56" width="152" height="34" rx="17" fill="#11253A" stroke="#1E4861" />
+  <text x="140" y="78" text-anchor="middle" fill="#94A8BF" font-family="Arial, sans-serif" font-size="14">Single-provider example</text>
+  <rect x="156" y="122" width="648" height="326" rx="26" fill="url(#provider)" stroke="#2A405A" stroke-dasharray="10 8" />
+  <text x="188" y="158" fill="#DCE8F5" font-family="Arial, sans-serif" font-size="22" font-weight="700">One provider offering</text>
+  <text x="188" y="183" fill="#89A0B7" font-family="Arial, sans-serif" font-size="14">Every claw inherits the same API, region, network, and lifecycle path.</text>
+
+  <rect x="210" y="232" width="196" height="112" rx="18" fill="#10263B" stroke="#1193B0" stroke-width="2" />
+  <text x="308" y="270" text-anchor="middle" fill="#F8FBFF" font-family="Arial, sans-serif" font-size="20" font-weight="700">Clawster control plane</text>
+  <text x="308" y="298" text-anchor="middle" fill="#95A9BC" font-family="Arial, sans-serif" font-size="13">bootstrap + scheduling</text>
+  <text x="308" y="320" text-anchor="middle" fill="#95A9BC" font-family="Arial, sans-serif" font-size="13">shared provider binding</text>
+
+  <rect x="474" y="208" width="268" height="72" rx="16" fill="#192C42" stroke="#2B4868" />
+  <rect x="474" y="292" width="268" height="72" rx="16" fill="#192C42" stroke="#2B4868" />
+  <rect x="474" y="376" width="268" height="72" rx="16" fill="#192C42" stroke="#2B4868" />
+  <text x="506" y="251" fill="#F2F7FD" font-family="Arial, sans-serif" font-size="18" font-weight="700">Gateway claws</text>
+  <text x="506" y="279" fill="#90A6BA" font-family="Arial, sans-serif" font-size="13">ingress, auth, edge services</text>
+  <text x="506" y="335" fill="#F2F7FD" font-family="Arial, sans-serif" font-size="18" font-weight="700">Worker claws</text>
+  <text x="506" y="363" fill="#90A6BA" font-family="Arial, sans-serif" font-size="13">jobs, agents, background tasks</text>
+  <text x="506" y="419" fill="#F2F7FD" font-family="Arial, sans-serif" font-size="18" font-weight="700">Support claws</text>
+  <text x="506" y="447" fill="#90A6BA" font-family="Arial, sans-serif" font-size="13">planner, memory, monitor, content</text>
+
+  <path d="M406 288H444C456 288 466 278 466 266V244" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" />
+  <path d="M406 288H444C456 288 466 298 466 310V328" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" />
+  <path d="M406 288H444C456 288 466 318 466 350V412" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" />
+
+  <rect x="250" y="382" width="116" height="32" rx="16" fill="#17354E" stroke="#2C5979" />
+  <text x="308" y="403" text-anchor="middle" fill="#BEE8F1" font-family="Arial, sans-serif" font-size="13">1 provider binding</text>
+
+  <rect x="210" y="466" width="532" height="38" rx="19" fill="#0D1D2D" stroke="#213955" />
+  <text x="476" y="490" text-anchor="middle" fill="#9EB5C9" font-family="Arial, sans-serif" font-size="14">Same provider type, same network shape, simpler operations</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg width="960" height="560" viewBox="0 0 960 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Single-provider VPS clawster</title>
+  <desc id="desc">A clawster deployed on a single VPS provider, where gateway, workers, and support claws run on virtual machines in one provider region.</desc>
+  <defs>
+    <linearGradient id="bg" x1="72" y1="40" x2="888" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#122236" />
+      <stop offset="1" stop-color="#0B121D" />
+    </linearGradient>
+    <linearGradient id="vps" x1="148" y1="132" x2="810" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162A42" />
+      <stop offset="1" stop-color="#101926" />
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="912" height="512" rx="28" fill="url(#bg)" stroke="#23344F" />
+  <rect x="64" y="56" width="178" height="34" rx="17" fill="#163450" stroke="#2A607C" />
+  <text x="153" y="78" text-anchor="middle" fill="#BCEAF5" font-family="Arial, sans-serif" font-size="14">Single provider · VPS</text>
+
+  <rect x="148" y="126" width="664" height="328" rx="28" fill="url(#vps)" stroke="#31506B" stroke-dasharray="10 8" />
+  <text x="182" y="162" fill="#E7F2FA" font-family="Arial, sans-serif" font-size="22" font-weight="700">VPS provider region</text>
+  <text x="182" y="186" fill="#8EA6BC" font-family="Arial, sans-serif" font-size="14">Example: Contabo, Hetzner, Vultr, or a similar VM fleet.</text>
+
+  <rect x="194" y="224" width="196" height="146" rx="18" fill="#10263B" stroke="#1193B0" stroke-width="2" />
+  <text x="292" y="262" text-anchor="middle" fill="#F8FBFF" font-family="Arial, sans-serif" font-size="20" font-weight="700">Cluster coordinator</text>
+  <text x="292" y="292" text-anchor="middle" fill="#97AEC4" font-family="Arial, sans-serif" font-size="13">shared provider API token</text>
+  <text x="292" y="314" text-anchor="middle" fill="#97AEC4" font-family="Arial, sans-serif" font-size="13">creates and tags VPS instances</text>
+  <rect x="228" y="328" width="128" height="26" rx="13" fill="#17354E" stroke="#2B597B" />
+  <text x="292" y="346" text-anchor="middle" fill="#C1EBF5" font-family="Arial, sans-serif" font-size="12">one provider binding</text>
+
+  <rect x="470" y="214" width="286" height="70" rx="16" fill="#1A2E45" stroke="#35597A" />
+  <rect x="470" y="294" width="286" height="70" rx="16" fill="#1A2E45" stroke="#35597A" />
+  <rect x="470" y="374" width="286" height="70" rx="16" fill="#1A2E45" stroke="#35597A" />
+  <text x="504" y="254" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="18" font-weight="700">Gateway VM</text>
+  <text x="504" y="278" fill="#91A8BD" font-family="Arial, sans-serif" font-size="13">public ingress, auth, proxy</text>
+  <text x="504" y="334" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="18" font-weight="700">Worker VMs</text>
+  <text x="504" y="358" fill="#91A8BD" font-family="Arial, sans-serif" font-size="13">jobs, planners, tool callers</text>
+  <text x="504" y="414" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="18" font-weight="700">Support VM</text>
+  <text x="504" y="438" fill="#91A8BD" font-family="Arial, sans-serif" font-size="13">memory, monitoring, recovery</text>
+
+  <path d="M390 297H432C448 297 458 283 458 266V249" stroke="#38BCD7" stroke-width="4" stroke-linecap="round" />
+  <path d="M390 297H432C448 297 458 307 458 323V329" stroke="#38BCD7" stroke-width="4" stroke-linecap="round" />
+  <path d="M390 297H432C448 297 458 327 458 354V409" stroke="#38BCD7" stroke-width="4" stroke-linecap="round" />
+
+  <rect x="194" y="476" width="562" height="34" rx="17" fill="#0C1A29" stroke="#1F3854" />
+  <text x="475" y="498" text-anchor="middle" fill="#A4BCD1" font-family="Arial, sans-serif" font-size="14">Best when you want one VM-style provider path for every claw role</text>
+</svg>

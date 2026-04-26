@@ -1,0 +1,44 @@
+<svg width="960" height="560" viewBox="0 0 960 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Single-provider cloud clawster</title>
+  <desc id="desc">A clawster deployed on a single cloud provider where the platform routes all claws through one cloud network and compute environment.</desc>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="36" x2="880" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102236" />
+      <stop offset="1" stop-color="#0B111A" />
+    </linearGradient>
+    <linearGradient id="cloud" x1="154" y1="126" x2="808" y2="446" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162842" />
+      <stop offset="1" stop-color="#101926" />
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="912" height="512" rx="28" fill="url(#bg)" stroke="#223149" />
+  <rect x="64" y="56" width="190" height="34" rx="17" fill="#17354E" stroke="#2B607B" />
+  <text x="159" y="78" text-anchor="middle" fill="#BDEAF5" font-family="Arial, sans-serif" font-size="14">Single provider · Cloud</text>
+
+  <rect x="154" y="126" width="654" height="326" rx="28" fill="url(#cloud)" stroke="#33536E" stroke-dasharray="10 8" />
+  <text x="188" y="162" fill="#E7F2FB" font-family="Arial, sans-serif" font-size="22" font-weight="700">Cloud provider account</text>
+  <text x="188" y="186" fill="#8EA6BC" font-family="Arial, sans-serif" font-size="14">Example: AWS, Azure, GCP, or another cloud region.</text>
+
+  <rect x="198" y="222" width="170" height="176" rx="20" fill="#10263B" stroke="#1193B0" stroke-width="2" />
+  <text x="283" y="260" text-anchor="middle" fill="#F8FBFF" font-family="Arial, sans-serif" font-size="20" font-weight="700">Clawster entry</text>
+  <text x="283" y="288" text-anchor="middle" fill="#97ADC3" font-family="Arial, sans-serif" font-size="13">provider binding</text>
+  <text x="283" y="310" text-anchor="middle" fill="#97ADC3" font-family="Arial, sans-serif" font-size="13">one VPC / region</text>
+  <rect x="228" y="334" width="110" height="28" rx="14" fill="#17354E" stroke="#2D597A" />
+  <text x="283" y="353" text-anchor="middle" fill="#C1EBF5" font-family="Arial, sans-serif" font-size="12">shared network</text>
+
+  <rect x="426" y="200" width="316" height="88" rx="18" fill="#1A2E45" stroke="#365A78" />
+  <rect x="426" y="304" width="316" height="88" rx="18" fill="#1A2E45" stroke="#365A78" />
+  <text x="462" y="242" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="18" font-weight="700">Gateway + app subnet</text>
+  <text x="462" y="268" fill="#91A7BB" font-family="Arial, sans-serif" font-size="13">load balancer, ingress, gateway claws</text>
+  <text x="462" y="346" fill="#F7FAFF" font-family="Arial, sans-serif" font-size="18" font-weight="700">Worker + service subnet</text>
+  <text x="462" y="372" fill="#91A7BB" font-family="Arial, sans-serif" font-size="13">workers, planners, monitor, memory</text>
+
+  <path d="M368 311H400C414 311 420 303 426 284" stroke="#38BCD7" stroke-width="4" stroke-linecap="round" />
+  <path d="M368 311H400C414 311 420 323 426 348" stroke="#38BCD7" stroke-width="4" stroke-linecap="round" />
+
+  <rect x="426" y="410" width="316" height="24" rx="12" fill="#12283C" />
+  <text x="584" y="426" text-anchor="middle" fill="#B7D0E2" font-family="Arial, sans-serif" font-size="12">same cloud IAM, network controls, and region boundary for all claws</text>
+
+  <rect x="198" y="476" width="544" height="34" rx="17" fill="#0D1C2B" stroke="#1F3854" />
+  <text x="470" y="498" text-anchor="middle" fill="#A4BCD1" font-family="Arial, sans-serif" font-size="14">Best when every claw should stay inside one cloud account and topology</text>
+</svg>

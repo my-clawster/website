@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef, useCallback } from 'react'
 import React, {type ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -73,6 +74,293 @@ const rolloutSteps = [
       'Turn the pilot into repeatable cluster patterns with docs, release notes, and a buyer-friendly demo narrative.',
   },
 ] as const;
+
+type ProviderType = 'vps' | 'cloud' | 'kubernetes'
+type ClawsterMode = 'single' | 'hybrid'
+interface ProviderOffering {
+  id: string
+  providerVendorId: string
+  vendorSlug: string
+  vendorName: string
+  slug: string
+  name: string
+  providerType: ProviderType
+  description: string | null
+  active: boolean
+  createdAt: string
+  updatedAt: string
+}
+interface ProviderModeIllustration {
+  src: string
+  alt: string
+  eyebrow: string
+  title: string
+  description: string
+  bullets: string[]
+}
+
+const SINGLE_GENERIC: ProviderModeIllustration = {
+  src: '/wizard-diagrams/clawster-single-generic.svg',
+  alt: 'Diagram of a single-provider clawster where all claw roles use one provider offering.',
+  eyebrow: 'Single provider',
+  title: 'Everything inherits one provider path',
+  description: 'Choose one provider offering and every claw in this clawster will use the same provider type, region, and control surface.',
+  bullets: [
+    'Lowest operational complexity for teams starting fresh.',
+    'One provider binding is shared by gateway, workers, and support claws.',
+    'Good default when you want the simplest deployment story.',
+  ],
+}
+const SINGLE_BY_PROVIDER: Record<ProviderType, ProviderModeIllustration> = {
+  vps: {
+    src: '/wizard-diagrams/clawster-single-vps.svg',
+    alt: 'Diagram of a single-provider VPS clawster with all claw roles running through one VM provider path.',
+    eyebrow: 'Single provider · VPS',
+    title: 'One VPS fleet for every claw',
+    description: 'All claws are provisioned through one VPS provider, which keeps networking, access control, and VM lifecycle management aligned.',
+    bullets: [
+      'Gateway, worker, and support claws all follow the same VM-style path.',
+      'Useful for teams that want straightforward host-level control.',
+      'Examples: Contabo, Hetzner, Vultr, or similar VPS offerings.',
+    ],
+  },
+  cloud: {
+    src: '/wizard-diagrams/clawster-single-cloud.svg',
+    alt: 'Diagram of a single-provider cloud clawster where all claw roles stay inside one cloud network.',
+    eyebrow: 'Single provider · Cloud',
+    title: 'One cloud topology for every claw',
+    description: 'All claws stay inside one cloud account and region, so networking, IAM, and scaling rules remain consistent across the whole clawster.',
+    bullets: [
+      'All claw roles share one cloud networking and policy surface.',
+      'Good when the whole clawster should live in one provider account.',
+      'Examples: AWS, Azure, GCP, or private cloud-style offerings.',
+    ],
+  },
+  kubernetes: {
+    src: '/wizard-diagrams/clawster-single-kubernetes.svg',
+    alt: 'Diagram of a single-provider Kubernetes clawster where every claw runs through one Kubernetes cluster path.',
+    eyebrow: 'Single provider · Kubernetes',
+    title: 'One Kubernetes path for every claw',
+    description: 'Every claw runs through the same Kubernetes provider binding, which makes cluster policy, namespaces, and pod scheduling consistent across roles.',
+    bullets: [
+      'All claws share one kube context and deployment path.',
+      'Best when every role should stay under one cluster control plane.',
+      'Examples: K3s, AKS, EKS, GKE, or an existing managed cluster.',
+    ],
+  },
+}
+
+const HYBRID_BASE: ProviderModeIllustration = {
+  src: '/wizard-diagrams/clawster-hybrid.svg',
+  alt: 'Diagram of a hybrid clawster with different claw roles distributed across VPS, Kubernetes, and cloud provider paths.',
+  eyebrow: 'Hybrid',
+  title: 'Mix provider types by claw role',
+  description: 'Step 1 still creates the primary provider binding, but later steps can assign different claw roles to better-fitting provider types and bindings.',
+  bullets: [
+    'Keep a shared clawster identity while splitting roles across provider types.',
+    'Useful for patterns like VPS gateways plus Kubernetes workers.',
+    'Best when one provider path is not ideal for every role.',
+  ],
+}
+// ─── Shared Utilities ───────────────────────────────────────────────────────────
+
+function useFadeIn() {
+  const ref = useRef<HTMLElement>(null)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry?.isIntersecting) {
+        el.classList.add('is-visible')
+        obs.disconnect()
+      }
+    }, { threshold: 0.08 })
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [])
+  return ref as React.RefObject<any>
+}
+
+// ─── Sub-components ─────────────────────────────────────────────────────────────
+
+function SectionLabel({ text }: { text: string }) {
+  return (
+    <p style={{
+      fontFamily: "'Space Mono', monospace",
+      fontSize: '0.7rem',
+      letterSpacing: '0.18em',
+      color: 'var(--lp-teal)',
+      marginBottom: '12px',
+      fontWeight: 700,
+    }}>
+      [{text}]
+    </p>
+  )
+}
+
+export function getProviderModeIllustration(
+  clusterMode: ClawsterMode,
+  offering: Pick<ProviderOffering, 'providerType' | 'vendorName' | 'name'> | null,
+): ProviderModeIllustration {
+  if (clusterMode === 'hybrid') {
+    if (!offering) return HYBRID_BASE
+
+    return {
+      ...HYBRID_BASE,
+      description: `${offering.vendorName} / ${offering.name} becomes the primary binding first. In step 2, each claw role can still diverge to VPS, cloud, or Kubernetes paths when needed.`,
+    }
+  }
+
+  if (!offering) return SINGLE_GENERIC
+
+  return {
+    ...SINGLE_BY_PROVIDER[offering.providerType],
+    description: `${offering.vendorName} / ${offering.name} is the single provider path for this clawster, so every claw inherits the same provider type and topology.`,
+  }
+}
+function DeploymentModesSection() {
+  const ref = useFadeIn()
+  const [activeSingleType, setActiveSingleType] = useState<ProviderType>('vps')
+
+  const providerExamples: Record<ProviderType, { label: string; vendorName: string; name: string; providerType: ProviderType; note: string }> = {
+    vps: {
+      label: 'VPS',
+      vendorName: 'Vultr',
+      name: 'General Purpose VPS',
+      providerType: 'vps',
+      note: 'Best when you want straightforward host-level control and one VM-style path for every claw.',
+    },
+    cloud: {
+      label: 'Cloud',
+      vendorName: 'AWS',
+      name: 'eu-west-1 foundation',
+      providerType: 'cloud',
+      note: 'Best when every claw should stay inside one cloud account, network boundary, and policy surface.',
+    },
+    kubernetes: {
+      label: 'Kubernetes',
+      vendorName: 'K3s',
+      name: 'Shared cluster binding',
+      providerType: 'kubernetes',
+      note: 'Best when every claw belongs under one cluster control plane, namespace strategy, and scheduling model.',
+    },
+  }
+
+  const singleExample = providerExamples[activeSingleType]
+  const singleIllustration = getProviderModeIllustration('single', singleExample)
+  const hybridIllustration = getProviderModeIllustration('hybrid', {
+    vendorName: 'Contabo',
+    name: 'Primary VPS edge',
+    providerType: 'vps',
+  })
+
+  return (
+    <section ref={ref} className="lp-section" style={{ padding: '120px 24px' }}>
+      <div style={{ maxWidth: 'var(--lp-max)', margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: 56 }}>
+          <SectionLabel text="DEPLOYMENT MODES" />
+          <h2 style={{ fontFamily: "'Space Mono', monospace", fontWeight: 700, fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', color: 'var(--lp-text)', marginBottom: 16 }}>
+            See single-provider and hybrid before you open the wizard
+          </h2>
+          <p style={{ color: 'var(--lp-muted)', maxWidth: 760, margin: '0 auto', fontSize: '0.95rem', lineHeight: 1.8 }}>
+            The onboarding wizard uses architecture previews to explain what changes when you choose one provider path for the whole clawster versus mixing provider types by role. These are the same diagrams you will see in Step 1.
+          </p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24, alignItems: 'start' }}>
+          <article style={{ background: 'var(--lp-card)', border: '1px solid var(--lp-border)', borderRadius: 16, overflow: 'hidden' }}>
+            <div style={{ padding: '20px 20px 16px', borderBottom: '1px solid var(--lp-border)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 14 }}>
+                <div>
+                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.7rem', letterSpacing: '0.12em', color: 'var(--lp-teal)', marginBottom: 6 }}>
+                    {singleIllustration.eyebrow.toUpperCase()}
+                  </div>
+                  <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.15rem', color: 'var(--lp-text)', margin: 0, fontWeight: 700 }}>
+                    {singleIllustration.title}
+                  </h3>
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                {(Object.keys(providerExamples) as ProviderType[]).map(type => {
+                  const selected = type === activeSingleType
+                  return (
+                    <button
+                      key={type}
+                      type="button"
+                      onClick={() => setActiveSingleType(type)}
+                      style={{
+                        borderRadius: 999,
+                        border: selected ? '1px solid rgba(17,147,176,0.45)' : '1px solid var(--lp-border)',
+                        background: selected ? 'rgba(17,147,176,0.12)' : 'rgba(255,255,255,0.03)',
+                        color: selected ? 'var(--lp-text)' : 'var(--lp-muted)',
+                        padding: '8px 12px',
+                        fontSize: '0.78rem',
+                        fontWeight: 600,
+                        cursor: 'pointer',
+                      }}
+                    >
+                      {providerExamples[type].label}
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+
+            <img src={singleIllustration.src} alt={singleIllustration.alt} style={{ width: '100%', display: 'block', aspectRatio: '12 / 7', objectFit: 'cover', background: '#0D1520' }} />
+
+            <div style={{ padding: 20 }}>
+              <p style={{ color: 'var(--lp-muted)', fontSize: '0.9rem', lineHeight: 1.7, marginTop: 0, marginBottom: 12 }}>
+                {singleExample.vendorName} / {singleExample.name} becomes the one provider path for every claw in the clawster.
+              </p>
+              <p style={{ color: 'var(--lp-dim)', fontSize: '0.84rem', lineHeight: 1.7, marginTop: 0, marginBottom: 16 }}>
+                {singleExample.note}
+              </p>
+              <div style={{ display: 'grid', gap: 8 }}>
+                {singleIllustration.bullets.map(item => (
+                  <div key={item} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                    <span style={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: 'var(--lp-teal)', marginTop: 6, flexShrink: 0 }} />
+                    <span style={{ fontSize: '0.82rem', lineHeight: 1.6, color: 'var(--lp-muted)' }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </article>
+
+          <article style={{ background: 'var(--lp-card)', border: '1px solid var(--lp-border)', borderRadius: 16, overflow: 'hidden' }}>
+            <div style={{ padding: '20px 20px 16px', borderBottom: '1px solid var(--lp-border)' }}>
+              <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.7rem', letterSpacing: '0.12em', color: '#8FE2F2', marginBottom: 6 }}>
+                {hybridIllustration.eyebrow.toUpperCase()}
+              </div>
+              <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.15rem', color: 'var(--lp-text)', margin: 0, fontWeight: 700 }}>
+                {hybridIllustration.title}
+              </h3>
+            </div>
+
+            <img src={hybridIllustration.src} alt={hybridIllustration.alt} style={{ width: '100%', display: 'block', aspectRatio: '12 / 7', objectFit: 'cover', background: '#0D1520' }} />
+
+            <div style={{ padding: 20 }}>
+              <p style={{ color: 'var(--lp-muted)', fontSize: '0.9rem', lineHeight: 1.7, marginTop: 0, marginBottom: 12 }}>
+                Start with one primary provider binding, then place specific claw roles where they fit best, such as VPS at the edge, Kubernetes for workers, and cloud services for managed integrations.
+              </p>
+              <p style={{ color: 'var(--lp-dim)', fontSize: '0.84rem', lineHeight: 1.7, marginTop: 0, marginBottom: 16 }}>
+                Hybrid is the right fit when one provider path is not ideal for every claw role or lifecycle boundary.
+              </p>
+              <div style={{ display: 'grid', gap: 8 }}>
+                {hybridIllustration.bullets.map(item => (
+                  <div key={item} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                    <span style={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: '#8FE2F2', marginTop: 6, flexShrink: 0 }} />
+                    <span style={{ fontSize: '0.82rem', lineHeight: 1.6, color: 'var(--lp-muted)' }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 function BlogListPageMetadata(props: Props): ReactNode {
   const {metadata} = props;
@@ -215,6 +503,8 @@ function BlogListPageContent(props: Props): ReactNode {
           </div>
         </section>
 
+        <DeploymentModesSection />
+        
         <section className="lr-section lr-ops-showcase">
           <Reveal className="lr-surface-card lr-ops-showcase__panel">
             <div className="lr-card-header">
