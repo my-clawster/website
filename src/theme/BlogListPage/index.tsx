@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import React, {type ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -73,6 +73,24 @@ const rolloutSteps = [
     description:
       'Turn the pilot into repeatable cluster patterns with docs, release notes, and a buyer-friendly demo narrative.',
   },
+] as const;
+
+const deploymentHighlights = [
+  {
+    value: '1',
+    label: 'starts visually',
+    description: 'Same architecture framing inside the onboarding, all users see the same story.',
+  },
+  {
+    value: '2',
+    label: 'operating modes',
+    description: 'Choose one provider path for every claw or split roles across multiple provider types.',
+  },
+  {
+    value: '3',
+    label: 'provider lanes',
+    description: 'VPS, cloud, and Kubernetes previews are shown before the wizard asks you to commit.',
+  }
 ] as const;
 
 type ProviderType = 'vps' | 'cloud' | 'kubernetes'
@@ -185,14 +203,7 @@ function useFadeIn() {
 
 function SectionLabel({ text }: { text: string }) {
   return (
-    <p style={{
-      fontFamily: "'Space Mono', monospace",
-      fontSize: '0.7rem',
-      letterSpacing: '0.18em',
-      color: 'var(--lp-teal)',
-      marginBottom: '12px',
-      fontWeight: 700,
-    }}>
+    <p className="lr-eyebrow lr-deployment-label">
       [{text}]
     </p>
   )
@@ -255,33 +266,56 @@ function DeploymentModesSection() {
   })
 
   return (
-    <section ref={ref} className="lp-section" style={{ padding: '120px 24px' }}>
-      <div style={{ maxWidth: 'var(--lp-max)', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: 56 }}>
-          <SectionLabel text="DEPLOYMENT MODES" />
-          <h2 style={{ fontFamily: "'Space Mono', monospace", fontWeight: 700, fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', color: 'var(--lp-text)', marginBottom: 16 }}>
-            See single-provider and hybrid before you open the wizard
-          </h2>
-          <p style={{ color: 'var(--lp-muted)', maxWidth: 760, margin: '0 auto', fontSize: '0.95rem', lineHeight: 1.8 }}>
-            The onboarding wizard uses architecture previews to explain what changes when you choose one provider path for the whole clawster versus mixing provider types by role. These are the same diagrams you will see in Step 1.
-          </p>
+    <section ref={ref} className="lr-section lr-deployment-modes">
+      <div className="lr-deployment-modes__inner">
+        <Reveal className="lr-home-hero__copy">
+        <div className="lr-deployment-hero">
+          <div className="lr-section-heading lr-deployment-modes__intro">
+            <span className="lr-eyebrow">DEPLOYMENT MODES</span>
+            <h2>
+              Wizard-guided: Single-provider or hybrid.
+            </h2>
+            <p>
+              The onboarding wizard uses architecture previews to explain what changes when you choose one provider path for the whole clawster versus mixing provider types by role.
+            </p>
+          </div>
+
+          <aside className="lr-surface-card lr-deployment-spotlight">
+            <span className="lr-eyebrow">[AT A GLANCE]</span>
+            <div className="lr-stat-row lr-deployment-stat-row">
+              {deploymentHighlights.map(item => (
+                <div key={item.label} className="lr-stat-card lr-deployment-stat-card">
+                  <strong>{item.value}</strong>
+                  <span>{item.label}</span>
+                  <p>{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </aside>
+        </div>
+        </Reveal>
+        <div className="lr-topic-strip lr-deployment-chip-row" aria-label="Deployment mode highlights">
+          <span className="lr-topic-chip">Single path for every claw</span>
+          <span className="lr-topic-chip">Hybrid placement by role</span>
+          <span className="lr-topic-chip">Preview-first onboarding</span>
+          <span className="lr-topic-chip">Buyer-friendly architecture story</span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24, alignItems: 'start' }}>
-          <article style={{ background: 'var(--lp-card)', border: '1px solid var(--lp-border)', borderRadius: 16, overflow: 'hidden' }}>
-            <div style={{ padding: '20px 20px 16px', borderBottom: '1px solid var(--lp-border)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, marginBottom: 14 }}>
+        <Reveal className="lr-home-hero__copy">
+        <div className="lr-deployment-grid">
+          <article className="lr-surface-card lr-deployment-card">
+            <div className="lr-deployment-card__header">
+              <div className="lr-deployment-card__title-wrap">
                 <div>
-                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.7rem', letterSpacing: '0.12em', color: 'var(--lp-teal)', marginBottom: 6 }}>
+                  <div className="lr-deployment-card__eyebrow">
                     {singleIllustration.eyebrow.toUpperCase()}
                   </div>
-                  <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.15rem', color: 'var(--lp-text)', margin: 0, fontWeight: 700 }}>
-                    {singleIllustration.title}
-                  </h3>
+                  <h3>{singleIllustration.title}</h3>
+                  <p className="lr-deployment-card__summary">Fastest path to one repeatable deployment story across the entire clawster.</p>
                 </div>
               </div>
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              <div className="lr-deployment-tabs">
                 {(Object.keys(providerExamples) as ProviderType[]).map(type => {
                   const selected = type === activeSingleType
                   return (
@@ -289,16 +323,12 @@ function DeploymentModesSection() {
                       key={type}
                       type="button"
                       onClick={() => setActiveSingleType(type)}
-                      style={{
-                        borderRadius: 999,
-                        border: selected ? '1px solid rgba(17,147,176,0.45)' : '1px solid var(--lp-border)',
-                        background: selected ? 'rgba(17,147,176,0.12)' : 'rgba(255,255,255,0.03)',
-                        color: selected ? 'var(--lp-text)' : 'var(--lp-muted)',
-                        padding: '8px 12px',
-                        fontSize: '0.78rem',
-                        fontWeight: 600,
-                        cursor: 'pointer',
-                      }}
+                      className={[
+                        'lr-deployment-tab',
+                        selected ? 'lr-deployment-tab--active' : '',
+                      ]
+                        .filter(Boolean)
+                        .join(' ')}
                     >
                       {providerExamples[type].label}
                     </button>
@@ -307,56 +337,54 @@ function DeploymentModesSection() {
               </div>
             </div>
 
-            <img src={singleIllustration.src} alt={singleIllustration.alt} style={{ width: '100%', display: 'block', aspectRatio: '12 / 7', objectFit: 'cover', background: '#0D1520' }} />
+            <div className="lr-deployment-card__media">
+              <img src={singleIllustration.src} alt={singleIllustration.alt} />
+            </div>
 
-            <div style={{ padding: 20 }}>
-              <p style={{ color: 'var(--lp-muted)', fontSize: '0.9rem', lineHeight: 1.7, marginTop: 0, marginBottom: 12 }}>
+            <div className="lr-deployment-card__body">
+              <p className="lr-deployment-card__lead">
                 {singleExample.vendorName} / {singleExample.name} becomes the one provider path for every claw in the clawster.
               </p>
-              <p style={{ color: 'var(--lp-dim)', fontSize: '0.84rem', lineHeight: 1.7, marginTop: 0, marginBottom: 16 }}>
+              <p className="lr-deployment-card__note">
                 {singleExample.note}
               </p>
-              <div style={{ display: 'grid', gap: 8 }}>
+              <ul className="lr-bullet-list lr-deployment-bullets">
                 {singleIllustration.bullets.map(item => (
-                  <div key={item} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-                    <span style={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: 'var(--lp-teal)', marginTop: 6, flexShrink: 0 }} />
-                    <span style={{ fontSize: '0.82rem', lineHeight: 1.6, color: 'var(--lp-muted)' }}>{item}</span>
-                  </div>
+                  <li key={item}>{item}</li>
                 ))}
-              </div>
+              </ul>
             </div>
           </article>
 
-          <article style={{ background: 'var(--lp-card)', border: '1px solid var(--lp-border)', borderRadius: 16, overflow: 'hidden' }}>
-            <div style={{ padding: '20px 20px 16px', borderBottom: '1px solid var(--lp-border)' }}>
-              <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.7rem', letterSpacing: '0.12em', color: '#8FE2F2', marginBottom: 6 }}>
+          <article className="lr-surface-card lr-deployment-card lr-deployment-card--hybrid">
+            <div className="lr-deployment-card__header">
+              <div className="lr-deployment-card__eyebrow lr-deployment-card__eyebrow--hybrid">
                 {hybridIllustration.eyebrow.toUpperCase()}
               </div>
-              <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.15rem', color: 'var(--lp-text)', margin: 0, fontWeight: 700 }}>
-                {hybridIllustration.title}
-              </h3>
+              <h3>{hybridIllustration.title}</h3>
+              <p className="lr-deployment-card__summary">Best when demos, workers, gateways, and managed integrations should not share one provider constraint.</p>
             </div>
 
-            <img src={hybridIllustration.src} alt={hybridIllustration.alt} style={{ width: '100%', display: 'block', aspectRatio: '12 / 7', objectFit: 'cover', background: '#0D1520' }} />
+            <div className="lr-deployment-card__media">
+              <img src={hybridIllustration.src} alt={hybridIllustration.alt} />
+            </div>
 
-            <div style={{ padding: 20 }}>
-              <p style={{ color: 'var(--lp-muted)', fontSize: '0.9rem', lineHeight: 1.7, marginTop: 0, marginBottom: 12 }}>
+            <div className="lr-deployment-card__body">
+              <p className="lr-deployment-card__lead">
                 Start with one primary provider binding, then place specific claw roles where they fit best, such as VPS at the edge, Kubernetes for workers, and cloud services for managed integrations.
               </p>
-              <p style={{ color: 'var(--lp-dim)', fontSize: '0.84rem', lineHeight: 1.7, marginTop: 0, marginBottom: 16 }}>
+              <p className="lr-deployment-card__note">
                 Hybrid is the right fit when one provider path is not ideal for every claw role or lifecycle boundary.
               </p>
-              <div style={{ display: 'grid', gap: 8 }}>
+              <ul className="lr-bullet-list lr-deployment-bullets lr-deployment-bullets--hybrid">
                 {hybridIllustration.bullets.map(item => (
-                  <div key={item} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
-                    <span style={{ width: 8, height: 8, borderRadius: '50%', backgroundColor: '#8FE2F2', marginTop: 6, flexShrink: 0 }} />
-                    <span style={{ fontSize: '0.82rem', lineHeight: 1.6, color: 'var(--lp-muted)' }}>{item}</span>
-                  </div>
+                  <li key={item}>{item}</li>
                 ))}
-              </div>
+              </ul>
             </div>
           </article>
         </div>
+        </Reveal>
       </div>
     </section>
   )
