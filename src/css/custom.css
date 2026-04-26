@@ -98,14 +98,16 @@ img {
 
 .navbar {
   border-bottom: 1px solid var(--lr-border);
-  background: rgba(8, 8, 13, 0.92);
+  background: rgba(8, 8, 13, 0.62);
   backdrop-filter: blur(14px);
+  /* hight */
+  min-height: 80px;
 }
 
 .lr-navbar__inner {
   width: min(calc(100% - 28px), var(--lr-shell));
   margin: 0 auto;
-  min-height: 82px;
+  min-height: 80px;
 }
 
 .lr-navbar__items {
@@ -146,7 +148,7 @@ img {
   display: inline-flex;
   gap: 0.6rem;
   justify-content: center;
-  padding: 0.95rem 1.15rem;
+  padding: 0.80rem 1.15rem;
   text-decoration: none;
 }
 
@@ -398,12 +400,12 @@ img {
 
 .lr-signal-card__mark {
   animation: lr-float 6s ease-in-out infinite;
-  left: 50%;
-  max-width: 88px;
+  left: 80%;
+  max-width: 68px;
   position: absolute;
-  top: 2.1rem;
+  top: 5rem;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 4;
   filter: drop-shadow(0 0 24px rgba(17, 147, 176, 0.36));
 }
 
@@ -474,7 +476,7 @@ img {
   left: 50%;
   overflow: hidden;
   position: absolute;
-  top: 32%;
+  top: 4%;
   transform: translateX(-50%) rotate(-1.2deg);
   width: min(86%, 520px);
   z-index: 3;
@@ -494,7 +496,7 @@ img {
   left: 1.4rem;
   overflow: hidden;
   position: absolute;
-  top: 1.4rem;
+  top: 12.4rem;
   width: min(68%, 300px);
   z-index: 4;
 }
@@ -1515,6 +1517,34 @@ img {
   width: 1px;
 }
 
+.marquee-right,
+.marquee-left,
+.marquee-right-slow,
+.marquee-left-slow {
+  animation-duration: 28s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  will-change: transform;
+}
+
+.marquee-right {
+  animation-name: lr-marquee-right;
+}
+
+.marquee-left {
+  animation-name: lr-marquee-left;
+}
+
+.marquee-right-slow {
+  animation-duration: 38s;
+  animation-name: lr-marquee-right;
+}
+
+.marquee-left-slow {
+  animation-duration: 42s;
+  animation-name: lr-marquee-left;
+}
+
 @keyframes lr-float {
   0%,
   100% {
@@ -1522,6 +1552,26 @@ img {
   }
   50% {
     transform: translate(-50%, -14px);
+  }
+}
+
+@keyframes lr-marquee-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes lr-marquee-right {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -1541,6 +1591,16 @@ img {
   }
   50% {
     opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-right,
+  .marquee-left,
+  .marquee-right-slow,
+  .marquee-left-slow {
+    animation: none;
+    transform: translate3d(0, 0, 0);
   }
 }
 

@@ -746,7 +746,7 @@ function BlogListPageContent(props: Props): ReactNode {
               </div>
               {latestPost ? (
                 <div className="lr-signal-card__preview">
-                  <span className="lr-eyebrow">Latest field note</span>
+                  <span className="lr-eyebrow">Latest field note</span><br/>
                   <Link to={latestPost.metadata.permalink}>{latestPost.metadata.title}</Link>
                   <p>{latestPost.metadata.description}</p>
                 </div>
@@ -780,14 +780,15 @@ function BlogListPageContent(props: Props): ReactNode {
 
         <DeploymentModesSection />
         
+        <MarqueeSection />
         <section className="lr-section lr-ops-showcase">
           <Reveal className="lr-surface-card lr-ops-showcase__panel">
             <div className="lr-card-header">
               <span className="lr-eyebrow">[OPERATING MODEL]</span>
-              <h3>The platform shape teams ask for after the first successful pilot.</h3>
+              <h3>Repeatable cluster architecture</h3>
               <p>
-                A reusable cluster layer for agent frameworks, policy boundaries, and provider
-                mobility, without surrendering ownership of the runtime.
+                A reusable cluster layer designed to support agent frameworks, policy boundaries, and provider
+                mobility, without surrendering ownership of the runtime that supports provider flexibility and clear isolation.
               </p>
             </div>
 
@@ -806,7 +807,7 @@ function BlogListPageContent(props: Props): ReactNode {
 
           <Reveal className="lr-surface-card lr-proof-panel" delay={120}>
             <span className="lr-eyebrow">[CLUSTER SIGNAL]</span>
-            <h3>What buyers and operators need to see fast.</h3>
+            <h3>What DevSecOps need to see fast</h3>
             <div className="lr-proof-terminal" role="presentation">
               <code>
                 <span>$ clawster deploy --workspace eu-prod --provider hybrid</span>
@@ -817,9 +818,9 @@ function BlogListPageContent(props: Props): ReactNode {
               </code>
             </div>
             <ul className="lr-bullet-list lr-proof-list">
-              <li>Clear isolation story for enterprise demos and security reviews.</li>
+              <li>Clear isolation story for enterprise needs.</li>
               <li>Provider flexibility without forcing teams into bespoke tooling.</li>
-              <li>Documentation and release notes that support onboarding after the demo.</li>
+              <li>Operational confidence that the clawster's security posture and runtime health are visible and verifiable.</li>
             </ul>
           </Reveal>
         </section>
@@ -851,8 +852,6 @@ function BlogListPageContent(props: Props): ReactNode {
 
         <NewsletterPanel />
         <BlogListPaginator metadata={metadata} />
-
-        <MarqueeSection />
         <CommunitySection />
         <FinalCTASection onDeploy={() => window.location.href = clawster.controlPlane} />
       </div>
