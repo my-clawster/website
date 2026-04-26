@@ -180,6 +180,93 @@ const HYBRID_BASE: ProviderModeIllustration = {
     'Best when one provider path is not ideal for every role.',
   ],
 }
+
+// ─── SVG Mascot ─────────────────────────────────────────────────────────────────
+
+function MascotSVG({ size = 220 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg"
+      style={{ animation: 'float-mascot 4s ease-in-out infinite', filter: 'drop-shadow(0 0 24px rgba(17,147,176,0.35))' }}>
+      {/* Connection lines from claws to nodes */}
+      <line x1="110" y1="110" x2="30" y2="40" stroke="#1193b0" strokeWidth="0.8" opacity="0.4" />
+      <line x1="110" y1="110" x2="190" y2="40" stroke="#1193b0" strokeWidth="0.8" opacity="0.4" />
+      <line x1="110" y1="110" x2="20" y2="150" stroke="#1193b0" strokeWidth="0.8" opacity="0.4" />
+      <line x1="110" y1="110" x2="200" y2="150" stroke="#1193b0" strokeWidth="0.8" opacity="0.4" />
+      <line x1="110" y1="110" x2="55" y2="195" stroke="#1193b0" strokeWidth="0.8" opacity="0.4" />
+      <line x1="110" y1="110" x2="165" y2="195" stroke="#1193b0" strokeWidth="0.8" opacity="0.4" />
+      {/* Node dots */}
+      {[[30,40],[190,40],[20,150],[200,150],[55,195],[165,195]].map(([x,y],i) => (
+        <circle key={i} cx={x} cy={y} r="4" fill="#1193b0" opacity="0.7"
+          style={{ animation: `pulse-dot ${1.5 + i*0.3}s ease-in-out infinite` }} />
+      ))}
+      {/* Body — lobster/crab shell */}
+      <ellipse cx="110" cy="118" rx="38" ry="32" fill="#111820" stroke="#1193b0" strokeWidth="1.5" />
+      {/* Shell ridges */}
+      <path d="M 82 105 Q 110 98 138 105" stroke="#1193b0" strokeWidth="0.8" opacity="0.6" fill="none" />
+      <path d="M 78 115 Q 110 107 142 115" stroke="#1193b0" strokeWidth="0.8" opacity="0.5" fill="none" />
+      <path d="M 80 125 Q 110 118 140 125" stroke="#1193b0" strokeWidth="0.8" opacity="0.4" fill="none" />
+      {/* Eyes */}
+      <circle cx="98" cy="100" r="5" fill="#1193b0" opacity="0.9" />
+      <circle cx="122" cy="100" r="5" fill="#1193b0" opacity="0.9" />
+      <circle cx="99" cy="99" r="2" fill="#08080d" />
+      <circle cx="123" cy="99" r="2" fill="#08080d" />
+      {/* Eye shine */}
+      <circle cx="100" cy="98" r="1" fill="white" opacity="0.7" />
+      <circle cx="124" cy="98" r="1" fill="white" opacity="0.7" />
+      {/* Left claw arm */}
+      <path d="M 80 108 Q 60 95 45 82" stroke="#1193b0" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      <path d="M 45 82 Q 35 73 30 65" stroke="#1193b0" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M 45 82 Q 38 76 36 70" stroke="#1193b0" strokeWidth="2" strokeLinecap="round" fill="none" />
+      {/* Right claw arm */}
+      <path d="M 140 108 Q 160 95 175 82" stroke="#1193b0" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      <path d="M 175 82 Q 185 73 190 65" stroke="#1193b0" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M 175 82 Q 182 76 184 70" stroke="#1193b0" strokeWidth="2" strokeLinecap="round" fill="none" />
+      {/* Legs */}
+      <path d="M 90 142 Q 75 155 65 168" stroke="#1193b0" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.8" />
+      <path d="M 100 146 Q 90 162 84 178" stroke="#1193b0" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.8" />
+      <path d="M 120 146 Q 130 162 136 178" stroke="#1193b0" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.8" />
+      <path d="M 130 142 Q 145 155 155 168" stroke="#1193b0" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.8" />
+      {/* Antennae */}
+      <path d="M 103 95 Q 92 80 82 65" stroke="#1193b0" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.7" />
+      <path d="M 117 95 Q 128 80 138 65" stroke="#1193b0" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.7" />
+      {/* Tail */}
+      <path d="M 95 148 Q 110 162 125 148" stroke="#1193b0" strokeWidth="1.5" fill="none" opacity="0.7" />
+      <path d="M 100 152 Q 110 168 120 152" stroke="#1193b0" strokeWidth="1.2" fill="none" opacity="0.5" />
+    </svg>
+  )
+}
+
+// ─── Constellation Background ────────────────────────────────────────────────────
+
+function ConstellationBg() {
+  const dots = [
+    [15,12],[35,8],[55,18],[72,5],[88,14],[10,35],[28,28],[48,40],[65,25],[80,38],
+    [92,20],[5,55],[22,48],[40,60],[58,52],[75,45],[90,58],[12,72],[30,68],[50,75],
+    [68,65],[85,72],[95,80],[8,88],[25,85],[45,92],[62,80],[78,88],[92,95],[18,95],
+  ]
+  const lines = [
+    [0,1],[1,2],[2,3],[3,4],[5,6],[6,7],[7,8],[8,9],[9,10],[11,12],[12,13],[13,14],
+    [14,15],[15,16],[17,18],[18,19],[19,20],[20,21],[22,23],[24,25],[25,26],[26,27],
+    [0,5],[5,11],[11,17],[17,22],[4,9],[9,10],[1,6],[6,12],[12,18],[18,24],
+  ]
+  return (
+    <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.5 }} viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+      {lines.map(([a,b], i) => {
+        const da = dots[a]!, db = dots[b]!
+        return (
+          <line key={i} x1={da[0]} y1={da[1]} x2={db[0]} y2={db[1]}
+            stroke="#1193b0" strokeWidth="0.12"
+            style={{ animation: `pulse-line ${2 + (i % 4) * 0.5}s ease-in-out infinite`, animationDelay: `${(i * 0.15) % 3}s` }} />
+        )
+      })}
+      {dots.map(([x, y], i) => (
+        <circle key={i} cx={x} cy={y} r="0.6" fill="#1193b0"
+          style={{ animation: `pulse-dot ${1.5 + (i % 5) * 0.4}s ease-in-out infinite`, animationDelay: `${(i * 0.2) % 4}s` }} />
+      ))}
+    </svg>
+  )
+}
+
 // ─── Shared Utilities ───────────────────────────────────────────────────────────
 
 function useFadeIn() {
@@ -390,6 +477,180 @@ function DeploymentModesSection() {
   )
 }
 
+function MarqueeSection() {
+  const rows = [
+    { items: ['DEPLOY AGENTS','CONNECT CHANNELS','ROUTE TASKS','ISOLATE WORKSPACES','MANAGE CREDENTIALS','MONITOR COSTS','SCHEDULE CRON','CONFIGURE MODELS'], dir: 'right', speed: 'marquee-right' },
+    { items: ['WHATSAPP','TELEGRAM','DISCORD','SLACK','SIGNAL','iMESSAGE','MATRIX','TEAMS','WEBCHAT','IRC','NOSTR','LINE','FEISHU'], dir: 'left', speed: 'marquee-left' },
+    { items: ['CLAUDE','GPT-4o','GEMINI','DEEPSEEK','LLAMA 4','MINIMAX','OLLAMA','OPENROUTER','CUSTOM ENDPOINTS'], dir: 'right', speed: 'marquee-right-slow' },
+    { items: ['SELF-IMPROVING','EPISODIC MEMORY','PERSISTENT SESSIONS','HEARTBEAT SCHEDULING','CONTAINER ISOLATION','AUDIT TRAILS','GIT VERSIONING','COST DASHBOARDS'], dir: 'left', speed: 'marquee-left-slow' },
+  ]
+  return (
+    <div className='lr-full-bleed' style={{ padding: '80px 0', overflow: 'hidden', position: 'relative' }}>
+      {/* Gradient masks */}
+      <div style={{
+        position: 'absolute', inset: 0, zIndex: 2, pointerEvents: 'none',
+        background: 'linear-gradient(to right, var(--lr-bg) 0%, transparent 12%, transparent 88%, var(--lr-bg) 100%)',
+      }} />
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+        {rows.map((row, ri) => {
+          const doubled = [...row.items, ...row.items]
+          return (
+            <div key={ri} style={{ overflow: 'hidden' }}>
+              <div className={row.speed} style={{ display: 'flex', gap: 32, whiteSpace: 'nowrap', width: 'max-content' }}>
+                {doubled.map((item, i) => (
+                  <span key={i} style={{
+                    fontFamily: "'Space Mono', monospace",
+                    fontSize: '0.75rem',
+                    letterSpacing: '0.1em',
+                    color: (i % 3 === 2) ? 'var(--lr-teal)' : 'var(--lr-dim)',
+                    opacity: (i % 3 === 2) ? 0.7 : 0.4,
+                  }}>
+                    {item}
+                    <span style={{ marginLeft: 32, color: 'var(--lr-dim)', opacity: 0.3 }}>•</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+function CommunitySection() {
+  const ref = useFadeIn()
+  const countersRef = useRef<HTMLDivElement>(null)
+  const animated = useRef(false)
+  const stats = [
+    { value: 100, suffix: 'K+', label: 'OpenClaw Stars' },
+    { value: 64, suffix: 'K+', label: 'Hermes Stars' },
+    { value: 50, suffix: '+', label: 'Channels' },
+    { value: 200, suffix: '+', label: 'Models' },
+  ]
+  const displayRefs = useRef<(HTMLSpanElement | null)[]>([])
+
+  useEffect(() => {
+    const el = countersRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry?.isIntersecting && !animated.current) {
+        animated.current = true
+        stats.forEach((stat, i) => {
+          const span = displayRefs.current[i]
+          if (!span) return
+          const start = performance.now()
+          const duration = 1200
+          function frame(now: number) {
+            const t = Math.min((now - start) / duration, 1)
+            const ease = 1 - Math.pow(1 - t, 3)
+            span!.textContent = Math.floor(ease * stat.value) + stat.suffix
+            if (t < 1) requestAnimationFrame(frame)
+          }
+          requestAnimationFrame(frame)
+        })
+        obs.disconnect()
+      }
+    }, { threshold: 0.3 })
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [])
+
+  return (
+    <section ref={ref} className="lr-section lr-dotgrid lr-full-bleed" style={{ padding: '120px 24px' }}>
+      <div className="lr-full-bleed__inner" style={{ textAlign: 'center' }}>
+        <SectionLabel text="COMMUNITY" />
+        <h2 style={{ fontFamily: "'Space Mono', monospace", fontWeight: 700, fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', color: 'var(--lr-text)', marginBottom: 16 }}>
+          Built by builders who run their own agents
+        </h2>
+        <p style={{ color: 'var(--lr-muted)', marginBottom: 48, fontSize: '1rem', maxWidth: 480, margin: '0 auto 48px' }}>
+          Open source, MIT licensed — your agents, your data, your rules.
+        </p>
+        <div ref={countersRef} style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 32, marginBottom: 48 }}>
+          {stats.map((stat, i) => (
+            <div key={i}>
+              <div style={{ fontFamily: "'Space Mono', monospace", fontWeight: 700, fontSize: 'clamp(2rem, 4vw, 2.8rem)', color: 'var(--lr-teal)', marginBottom: 6 }}>
+                <span ref={el => { displayRefs.current[i] = el }}>0{stat.suffix}</span>
+              </div>
+              <div style={{ color: 'var(--lr-dim)', fontSize: '0.8rem', letterSpacing: '0.08em', fontFamily: "'Space Mono', monospace" }}>{stat.label}</div>
+            </div>
+          ))}
+        </div>
+        <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
+          <a href="https://github.com/la-rebelion/clawster" target="_blank" rel="noopener noreferrer"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'transparent', color: 'var(--lr-teal)', border: '1px solid var(--lr-teal)', borderRadius: 8, padding: '12px 24px', fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none', transition: 'background 0.2s' }}
+            onMouseOver={e => e.currentTarget.style.background = 'rgba(17,147,176,0.1)'}
+            onMouseOut={e => e.currentTarget.style.background = 'transparent'}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" /></svg>
+            Star on GitHub
+          </a>
+          <a href="https://discord.gg/clawster" target="_blank" rel="noopener noreferrer"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'transparent', color: 'var(--lr-text)', border: '1px solid var(--lr-border)', borderRadius: 8, padding: '12px 24px', fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none', transition: 'all 0.2s' }}
+            onMouseOver={e => { e.currentTarget.style.borderColor = 'var(--lr-teal)'; e.currentTarget.style.color = 'var(--lr-teal)' }}
+            onMouseOut={e => { e.currentTarget.style.borderColor = 'var(--lr-border)'; e.currentTarget.style.color = 'var(--lr-text)' }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
+            Join Discord
+          </a>
+        </div>
+        <p style={{ color: 'var(--lr-dim)', fontSize: '0.82rem', fontFamily: "'Space Mono', monospace" }}>
+          <span style={{ color: 'var(--lr-teal)' }}>247</span> clusters deployed and counting
+        </p>
+      </div>
+    </section>
+  )
+}
+
+function FinalCTASection({ onDeploy }: { onDeploy: () => void }) {
+  const ref = useFadeIn()
+  return (
+    <section ref={ref} className="lr-section lr-dotgrid lr-full-bleed" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '120px 24px', position: 'relative', overflow: 'hidden' }}>
+      <div className="lr-glow-teal-sm" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }} />
+      <ConstellationBg />
+      <div className="lr-full-bleed__inner" style={{ maxWidth: 720, textAlign: 'center', position: 'relative', zIndex: 1 }}>
+        <div style={{ marginBottom: 32 }}>
+          <MascotSVG size={120} />
+        </div>
+        <h2 style={{
+          fontFamily: "'Space Mono', monospace",
+          fontWeight: 700,
+          fontSize: 'clamp(2rem, 5vw, 4rem)',
+          color: 'var(--lr-text)',
+          lineHeight: 1.1,
+          marginBottom: 20,
+        }}>
+          Own your agents.<br />
+          <span style={{ color: 'var(--lr-teal)' }}>Own your stack.</span>
+        </h2>
+        <p style={{ color: 'var(--lr-muted)', fontSize: '1.05rem', marginBottom: 40, maxWidth: 480, margin: '0 auto 40px' }}>
+          Deploy your first cluster in 5 minutes. No vendor lock-in.<br/> My Clawster is <span className='claws-text' style={{fontSize: '1.15rem'}}>open source.</span>
+        </p>
+        <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <button
+            onClick={onDeploy}
+            style={{ background: 'var(--lr-teal)', color: '#fff', border: 'none', borderRadius: 8, padding: '16px 36px', fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: '1rem', cursor: 'pointer', transition: 'background 0.2s' }}
+            onMouseOver={e => (e.currentTarget.style.background = '#0d7a94')}
+            onMouseOut={e => (e.currentTarget.style.background = 'var(--lr-teal)')}
+          >
+            Deploy Your First Cluster
+          </button>
+          <a href="https://github.com/la-rebelion/clawster" target="_blank" rel="noopener noreferrer"
+            style={{ background: 'transparent', color: 'var(--lr-text)', border: '1px solid var(--lr-border)', borderRadius: 8, padding: '16px 28px', fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '1rem', textDecoration: 'none', transition: 'border-color 0.2s', display: 'inline-block' }}
+            onMouseOver={e => (e.currentTarget.style.borderColor = 'var(--lr-teal)')}
+            onMouseOut={e => (e.currentTarget.style.borderColor = 'var(--lr-border)')}>
+            Star on GitHub
+          </a>
+          <a href="https://discord.gg/clawster" target="_blank" rel="noopener noreferrer"
+            style={{ background: 'transparent', color: 'var(--lr-text)', border: '1px solid var(--lr-border)', borderRadius: 8, padding: '16px 28px', fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '1rem', textDecoration: 'none', transition: 'border-color 0.2s', display: 'inline-block' }}
+            onMouseOver={e => (e.currentTarget.style.borderColor = 'var(--lr-teal)')}
+            onMouseOut={e => (e.currentTarget.style.borderColor = 'var(--lr-border)')}>
+            Join Discord
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function BlogListPageMetadata(props: Props): ReactNode {
   const {metadata} = props;
   const {
@@ -454,20 +715,6 @@ function BlogListPageContent(props: Props): ReactNode {
                 Read the docs
               </Link>
             </div>
-            {/* <div className="lr-stat-row">
-              <div className="lr-stat-card">
-                <strong>{metadata.totalCount}</strong>
-                <span>Field notes</span>
-              </div>
-              <div className="lr-stat-card">
-                <strong>{yearsOfWriting}</strong>
-                <span>Years in motion</span>
-              </div>
-              <div className="lr-stat-card">
-                <strong>{topTags.length}</strong>
-                <span>Topic lanes</span>
-              </div>
-            </div> */}
           </Reveal>
           <Reveal className="lr-home-hero__stage" delay={120}>
             <div className="lr-signal-card">
@@ -577,52 +824,6 @@ function BlogListPageContent(props: Props): ReactNode {
           </Reveal>
         </section>
 
-        <section className="lr-section lr-rollout-section">
-          <Reveal className="lr-section-heading">
-            <div>
-              <span className="lr-eyebrow">[GO LIVE PATH]</span>
-              <h2>Make the homepage do two jobs: educate and convert.</h2>
-            </div>
-            <p>
-              Use the field notes as proof, the docs as onboarding, and the calls to action as a
-              clear handoff into a demo conversation or early-access registration.
-            </p>
-          </Reveal>
-
-          <div className="lr-rollout-grid">
-            {rolloutSteps.map((step) => (
-              <Reveal key={step.label} className="lr-surface-card lr-rollout-card">
-                <span className="lr-rollout-card__label">{step.label}</span>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal className="lr-conversion-panel" delay={140}>
-            <div>
-              <span className="lr-eyebrow">[NEXT STEP]</span>
-              <h3>Want to see My Clawster in a real deployment conversation?</h3>
-              <p>
-                Request a walkthrough if you are evaluating self-hosted agent infrastructure, or
-                join the updates stream if you want releases, docs, and launch notes as they land.
-              </p>
-            </div>
-            <div className="lr-conversion-actions">
-              <Link className="lr-button lr-button--primary" href={social.linkedin}>
-                <span>Request a demo</span>
-                <ArrowTipIcon width={16} height={16} />
-              </Link>
-              <Link className="lr-button" to="/subscribe">
-                Join updates
-              </Link>
-              <Link className="lr-button" to="/docs">
-                Explore docs
-              </Link>
-            </div>
-          </Reveal>
-        </section>
-
         <section id="latest" className="lr-section">
           <Reveal className="lr-section-heading">
             <div>
@@ -650,6 +851,10 @@ function BlogListPageContent(props: Props): ReactNode {
 
         <NewsletterPanel />
         <BlogListPaginator metadata={metadata} />
+
+        <MarqueeSection />
+        <CommunitySection />
+        <FinalCTASection onDeploy={() => window.location.href = clawster.controlPlane} />
       </div>
     </BlogLayout>
   );

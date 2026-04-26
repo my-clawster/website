@@ -9,6 +9,9 @@
   --lr-border-strong: rgba(17, 147, 176, 0.36);
   --lr-text: #f0eeeb;
   --lr-muted: #9ca3af;
+  --lr-teal:      #1193b0;
+  --lr-teal-dim:  rgba(17,147,176,0.25);
+  --lr-teal-glow: rgba(17,147,176,0.12);
   --lr-dim: #4b5563;
   --lr-accent: #1193b0;
   --lr-accent-2: #da7756;
@@ -264,6 +267,15 @@ img {
 .lr-home {
   display: grid;
   gap: 2.5rem;
+}
+.lr-full-bleed {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+}
+.lr-full-bleed__inner {
+  margin: 0 auto;
+  width: min(calc(100% - 48px), var(--lr-shell));
 }
 
 .lr-home-hero {
