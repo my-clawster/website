@@ -42,7 +42,7 @@ export default function NewsletterForm({
               name="email"
               value={email}
               required
-              placeholder="you@workshop.dev"
+              placeholder="you@clawster.my"
               onChange={(event) => setEmail(event.target.value)}
             />
           </label>

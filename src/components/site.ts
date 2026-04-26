@@ -23,12 +23,18 @@ type SocialConfig = {
 };
 
 export type SiteData = {
+  clawster: {
+    controlPlane: string;
+  };
   brand: BrandConfig;
   newsletter: NewsletterConfig;
   social: SocialConfig;
 };
 
 const defaults: SiteData = {
+  clawster: {
+    controlPlane: 'https://claws.clawster.my'
+  },
   brand: {
     phrase: 'Run the agents. Keep the keys. Own the cluster.',
     summary:
@@ -57,6 +63,10 @@ export function useSiteData(): SiteData {
   const customFields = (siteConfig.customFields ?? {}) as Partial<SiteData>;
 
   return {
+    clawster: {
+      ...defaults.clawster,
+      ...customFields.clawster,
+    },
     brand: {
       ...defaults.brand,
       ...customFields.brand,

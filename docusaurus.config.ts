@@ -196,6 +196,11 @@ const config: Config = {
   themes: ['@docusaurus/theme-mermaid'],
 
   customFields: {
+    clawster: {
+      controlPlane: 'https://claws.clawster.my',
+      description:
+        'Clawster is a self-hostable cluster management platform for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.',
+    },
     brand: {
       phrase: 'Run the agents. Keep the keys. Own the cluster.',
       summary:
