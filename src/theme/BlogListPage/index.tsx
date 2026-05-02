@@ -250,7 +250,7 @@ function ConstellationBg() {
     [0,5],[5,11],[11,17],[17,22],[4,9],[9,10],[1,6],[6,12],[12,18],[18,24],
   ]
   return (
-    <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.5 }} viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+    <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.2, zIndex: 0 }} viewBox="0 0 100 110" preserveAspectRatio="xMidYMid slice">
       {lines.map(([a,b], i) => {
         const da = dots[a]!, db = dots[b]!
         return (
@@ -523,8 +523,8 @@ function CommunitySection() {
   const countersRef = useRef<HTMLDivElement>(null)
   const animated = useRef(false)
   const stats = [
-    { value: 100, suffix: 'K+', label: 'OpenClaw Stars' },
-    { value: 64, suffix: 'K+', label: 'Hermes Stars' },
+    { value: 300, suffix: 'K+', label: 'OpenClaw Stars' },
+    { value: 100, suffix: 'K+', label: 'Hermes Stars' },
     { value: 50, suffix: '+', label: 'Channels' },
     { value: 200, suffix: '+', label: 'Models' },
   ]
@@ -577,14 +577,15 @@ function CommunitySection() {
           ))}
         </div>
         <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 24 }}>
-          <a href="https://github.com/la-rebelion/clawster" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/my-clawster/my-clawster" target="_blank" rel="noopener noreferrer"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'transparent', color: 'var(--lr-teal)', border: '1px solid var(--lr-teal)', borderRadius: 8, padding: '12px 24px', fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none', transition: 'background 0.2s' }}
             onMouseOver={e => e.currentTarget.style.background = 'rgba(17,147,176,0.1)'}
             onMouseOut={e => e.currentTarget.style.background = 'transparent'}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" /></svg>
-            Star on GitHub
+            Star Us on GitHub
           </a>
-          <a href="https://discord.gg/clawster" target="_blank" rel="noopener noreferrer"
+          {/* My Clawster Discord Channel */}
+          <a href="https://discord.gg/amNgZy4YE7" target="_blank" rel="noopener noreferrer"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'transparent', color: 'var(--lr-text)', border: '1px solid var(--lr-border)', borderRadius: 8, padding: '12px 24px', fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none', transition: 'all 0.2s' }}
             onMouseOver={e => { e.currentTarget.style.borderColor = 'var(--lr-teal)'; e.currentTarget.style.color = 'var(--lr-teal)' }}
             onMouseOut={e => { e.currentTarget.style.borderColor = 'var(--lr-border)'; e.currentTarget.style.color = 'var(--lr-text)' }}>
@@ -600,15 +601,24 @@ function CommunitySection() {
   )
 }
 
-function FinalCTASection({ onDeploy }: { onDeploy: () => void }) {
+function CTASection({ onDeploy }: { onDeploy: () => void }) {
+  const lanes = ['AGENTS', 'CHANNELS', 'TASKS', 'WORKSPACES', 'HERMES', 'OPENCLAW', 'MONITORING', 'MODELS', 'KUBERNETES', 'VPS', 'CLOUD', 'HYBRID']
   const ref = useFadeIn()
   return (
     <section ref={ref} className="lr-section lr-dotgrid lr-full-bleed" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '120px 24px', position: 'relative', overflow: 'hidden' }}>
       <div className="lr-glow-teal-sm" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }} />
-      <ConstellationBg />
+      <ConstellationBg />      
+      <div className="lr-constellation" style={{ position: 'absolute', inset: 0, display: 'flex', gap: 48, justifyContent: 'center', alignItems: 'center', opacity: 0.15, zIndex: 0, pointerEvents: 'none' }}>
+        {lanes.map((lane, index) => (
+          <span key={lane} style={{'--node-index': index} as React.CSSProperties}>
+            {lane}
+          </span>
+        ))}
+      </div>
       <div className="lr-full-bleed__inner" style={{ maxWidth: 720, textAlign: 'center', position: 'relative', zIndex: 1 }}>
         <div style={{ marginBottom: 32 }}>
-          <MascotSVG size={120} />
+          <img className="lr-signal-card__mark" style={{ '--signal-mark-left': '55%', '--signal-mark-max-width': '300px', '--signal-mark-top': '-8rem' } as React.CSSProperties} src="/img/brand/my-clawster-logo.png" alt="My Clawster Logo" />
+          {/* <MascotSVG size={120} /> */}
         </div>
         <h2 style={{
           fontFamily: "'Space Mono', monospace",
@@ -622,7 +632,7 @@ function FinalCTASection({ onDeploy }: { onDeploy: () => void }) {
           <span style={{ color: 'var(--lr-teal)' }}>Own your stack.</span>
         </h2>
         <p style={{ color: 'var(--lr-muted)', fontSize: '1.05rem', marginBottom: 40, maxWidth: 480, margin: '0 auto 40px' }}>
-          Deploy your first cluster in 5 minutes. No vendor lock-in.<br/> My Clawster is <span className='claws-text' style={{fontSize: '1.15rem'}}>open source.</span>
+          Deploy your first clawster in 5 minutes. No vendor lock-in.<br/> My Clawster is <span className='claws-text' style={{fontSize: '1.15rem'}}>open source.</span>
         </p>
         <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
           <button
@@ -631,9 +641,9 @@ function FinalCTASection({ onDeploy }: { onDeploy: () => void }) {
             onMouseOver={e => (e.currentTarget.style.background = '#0d7a94')}
             onMouseOut={e => (e.currentTarget.style.background = 'var(--lr-teal)')}
           >
-            Deploy Your First Cluster
+            Deploy Your First Clawster
           </button>
-          <a href="https://github.com/la-rebelion/clawster" target="_blank" rel="noopener noreferrer"
+          <a href="https://github.com/my-clawster/my-clawster" target="_blank" rel="noopener noreferrer"
             style={{ background: 'transparent', color: 'var(--lr-text)', border: '1px solid var(--lr-border)', borderRadius: 8, padding: '16px 28px', fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: '1rem', textDecoration: 'none', transition: 'border-color 0.2s', display: 'inline-block' }}
             onMouseOver={e => (e.currentTarget.style.borderColor = 'var(--lr-teal)')}
             onMouseOut={e => (e.currentTarget.style.borderColor = 'var(--lr-border)')}>
@@ -695,7 +705,8 @@ function BlogListPageContent(props: Props): ReactNode {
 
   return (
     <BlogLayout sidebar={sidebar}>
-      <div className="lr-home">
+      <div className="lr-home">        
+        <CTASection onDeploy={() => window.location.href = clawster.controlPlane} />
         <section className="lr-home-hero">
           <Reveal className="lr-home-hero__copy">
             <span className="lr-eyebrow">[SELF-HOSTABLE AGENT OPS]</span>
@@ -703,7 +714,7 @@ function BlogListPageContent(props: Props): ReactNode {
             <p>
               {brand.summary}<br/>Deploy <span className="claws-text">OpenClaw</span>, <span className="claws-text">Hermes</span>, and any open-source agent 
               framework — orchestrated together in isolated workspaces. 
-              Runs <span className="claws-green-text">on-premise, cloud, or hybrid</span>. No vendor lock-in. Your data, your rules.
+              Runs <span className="claws-green-text">on-premise</span>, <span className="claws-green-text">cloud</span>, or <span className="claws-green-text">hybrid</span>. No vendor lock-in. Your data, your rules.
             </p>
             Get your <span className="claws-orange-text">self-hosted AI agent</span> clusters up and running without the ops overhead.
             <div className="lr-hero-actions">
@@ -726,7 +737,7 @@ function BlogListPageContent(props: Props): ReactNode {
                   </span>
                 ))}
               </div>
-              <img className="lr-signal-card__mark" src="/img/brand/my-clawster.png" alt="" />
+              <img className="lr-signal-card__mark" src="/img/brand/my-clawster.png" alt="My Clawster Logo" />
               <div className="lr-product-shot">
                 <img src="/img/brand/clawsters-overview.png" alt="My Clawster cluster overview dashboard" />
               </div>
@@ -764,6 +775,8 @@ function BlogListPageContent(props: Props): ReactNode {
             <p>
               The best-fit teams want control over isolation, provider choice, and model policy,
               but they still need a clear story for demos, onboarding, and stakeholder trust.
+              Remove shadow IT barriers by providing teams with a repeatable cluster architecture 
+              that supports both single-provider and hybrid deployments, with operational confidence built in.
             </p>
           </Reveal>
 
@@ -853,7 +866,6 @@ function BlogListPageContent(props: Props): ReactNode {
         <NewsletterPanel />
         <BlogListPaginator metadata={metadata} />
         <CommunitySection />
-        <FinalCTASection onDeploy={() => window.location.href = clawster.controlPlane} />
       </div>
     </BlogLayout>
   );

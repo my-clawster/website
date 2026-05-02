@@ -214,7 +214,7 @@ img {
   backdrop-filter: blur(18px);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012)),
-    linear-gradient(135deg, rgba(17, 147, 176, 0.08), rgba(0, 0, 0, 0));
+    linear-gradient(135deg, rgba(17, 147, 176, 0.12), rgba(0, 0, 0, 0.08));
   border: 1px solid var(--lr-border);
   border-radius: var(--lr-radius-xl);
   box-shadow: var(--lr-shadow);
@@ -271,7 +271,7 @@ img {
   gap: 2.5rem;
 }
 .lr-full-bleed {
-  margin-left: calc(50% - 50vw);
+  margin-left: calc(50% - 55vw);
   margin-right: calc(50% - 50vw);
   width: 100vw;
 }
@@ -400,10 +400,10 @@ img {
 
 .lr-signal-card__mark {
   animation: lr-float 6s ease-in-out infinite;
-  left: 80%;
-  max-width: 68px;
+  left: var(--signal-mark-left, 80%);
+  max-width: var(--signal-mark-max-width, 68px);
   position: absolute;
-  top: 5rem;
+  top: var(--signal-mark-top, 5rem);
   transform: translateX(-50%);
   z-index: 4;
   filter: drop-shadow(0 0 24px rgba(17, 147, 176, 0.36));
@@ -430,7 +430,7 @@ img {
   background: rgba(17, 147, 176, 0.1);
   border: 1px solid rgba(17, 147, 176, 0.34);
   border-radius: 8px;
-  color: rgba(240, 238, 235, 0.82);
+  color: rgba(240, 238, 235, 0.52);
   font-family: var(--lr-font-mono);
   font-size: 0.66rem;
   padding: 0.38rem 0.48rem;
@@ -446,7 +446,7 @@ img {
 
 .lr-constellation span:nth-child(2) {
   left: 78%;
-  top: 24%;
+  top: 17%;
 }
 
 .lr-constellation span:nth-child(3) {
@@ -460,13 +460,43 @@ img {
 }
 
 .lr-constellation span:nth-child(5) {
-  left: 31%;
+  left: 21%;
   top: 79%;
 }
 
 .lr-constellation span:nth-child(6) {
-  left: 70%;
+  left: 75%;
   top: 78%;
+}
+
+.lr-constellation span:nth-child(7) {
+  left: 28%;
+  top: 15%;
+}
+
+.lr-constellation span:nth-child(8) {
+  left: 12%;
+  top: 42%;
+}
+
+.lr-constellation span:nth-child(9) {
+  left: 82%;
+  top: 38%;
+}
+
+.lr-constellation span:nth-child(10) {
+  left: 44%;
+  top: 88%;
+}
+
+.lr-constellation span:nth-child(11) {
+  left: 80%;
+  top: 65%;
+}
+
+.lr-constellation span:nth-child(12) {
+  left: 56%;
+  top: 88%;
 }
 
 .lr-product-shot {
