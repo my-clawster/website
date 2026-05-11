@@ -9,7 +9,7 @@ const hubspot = {
 
 const config: Config = {
   title: 'My Clawster',
-  tagline: 'Self-hostable cluster management for agent infrastructure.',
+  tagline: 'Self-hostable cluster management for managed agent infrastructure.',
   favicon: 'img/brand/my-clawster.png',
 
   future: {
@@ -20,8 +20,8 @@ const config: Config = {
   baseUrl: '/',
   trailingSlash: false,
 
-  organizationName: 'la-rebelion',
-  projectName: 'clawster-website',
+  organizationName: 'my-clawster',
+  projectName: 'website',
 
   onBrokenLinks: 'throw',
   markdown: {
@@ -43,13 +43,13 @@ const config: Config = {
           routeBasePath: '/docs',
         },
         blog: {
-          routeBasePath: '/',
+          routeBasePath: '/blog',
           archiveBasePath: 'archive',
           tagsBasePath: 'tags',
           authorsMapPath: 'authors.yml',
           blogTitle: 'My Clawster',
           blogDescription:
-            'Field notes, release writing, and practical guides for teams self-hosting AI agent infrastructure.',
+            'Self-hostable managed agents infrastructure for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.',
           postsPerPage: 9,
           blogSidebarTitle: 'Archive',
           blogSidebarCount: 'ALL',
@@ -76,7 +76,7 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
         gtag: {
-          trackingID: 'G-#######',
+          trackingID: 'G-DFPWK4QZH9',
         },
         sitemap: {
           lastmod: 'date',
@@ -133,10 +133,11 @@ const config: Config = {
         srcDark: 'img/brand/my-clawster.png',
       },
       items: [
-        {to: '/', label: 'Field Notes', position: 'left'},
+        {to: '/blog', label: 'Blog', position: 'left'},
         {to: '/docs', label: 'Docs', position: 'left'},
         {to: '/archive', label: 'Archive', position: 'left'},
         {to: '/subscribe', label: 'Updates', position: 'right'},
+        { href: 'https://clawne.me', label: 'Clawne Me', position: 'right' },
         {
           href: 'https://github.com/la-rebelion',
           label: 'GitHub',
@@ -199,7 +200,7 @@ const config: Config = {
     clawster: {
       controlPlane: 'https://claws.clawster.my',
       description:
-        'Clawster is a self-hostable cluster management platform for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.',
+        'My Clawster is a self-hostable cluster management platform for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.',
     },
     brand: {
       phrase: 'Run the agents. Keep the keys. Own the cluster.',
@@ -207,8 +208,12 @@ const config: Config = {
         'Self-hostable cluster management for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.',
       foundedYear: 2021,
     },
+    clawne: {
+      description:
+        'With Clawne Me, clone yourself as an agent on My Clawster to automate tasks and projects. Choose your personality, your clone learn from interactions, and extend with custom skills.',
+    },
     newsletter: {
-      subscribeUrl: 'https://go.rebelion.la/subscribe',
+      subscribeUrl: '/subscribe',
       emailParam: 'email',
       title: 'Stay close to the cluster',
       description:
