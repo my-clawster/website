@@ -43,7 +43,7 @@ const config: Config = {
           routeBasePath: '/docs',
         },
         blog: {
-          routeBasePath: '/blog',
+          routeBasePath: '/',
           archiveBasePath: 'archive',
           tagsBasePath: 'tags',
           authorsMapPath: 'authors.yml',
@@ -133,8 +133,10 @@ const config: Config = {
         srcDark: 'img/brand/my-clawster.png',
       },
       items: [
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {to: '/docs', label: 'Docs', position: 'left'},
+        {type: 'doc', docId: 'my-clawster/index', label: 'My Clawster', position: 'left'},
+        {type: 'doc', docId: 'clawne-me/index', label: 'Clawne Me', position: 'left'},
+        {type: 'doc', docId: 'enterprise/index', label: 'Enterprise', position: 'left'},
+        {to: '/', label: 'Blog', position: 'left'},
         {to: '/archive', label: 'Archive', position: 'left'},
         {to: '/subscribe', label: 'Updates', position: 'right'},
         { href: 'https://clawne.me', label: 'Clawne Me', position: 'right' },
@@ -226,6 +228,13 @@ const config: Config = {
       linkedin: 'https://www.linkedin.com/in/adrianescutia/',
       x: 'https://twitter.com/LaRebelionLabs',
       youtube: 'https://www.youtube.com/@LaRebelion',
+    },
+    docs: {
+      labels: {
+        oss: 'OSS',
+        community: 'Community',
+        enterprise: 'Enterprise',
+      },
     },
   },
 };

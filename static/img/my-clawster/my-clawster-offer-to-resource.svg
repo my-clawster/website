@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920" role="img" aria-labelledby="title desc">
+  <title id="title">Clawster product to provider resource model</title>
+  <desc id="desc">Layered diagram showing how a Clawster offer becomes a product, service option, activation mapping, and provider resource.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7fafc; }
+      .title { font: 700 34px Inter, Arial, sans-serif; fill: #152238; }
+      .subtitle { font: 400 17px Inter, Arial, sans-serif; fill: #536179; }
+      .lane-label { font: 700 18px Inter, Arial, sans-serif; fill: #152238; }
+      .lane-note { font: 400 13px Inter, Arial, sans-serif; fill: #64748b; }
+      .card-title { font: 700 17px Inter, Arial, sans-serif; fill: #172033; }
+      .card-text { font: 400 13px Inter, Arial, sans-serif; fill: #526276; }
+      .small { font: 400 12px Inter, Arial, sans-serif; fill: #64748b; }
+      .pill-text { font: 700 12px Inter, Arial, sans-serif; fill: #263044; }
+      .lane { fill: #ffffff; stroke: #d8e0ec; stroke-width: 1.5; }
+      .label-box { fill: #eef4fb; stroke: #c9d6e8; stroke-width: 1.5; rx: 12; }
+      .offer { fill: #dceeff; stroke: #5c93d6; stroke-width: 2; rx: 18; }
+      .product { fill: #e6f6ea; stroke: #52a86d; stroke-width: 2; rx: 18; }
+      .service { fill: #fff5d9; stroke: #d99a26; stroke-width: 2; rx: 18; }
+      .activation { fill: #f2e9ff; stroke: #8b6bd6; stroke-width: 2; rx: 18; }
+      .resource { fill: #e4f7f7; stroke: #2c98a0; stroke-width: 2; rx: 18; }
+      .provider { fill: #fce8e8; stroke: #d66565; stroke-width: 2; rx: 18; }
+      .chip { fill: #ffffff; stroke: #cfd8e6; stroke-width: 1.4; rx: 13; }
+      .chip-blue { fill: #edf6ff; stroke: #9bc7f2; }
+      .chip-green { fill: #edf9f0; stroke: #9cd7ab; }
+      .chip-gold { fill: #fff8e8; stroke: #e6bd62; }
+      .chip-purple { fill: #f6efff; stroke: #bca7ec; }
+      .chip-teal { fill: #ecfbfb; stroke: #8ed2d6; }
+      .arrow { fill: none; stroke: #6b778c; stroke-width: 2.2; marker-end: url(#arrowhead); }
+      .arrow-soft { fill: none; stroke: #a0abbc; stroke-width: 1.7; marker-end: url(#arrowhead-soft); }
+      .dash { stroke-dasharray: 7 7; }
+      .legend-title { font: 700 15px Inter, Arial, sans-serif; fill: #172033; }
+      .legend-text { font: 400 13px Inter, Arial, sans-serif; fill: #526276; }
+    </style>
+    <marker id="arrowhead" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 2 2 L 10 6 L 2 10 z" fill="#6b778c"/>
+    </marker>
+    <marker id="arrowhead-soft" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 2 2 L 10 6 L 2 10 z" fill="#a0abbc"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#1e293b" flood-opacity="0.11"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1440" height="920"/>
+
+  <text class="title" x="56" y="58">From Offer to Running Claw</text>
+  <text class="subtitle" x="56" y="88">A plain-language view of how marketing offers connect to technical service options and provider resources.</text>
+
+  <g transform="translate(56 124)">
+    <rect class="lane" x="0" y="0" width="1328" height="96" rx="18"/>
+    <rect class="label-box" x="18" y="18" width="178" height="60"/>
+    <text class="lane-label" x="107" y="43" text-anchor="middle">Offer</text>
+    <text class="lane-note" x="107" y="62" text-anchor="middle">What we sell</text>
+
+    <rect class="offer" x="260" y="14" width="360" height="68" filter="url(#shadow)"/>
+    <text class="card-title" x="440" y="40" text-anchor="middle">VPS for Claws</text>
+    <text class="card-text" x="440" y="61" text-anchor="middle">Published package a customer can choose</text>
+
+    <rect class="chip chip-blue" x="692" y="21" width="154" height="32"/>
+    <text class="pill-text" x="769" y="42" text-anchor="middle">Starter</text>
+    <rect class="chip chip-blue" x="864" y="21" width="154" height="32"/>
+    <text class="pill-text" x="941" y="42" text-anchor="middle">General purpose</text>
+    <rect class="chip chip-blue" x="1036" y="21" width="154" height="32"/>
+    <text class="pill-text" x="1113" y="42" text-anchor="middle">High performance</text>
+    <text class="small" x="942" y="72" text-anchor="middle">Different offer names can point to the same product structure.</text>
+  </g>
+
+  <g transform="translate(56 226)">
+    <rect class="lane" x="0" y="0" width="1328" height="112" rx="18"/>
+    <rect class="label-box" x="18" y="26" width="178" height="60"/>
+    <text class="lane-label" x="107" y="51" text-anchor="middle">Product</text>
+    <text class="lane-note" x="107" y="70" text-anchor="middle">What it is</text>
+
+    <rect class="product" x="260" y="20" width="270" height="72" filter="url(#shadow)"/>
+    <text class="card-title" x="395" y="47" text-anchor="middle">Product Specification</text>
+    <text class="card-text" x="395" y="68" text-anchor="middle">Multi-function Claw</text>
+
+    <rect class="product" x="640" y="20" width="270" height="72" filter="url(#shadow)"/>
+    <text class="card-title" x="775" y="47" text-anchor="middle">Product Offering</text>
+    <text class="card-text" x="775" y="68" text-anchor="middle">VPS for Claws</text>
+
+    <rect class="chip chip-green" x="1010" y="20" width="220" height="72"/>
+    <text class="pill-text" x="1120" y="48" text-anchor="middle">Business promise</text>
+    <text class="small" x="1120" y="68" text-anchor="middle">A managed place to run agents</text>
+  </g>
+
+  <g transform="translate(56 344)">
+    <rect class="lane" x="0" y="0" width="1328" height="150" rx="18"/>
+    <rect class="label-box" x="18" y="45" width="178" height="60"/>
+    <text class="lane-label" x="107" y="70" text-anchor="middle">Customer Service</text>
+    <text class="lane-note" x="107" y="89" text-anchor="middle">Choices people see</text>
+
+    <rect class="service" x="260" y="22" width="350" height="106" filter="url(#shadow)"/>
+    <text class="card-title" x="435" y="49" text-anchor="middle">Service Specification</text>
+    <text class="card-text" x="435" y="70" text-anchor="middle">Claw VPS Runtime</text>
+    <text class="small" x="435" y="96" text-anchor="middle">The selectable service the customer asks for</text>
+
+    <rect class="chip chip-gold" x="690" y="18" width="178" height="38"/>
+    <text class="pill-text" x="779" y="42" text-anchor="middle">Compute profile</text>
+    <rect class="chip chip-gold" x="690" y="66" width="178" height="38"/>
+    <text class="pill-text" x="779" y="90" text-anchor="middle">OS image</text>
+    <rect class="chip chip-gold" x="690" y="114" width="178" height="38"/>
+    <text class="pill-text" x="779" y="138" text-anchor="middle">Region</text>
+
+    <rect class="chip chip-gold" x="940" y="18" width="242" height="38"/>
+    <text class="pill-text" x="1061" y="42" text-anchor="middle">General Purpose 2 vCPU / 8 GB</text>
+    <rect class="chip chip-gold" x="940" y="66" width="242" height="38"/>
+    <text class="pill-text" x="1061" y="90" text-anchor="middle">Ubuntu 22.04 LTS</text>
+    <rect class="chip chip-gold" x="940" y="114" width="242" height="38"/>
+    <text class="pill-text" x="1061" y="138" text-anchor="middle">Europe</text>
+  </g>
+
+  <g transform="translate(56 500)">
+    <rect class="lane" x="0" y="0" width="1328" height="154" rx="18"/>
+    <rect class="label-box" x="18" y="47" width="178" height="60"/>
+    <text class="lane-label" x="107" y="72" text-anchor="middle">Activation</text>
+    <text class="lane-note" x="107" y="91" text-anchor="middle">How choices map</text>
+
+    <rect class="activation" x="260" y="26" width="284" height="88" filter="url(#shadow)"/>
+    <text class="card-title" x="402" y="55" text-anchor="middle">Activation Spec</text>
+    <text class="card-text" x="402" y="77" text-anchor="middle">createInstance request</text>
+    <text class="small" x="402" y="98" text-anchor="middle">Required: plan, image, region, period</text>
+
+    <rect class="activation" x="642" y="26" width="300" height="88" filter="url(#shadow)"/>
+    <text class="card-title" x="792" y="55" text-anchor="middle">Activation Mappings</text>
+    <text class="card-text" x="792" y="77" text-anchor="middle">Translate friendly choices</text>
+    <text class="small" x="792" y="98" text-anchor="middle">Example: profile -> provider product ID</text>
+
+    <rect class="chip chip-purple" x="1020" y="16" width="220" height="34"/>
+    <text class="pill-text" x="1130" y="38" text-anchor="middle">productId = V94</text>
+    <rect class="chip chip-purple" x="1020" y="60" width="220" height="34"/>
+    <text class="pill-text" x="1130" y="82" text-anchor="middle">imageId = Ubuntu 22.04</text>
+    <rect class="chip chip-purple" x="1020" y="104" width="220" height="34"/>
+    <text class="pill-text" x="1130" y="126" text-anchor="middle">region = EU</text>
+  </g>
+
+  <g transform="translate(56 660)">
+    <rect class="lane" x="0" y="0" width="1328" height="116" rx="18"/>
+    <rect class="label-box" x="18" y="28" width="178" height="60"/>
+    <text class="lane-label" x="107" y="53" text-anchor="middle">Resource</text>
+    <text class="lane-note" x="107" y="72" text-anchor="middle">What gets created</text>
+
+    <rect class="resource" x="260" y="22" width="292" height="72" filter="url(#shadow)"/>
+    <text class="card-title" x="406" y="49" text-anchor="middle">Resource Spec</text>
+    <text class="card-text" x="406" y="70" text-anchor="middle">Provider VPS Instance</text>
+
+    <rect class="resource" x="642" y="22" width="292" height="72" filter="url(#shadow)"/>
+    <text class="card-title" x="788" y="49" text-anchor="middle">Provider Resource</text>
+    <text class="card-text" x="788" y="70" text-anchor="middle">The actual server in Provider Infra</text>
+
+    <rect class="provider" x="1012" y="22" width="230" height="72" filter="url(#shadow)"/>
+    <text class="card-title" x="1127" y="49" text-anchor="middle">Running Claw</text>
+    <text class="card-text" x="1127" y="70" text-anchor="middle">Bound to that provider resource</text>
+  </g>
+
+  <g transform="translate(56 790)">
+    <rect class="lane" x="0" y="0" width="1328" height="80" rx="18"/>
+    <text class="legend-title" x="24" y="31">How to read this</text>
+    <circle cx="190" cy="27" r="7" fill="#5c93d6"/>
+    <text class="legend-text" x="208" y="32">Blue is the commercial offer.</text>
+    <circle cx="418" cy="27" r="7" fill="#d99a26"/>
+    <text class="legend-text" x="436" y="32">Yellow is what the customer selects.</text>
+    <circle cx="710" cy="27" r="7" fill="#8b6bd6"/>
+    <text class="legend-text" x="728" y="32">Purple translates choices into provider API fields.</text>
+    <circle cx="1082" cy="27" r="7" fill="#2c98a0"/>
+    <text class="legend-text" x="1100" y="26">Teal/red is the created provider</text>
+    <text class="legend-text" x="1102" y="40">resource and running Claw.</text>
+    <text class="legend-text" x="24" y="59">Key idea: business teams shape offers and service choices; operators manage mappings and compatibility so the provider can create the right resource.</text>
+  </g>
+
+  <!-- Offer to Product -->
+  <path class="arrow" d="M496 206 C496 224 457 226 449 246"/>
+  <!-- Product Spec to Product Offering -->
+  <path class="arrow" d="M588 282 C600 282 607 282 692 282"/>
+  <path class="arrow" d="M775 338 C775 362 610 350 552 373"/>
+  <!-- Service Spec to Service Options -->
+  <path class="arrow" d="M665 419 C696 419 705 419 745 419"/>
+  <!-- Service Spec to Activation Spec -->
+  <path class="arrow-soft" d="M920 381 C956 381 964 381 997 381"/>
+  <path class="arrow-soft" d="M920 429 C956 429 964 429 997 429"/>
+  <path class="arrow-soft" d="M920 477 C956 477 964 477 997 477"/>
+  <path class="arrow" d="M435 494 C435 518 406 500 406 526"/>
+  <!-- Activation Spec to Activation Mappings -->
+  <path class="arrow" d="M599 570 C645 570 655 570 697 570"/>
+  <!-- Activation Mapping to Provider Resource -->
+  <path class="arrow-soft" d="M997 540 C1030 540 1038 540 1075 540"/>
+  <path class="arrow-soft" d="M997 577 C1030 577 1038 577 1075 577"/>
+  <path class="arrow-soft" d="M997 612 C1030 612 1038 612 1075 612"/>
+  <path class="arrow" d="M792 654 C792 678 580 654 511 682"/>
+  <!-- Resource Spec to Provider Resource -->
+  <path class="arrow" d="M607 718 C645 718 661 718 697 718"/>
+  <!-- Provider Resource to Running Claw -->
+  <path class="arrow" d="M989 718 C1023 718 1037 718 1067 718"/>
+
+  <!-- Activation to Resource Running Claw -->
+  <path class="arrow-soft dash" d="M1130 638 C1166 654 1177 678 1165 680"/>
+  <text class="small" x="1188" y="668">Compatibility checks</text>
+  <text class="small" x="1188" y="680">keep invalid choices out.</text>
+</svg>

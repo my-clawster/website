@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="640" viewBox="0 0 1440 640" role="img" aria-labelledby="cm-title cm-desc">
+  <title id="cm-title">Clawne Me user flow</title>
+  <desc id="cm-desc">Five-step journey: choose a goal, shape it, add memory and tools, launch, iterate.</desc>
+  <defs>
+    <style>.bg{fill:#f7fafc}.cw{fill:#fff;stroke:#d8e0ec;stroke-width:1.5}.cd{fill:#17354e}</style>
+    <filter id="sh3" x="-8%" y="-15%" width="116%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#1e293b" flood-opacity="0.10"/></filter>
+    <marker id="arr3" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M2 2 L10 6 L2 10 z" fill="#6b778c"/></marker>
+  </defs>
+  <rect class="bg" width="1440" height="640"/>
+  <rect fill="#17354e" width="1440" height="110"/>
+  <text x="56" y="54" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" fill="#fff">Clawne Me: from idea to assistant</text>
+  <text x="56" y="83" font-family="Inter,Arial,sans-serif" font-size="16" fill="#cde1ef">A product flow designed for people who want results before they want architecture.</text>
+  <rect class="cw" x="98" y="130" width="220" height="294" rx="18" filter="url(#sh3)"/>
+  <circle cx="208" cy="176" r="22" fill="#eef4fb" stroke="#9bc7f2" stroke-width="2"/>
+  <text x="208" y="182" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#17354e">1</text>
+  <text x="208" y="224" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#172033">Choose a goal</text>
+  <text x="208" y="250" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Research, inbox help,</text>
+  <text x="208" y="267" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">project assistance, or</text>
+  <text x="208" y="284" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">a personal routine.</text>
+  <text x="208" y="310" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b" font-style="italic">The goal anchors the Clawne.</text>
+  <line x1="320" y1="277" x2="352" y2="277" stroke="#6b778c" stroke-width="2.4" marker-end="url(#arr3)"/>
+  <rect class="cw" x="354" y="130" width="220" height="294" rx="18" filter="url(#sh3)"/>
+  <circle cx="464" cy="176" r="22" fill="#eef4fb" stroke="#9bc7f2" stroke-width="2"/>
+  <text x="464" y="182" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#17354e">2</text>
+  <text x="464" y="224" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#172033">Shape it</text>
+  <text x="464" y="250" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Name the Clawne, define</text>
+  <text x="464" y="267" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">its role, and set the</text>
+  <text x="464" y="284" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">tone you want.</text>
+  <text x="464" y="310" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b" font-style="italic">Keep the first version narrow.</text>
+  <line x1="576" y1="277" x2="608" y2="277" stroke="#6b778c" stroke-width="2.4" marker-end="url(#arr3)"/>
+  <rect class="cd" x="610" y="118" width="220" height="318" rx="18" filter="url(#sh3)"/>
+  <circle cx="720" cy="166" r="22" fill="#214c6b" stroke="#5ea8c6" stroke-width="2"/>
+  <text x="720" y="172" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff">3</text>
+  <text x="720" y="214" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#fff">Add memory and tools</text>
+  <text x="720" y="238" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#cde1ef">Only when they actually help.</text>
+  <text x="720" y="272" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#8baabf">The best early Clawnes</text>
+  <text x="720" y="289" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#8baabf">are narrow, clear,</text>
+  <text x="720" y="306" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#8baabf">and easy to improve.</text>
+  <text x="720" y="344" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b" font-style="italic">Complexity is additive, not upfront.</text>
+  <line x1="832" y1="277" x2="864" y2="277" stroke="#6b778c" stroke-width="2.4" marker-end="url(#arr3)"/>
+  <rect class="cw" x="866" y="130" width="220" height="294" rx="18" filter="url(#sh3)"/>
+  <circle cx="976" cy="176" r="22" fill="#eef4fb" stroke="#9bc7f2" stroke-width="2"/>
+  <text x="976" y="182" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#17354e">4</text>
+  <text x="976" y="224" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#172033">Launch</text>
+  <text x="976" y="250" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Try real prompts and</text>
+  <text x="976" y="267" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">watch where it helps,</text>
+  <text x="976" y="284" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">drifts, or overreaches.</text>
+  <text x="976" y="310" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b" font-style="italic">Real use reveals the gaps.</text>
+  <line x1="1088" y1="277" x2="1120" y2="277" stroke="#6b778c" stroke-width="2.4" marker-end="url(#arr3)"/>
+  <rect class="cw" x="1122" y="130" width="220" height="294" rx="18" filter="url(#sh3)"/>
+  <circle cx="1232" cy="176" r="22" fill="#eef4fb" stroke="#9bc7f2" stroke-width="2"/>
+  <text x="1232" y="182" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#17354e">5</text>
+  <text x="1232" y="224" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#172033">Iterate</text>
+  <text x="1232" y="250" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Refine the role,</text>
+  <text x="1232" y="267" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">tighten the prompt,</text>
+  <text x="1232" y="284" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">and grow carefully.</text>
+  <text x="1232" y="310" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b" font-style="italic">Good Clawnes improve slowly.</text>
+  <rect fill="#fff" stroke="#d8e0ec" stroke-width="1.5" x="160" y="480" width="1120" height="76" rx="16"/>
+  <text x="720" y="511" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">Clawne Me is product guidance first</text>
+  <text x="720" y="535" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" fill="#526276">The infrastructure matters, but it should stay behind the experience until the user actually needs it.</text>
+  <text x="720" y="614" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" fill="#64748b">A Clawne built in ten minutes and refined over a week outperforms one designed exhaustively upfront.</text>
+</svg>

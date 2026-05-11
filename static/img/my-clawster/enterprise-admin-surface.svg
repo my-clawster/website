@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="ea-title ea-desc">
+  <title id="ea-title">Enterprise admin surface</title>
+  <desc id="ea-desc">The enterprise operator layer: admin portal overview, catalog governance, operations, and visibility.</desc>
+  <defs>
+    <style>.bg{fill:#f7fafc}.hub{fill:#17354e}.cw{fill:#fff;stroke:#d8e0ec;stroke-width:1.5}.cg{fill:#fff8e8;stroke:#e6bd62;stroke-width:2}.cb{fill:#dceeff;stroke:#5c93d6;stroke-width:2}.ct{fill:#ecfbfb;stroke:#8ed2d6;stroke-width:2}</style>
+    <filter id="sh4" x="-8%" y="-15%" width="116%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#1e293b" flood-opacity="0.10"/></filter>
+  </defs>
+  <rect class="bg" width="1440" height="720"/>
+  <rect fill="#17354e" width="1440" height="110"/>
+  <text x="56" y="54" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" fill="#fff">Enterprise admin surface</text>
+  <text x="56" y="83" font-family="Inter,Arial,sans-serif" font-size="16" fill="#cde1ef">The operator layer that governs the platform without forking the OSS core.</text>
+  <rect class="hub" x="60" y="130" width="1320" height="96" rx="18" filter="url(#sh4)"/>
+  <rect fill="#214c6b" stroke="#4e92b2" stroke-width="1.5" x="88" y="153" width="240" height="50" rx="12"/>
+  <text x="208" y="184" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#eaf6fb">Enterprise admin portal</text>
+  <text x="800" y="170" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff">Operate the platform, not just a single cluster</text>
+  <text x="800" y="194" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" fill="#cde1ef">Govern catalog readiness, provider lanes, bindings, health, and operator workflows via enterprise extensions.</text>
+  <rect class="cg" x="60" y="248" width="420" height="164" rx="16" filter="url(#sh4)"/>
+  <text x="270" y="290" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">Product-to-Resource</text>
+  <text x="270" y="313" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Offers, product offerings, service specs,</text>
+  <text x="270" y="330" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">activation mappings, and compatibility rules.</text>
+  <text x="270" y="355" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b" font-style="italic">The path from what we sell to what the provider creates.</text>
+  <text x="270" y="394" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#d99a26" font-weight="700">Catalog governance</text>
+  <rect class="cb" x="510" y="248" width="420" height="164" rx="16" filter="url(#sh4)"/>
+  <text x="720" y="290" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">Provider management</text>
+  <text x="720" y="313" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Discovery workflows, readiness stages,</text>
+  <text x="720" y="330" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">provider lanes, and Generic HTTP fallback.</text>
+  <text x="720" y="355" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b" font-style="italic">Move a provider from unknown to production-ready.</text>
+  <text x="720" y="394" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#5c93d6" font-weight="700">Provider operations</text>
+  <rect class="ct" x="960" y="248" width="420" height="164" rx="16" filter="url(#sh4)"/>
+  <text x="1170" y="290" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">Integrations</text>
+  <text x="1170" y="313" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Credentials, connectivity, and test-health</text>
+  <text x="1170" y="330" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">checks for provider access.</text>
+  <text x="1170" y="355" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b" font-style="italic">Verify integration state before production.</text>
+  <text x="1170" y="394" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#2c98a0" font-weight="700">Integration health</text>
+  <rect class="cg" x="60" y="432" width="420" height="164" rx="16" filter="url(#sh4)"/>
+  <text x="270" y="474" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">Offers and governance</text>
+  <text x="270" y="497" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Business promises, offer visibility rules,</text>
+  <text x="270" y="514" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">and staged rollout of new service options.</text>
+  <text x="270" y="539" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b" font-style="italic">Control what customers see and when.</text>
+  <text x="270" y="578" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#d99a26" font-weight="700">Catalog governance</text>
+  <rect class="cb" x="510" y="432" width="420" height="164" rx="16" filter="url(#sh4)"/>
+  <text x="720" y="474" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">Audit and health</text>
+  <text x="720" y="497" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Change history, who did what,</text>
+  <text x="720" y="514" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">and a short path to the root cause.</text>
+  <text x="720" y="539" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b" font-style="italic">Find what is broken and explain it.</text>
+  <text x="720" y="578" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#5c93d6" font-weight="700">Visibility</text>
+  <rect class="ct" x="960" y="432" width="420" height="164" rx="16" filter="url(#sh4)"/>
+  <text x="1170" y="474" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">Claws telemetry</text>
+  <text x="1170" y="497" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Activation context, operational view,</text>
+  <text x="1170" y="514" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">and ongoing platform supervision.</text>
+  <text x="1170" y="539" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b" font-style="italic">Stay informed without polling.</text>
+  <text x="1170" y="578" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#2c98a0" font-weight="700">Visibility</text>
+  <text x="720" y="690" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" fill="#64748b">Mounted through enterprise extensions — the OSS core stays deployable and unmodified.</text>
+</svg>
