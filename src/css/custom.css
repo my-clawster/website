@@ -212,6 +212,8 @@ img {
 
 .lr-site-rail {
   min-width: 0;
+  position: relative;
+  z-index: 8;
 }
 
 .lr-sidebar-shell {
@@ -219,6 +221,7 @@ img {
   gap: 1rem;
   position: sticky;
   top: 112px;
+  z-index: 9;
 }
 
 .lr-sidebar-shell--collapsed {
@@ -236,6 +239,9 @@ img {
   gap: 0.5rem;
   justify-content: center;
   padding: 0.65rem 0.85rem;
+  position: relative;
+  pointer-events: auto;
+  z-index: 10;
   transition:
     border-color 180ms ease,
     box-shadow 180ms ease,

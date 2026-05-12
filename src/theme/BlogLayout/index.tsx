@@ -1,13 +1,36 @@
-import React, {type ReactNode, useState} from 'react';
+import React, {type ReactNode, useEffect, useState} from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import BlogSidebar from '@theme/BlogSidebar';
 import type {Props} from '@theme/BlogLayout';
 
+const BLOG_SIDEBAR_STORAGE_KEY = 'clawster-website-blog-sidebar-collapsed';
+
 export default function BlogLayout(props: Props): ReactNode {
   const {sidebar, toc, children, ...layoutProps} = props;
   const hasSidebar = Boolean(sidebar?.items.length);
   const [isSidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [hasLoadedSidebarState, setHasLoadedSidebarState] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedState = window.localStorage.getItem(BLOG_SIDEBAR_STORAGE_KEY);
+      if (savedState !== null) {
+        setSidebarCollapsed(savedState === 'true');
+      }
+    }
+    setHasLoadedSidebarState(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hasLoadedSidebarState || typeof window === 'undefined') {
+      return;
+    }
+    window.localStorage.setItem(
+      BLOG_SIDEBAR_STORAGE_KEY,
+      String(isSidebarCollapsed),
+    );
+  }, [hasLoadedSidebarState, isSidebarCollapsed]);
 
   return (
     <Layout {...layoutProps} wrapperClassName={clsx('lr-layout', layoutProps.wrapperClassName)}>
