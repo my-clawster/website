@@ -1,4 +1,4 @@
-import React, {type ReactNode} from 'react';
+import React, {type ReactNode, useState} from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import BlogSidebar from '@theme/BlogSidebar';
@@ -7,6 +7,7 @@ import type {Props} from '@theme/BlogLayout';
 export default function BlogLayout(props: Props): ReactNode {
   const {sidebar, toc, children, ...layoutProps} = props;
   const hasSidebar = Boolean(sidebar?.items.length);
+  const [isSidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   return (
     <Layout {...layoutProps} wrapperClassName={clsx('lr-layout', layoutProps.wrapperClassName)}>
@@ -15,10 +16,15 @@ export default function BlogLayout(props: Props): ReactNode {
           className={clsx('lr-site-grid', {
             'lr-site-grid--with-sidebar': hasSidebar,
             'lr-site-grid--with-toc': Boolean(toc),
+            'lr-site-grid--sidebar-collapsed': hasSidebar && isSidebarCollapsed,
           })}>
           {hasSidebar ? (
-            <aside className="lr-site-rail">
-              <BlogSidebar sidebar={sidebar} />
+            <aside className={clsx('lr-site-rail', {'lr-site-rail--collapsed': isSidebarCollapsed})}>
+              <BlogSidebar
+                sidebar={sidebar}
+                collapsed={isSidebarCollapsed}
+                onToggleCollapse={() => setSidebarCollapsed((value) => !value)}
+              />
             </aside>
           ) : null}
           <main className="lr-site-main">{children}</main>

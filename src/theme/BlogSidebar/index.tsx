@@ -1,11 +1,21 @@
 import Link from '@docusaurus/Link';
+import clsx from 'clsx';
 import {groupBlogSidebarItemsByYear} from '@docusaurus/plugin-content-blog/client';
 import {useWindowSize} from '@docusaurus/theme-common';
 import type {Props} from '@theme/BlogSidebar';
 import NewsletterPanel from '@site/src/components/NewsletterPanel';
 import {useSiteData} from '@site/src/components/site';
 
-export default function BlogSidebar({sidebar}: Props) {
+type BlogSidebarProps = Props & {
+  collapsed?: boolean;
+  onToggleCollapse?: () => void;
+};
+
+export default function BlogSidebar({
+  sidebar,
+  collapsed = false,
+  onToggleCollapse,
+}: BlogSidebarProps) {
   const {social} = useSiteData();
   const windowSize = useWindowSize();
 
@@ -61,5 +71,22 @@ export default function BlogSidebar({sidebar}: Props) {
     );
   }
 
-  return archiveList;
+  return (
+    <div className={clsx('lr-sidebar-shell', {'lr-sidebar-shell--collapsed': collapsed})}>
+      <button
+        type="button"
+        className="lr-sidebar-toggle"
+        onClick={onToggleCollapse}
+        aria-expanded={!collapsed}
+        aria-controls="lr-sidebar-panel">
+        <span className="lr-sidebar-toggle__icon" aria-hidden="true">
+          {collapsed ? '»' : '«'}
+        </span>
+        <span className="lr-sidebar-toggle__label">
+          {collapsed ? 'Expand panel' : 'Collapse panel'}
+        </span>
+      </button>
+      {!collapsed ? <div id="lr-sidebar-panel">{archiveList}</div> : null}
+    </div>
+  );
 }
