@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkclawster_website=self.webpackChunkclawster_website||[]).push([["3220"],{1912(e){e.exports=JSON.parse('{"blogBasePath":"/","blogTitle":"My Clawster","authorsListPath":"/authors"}')}}]);

@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1050" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#5B21B6"/>
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DBEAFE"/>
+      <stop offset="100%" stop-color="#BFDBFE"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowBig" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#1E3A5F"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1500" height="1050" fill="#FFFFFF"/>
+
+  <!-- Header band -->
+  <rect width="1500" height="110" fill="#1E3A5F"/>
+  <text x="50" y="50" font-size="28" font-weight="bold" fill="#FFFFFF">IBIDEM Co. — Tu sistema en 12 semanas</text>
+  <text x="50" y="80" font-size="16" fill="#BFDBFE">Cómo funciona la Fase 1 · Tu metodología de 20 años + inteligencia artificial encima</text>
+  <text x="50" y="100" font-size="12" fill="#93C5FD" font-style="italic">Propuesta preparada por Evolution DataSoft · plataforma My Clawster</text>
+
+  <!-- Right header tagline -->
+  <g transform="translate(1100,30)">
+    <rect width="370" height="64" fill="#FFFFFF" rx="8" opacity="0.95"/>
+    <text x="185" y="26" font-size="14" font-weight="bold" fill="#1E3A5F" text-anchor="middle">"No te cambiamos cómo trabajas."</text>
+    <text x="185" y="46" font-size="12" fill="#374151" text-anchor="middle">Tu Excel sigue siendo tu Excel. Sólo le ponemos</text>
+    <text x="185" y="60" font-size="12" fill="#374151" text-anchor="middle">inteligencia encima para que decidas en tiempo real.</text>
+  </g>
+
+  <!-- ============== ROW 1: Flow Excel -> Cloud -> My Clawster -> Dashboard ============== -->
+  <text x="750" y="150" font-size="18" font-weight="bold" fill="#1E3A5F" text-anchor="middle">El recorrido de tu información</text>
+
+  <!-- 1. Tus Excel -->
+  <g transform="translate(40,180)" filter="url(#softShadow)">
+    <rect width="240" height="240" fill="#F9FAFB" stroke="#10B981" stroke-width="2" rx="12"/>
+    <text x="120" y="32" font-size="16" font-weight="bold" fill="#065F46" text-anchor="middle">1. Tu información</text>
+    <text x="120" y="52" font-size="11" fill="#6B7280" text-anchor="middle">Tus 36–40 formatos en Excel</text>
+
+    <!-- Stack of Excel files -->
+    <g transform="translate(40,72)">
+      <rect width="160" height="34" fill="#FFFFFF" stroke="#10B981" rx="4"/>
+      <rect width="160" height="10" fill="#10B981" rx="4"/>
+      <text x="80" y="8" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">XLSX</text>
+      <text x="80" y="26" font-size="11" fill="#111827" text-anchor="middle">Control financiero</text>
+    </g>
+    <g transform="translate(40,112)">
+      <rect width="160" height="34" fill="#FFFFFF" stroke="#10B981" rx="4"/>
+      <rect width="160" height="10" fill="#10B981" rx="4"/>
+      <text x="80" y="8" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">XLSX</text>
+      <text x="80" y="26" font-size="11" fill="#111827" text-anchor="middle">Concentrado materiales</text>
+    </g>
+    <g transform="translate(40,152)">
+      <rect width="160" height="34" fill="#FFFFFF" stroke="#10B981" rx="4"/>
+      <rect width="160" height="10" fill="#10B981" rx="4"/>
+      <text x="80" y="8" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">XLSX</text>
+      <text x="80" y="26" font-size="11" fill="#111827" text-anchor="middle">Cuentas por obra</text>
+    </g>
+    <text x="120" y="210" font-size="11" fill="#6B7280" text-anchor="middle" font-style="italic">+ caja chica, viáticos, REPSE…</text>
+    <text x="120" y="226" font-size="10" fill="#9CA3AF" text-anchor="middle">Sigues capturando como hoy.</text>
+  </g>
+
+  <!-- Arrow 1->2 -->
+  <line x1="290" y1="300" x2="335" y2="300" stroke="#1E3A5F" stroke-width="3" marker-end="url(#arrowBig)"/>
+
+  <!-- 2. OneDrive -->
+  <g transform="translate(345,180)" filter="url(#softShadow)">
+    <rect width="240" height="240" fill="url(#cloudGrad)" stroke="#2563EB" stroke-width="2" rx="12"/>
+    <text x="120" y="32" font-size="16" font-weight="bold" fill="#1E40AF" text-anchor="middle">2. En la nube</text>
+    <text x="120" y="52" font-size="11" fill="#1E40AF" text-anchor="middle">SharePoint / OneDrive empresarial</text>
+
+    <!-- Cloud icon -->
+    <g transform="translate(60,80)">
+      <path d="M 30,60 Q 0,60 0,40 Q 0,20 25,18 Q 30,0 60,5 Q 90,0 95,25 Q 120,25 120,45 Q 120,60 100,60 Z" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+      <text x="60" y="46" font-size="28" fill="#2563EB" text-anchor="middle">☁</text>
+    </g>
+
+    <text x="120" y="184" font-size="12" font-weight="bold" fill="#1E40AF" text-anchor="middle">Respaldado automáticamente</text>
+    <text x="120" y="202" font-size="11" fill="#374151" text-anchor="middle">Versionado · histórico · seguro</text>
+    <text x="120" y="220" font-size="10" fill="#6B7280" text-anchor="middle" font-style="italic">Si una laptop se pierde, no pierdes nada.</text>
+  </g>
+
+  <!-- Arrow 2->3 -->
+  <line x1="595" y1="300" x2="640" y2="300" stroke="#1E3A5F" stroke-width="3" marker-end="url(#arrowBig)"/>
+
+  <!-- 3. My Clawster -->
+  <g transform="translate(650,180)" filter="url(#softShadow)">
+    <rect width="280" height="240" fill="url(#brainGrad)" rx="14"/>
+    <rect x="6" y="6" width="268" height="228" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="3,3" rx="10" opacity="0.5"/>
+    <text x="140" y="36" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3. My Clawster</text>
+    <text x="140" y="56" font-size="11" fill="#DDD6FE" text-anchor="middle">Capa de inteligencia artificial</text>
+
+    <!-- Brain core -->
+    <circle cx="140" cy="120" r="40" fill="#FFFFFF" opacity="0.15"/>
+    <circle cx="140" cy="120" r="28" fill="#FFFFFF"/>
+    <text x="140" y="130" font-size="28" fill="#5B21B6" text-anchor="middle" font-weight="bold">IA</text>
+
+    <text x="140" y="184" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Lee · Organiza · Cruza · Vigila</text>
+    <text x="140" y="206" font-size="11" fill="#DDD6FE" text-anchor="middle">Sin reemplazar tu metodología.</text>
+    <text x="140" y="222" font-size="11" fill="#DDD6FE" text-anchor="middle">Sin que captures dos veces.</text>
+  </g>
+
+  <!-- Arrow 3->4 -->
+  <line x1="940" y1="300" x2="985" y2="300" stroke="#1E3A5F" stroke-width="3" marker-end="url(#arrowBig)"/>
+
+  <!-- 4. Dashboard -->
+  <g transform="translate(995,180)" filter="url(#softShadow)">
+    <rect width="240" height="240" fill="#F9FAFB" stroke="#1E3A5F" stroke-width="2" rx="12"/>
+    <text x="120" y="32" font-size="16" font-weight="bold" fill="#1E3A5F" text-anchor="middle">4. Tu dashboard</text>
+    <text x="120" y="52" font-size="11" fill="#6B7280" text-anchor="middle">Lo abres en cualquier dispositivo</text>
+
+    <!-- Dashboard mockup -->
+    <g transform="translate(40,68)">
+      <rect width="160" height="146" fill="#FFFFFF" stroke="#1E3A5F" rx="6"/>
+      <rect width="160" height="22" fill="#1E3A5F" rx="6"/>
+      <rect y="12" width="160" height="10" fill="#1E3A5F"/>
+      <text x="80" y="16" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">IBIDEM · Hoy</text>
+
+      <!-- KPI 1 -->
+      <rect x="6" y="28" width="148" height="22" fill="#ECFDF5" stroke="#10B981"/>
+      <text x="10" y="42" font-size="9" fill="#065F46" font-weight="bold">Utilidad consolidada</text>
+      <text x="148" y="42" font-size="9" fill="#065F46" text-anchor="end" font-weight="bold">+10.4%</text>
+
+      <!-- KPI 2 -->
+      <rect x="6" y="54" width="148" height="22" fill="#FEF3C7" stroke="#D97706"/>
+      <text x="10" y="68" font-size="9" fill="#92400E" font-weight="bold">Obras en alerta</text>
+      <text x="148" y="68" font-size="9" fill="#92400E" text-anchor="end" font-weight="bold">2 de 12</text>
+
+      <!-- Bars -->
+      <text x="10" y="90" font-size="8" fill="#6B7280">Avance por obra</text>
+      <rect x="10" y="94" width="80" height="6" fill="#10B981"/>
+      <rect x="10" y="104" width="120" height="6" fill="#10B981"/>
+      <rect x="10" y="114" width="50" height="6" fill="#D97706"/>
+      <rect x="10" y="124" width="100" height="6" fill="#10B981"/>
+      <rect x="10" y="134" width="30" height="6" fill="#DC2626"/>
+    </g>
+
+    <text x="120" y="234" font-size="10" fill="#6B7280" text-anchor="middle" font-style="italic">Estado real, no de hace 6 semanas.</text>
+  </g>
+
+  <!-- ============== ROW 2: Phases ============== -->
+  <text x="750" y="464" font-size="18" font-weight="bold" fill="#1E3A5F" text-anchor="middle">La Fase 1 es un solo entregable — con dos hitos visibles</text>
+  <text x="750" y="484" font-size="12" fill="#6B7280" text-anchor="middle" font-style="italic">Ambas sub-fases se entregan juntas. La 1.1 funciona sola; la 1.2 le agrega la inteligencia.</text>
+
+  <!-- Phase 1.1 -->
+  <g transform="translate(40,490)" filter="url(#softShadow)">
+    <rect width="700" height="240" fill="#F0F9FF" stroke="#3B82F6" stroke-width="2" rx="14"/>
+    <rect width="700" height="44" fill="#3B82F6" rx="14"/>
+    <rect y="32" width="700" height="12" fill="#3B82F6"/>
+    <text x="20" y="29" font-size="16" font-weight="bold" fill="#FFFFFF">SUB-FASE 1.1 · Organizamos tu información</text>
+    <text x="540" y="29" font-size="13" fill="#DBEAFE">Semanas 1–6</text>
+
+    <text x="24" y="74" font-size="13" fill="#1E3A5F" font-weight="bold">Lo que pasa por dentro (procesos transparentes, sin IA):</text>
+    <g transform="translate(24,86)">
+      <circle cx="8" cy="8" r="4" fill="#3B82F6"/>
+      <text x="22" y="12" font-size="12" fill="#374151">Conectamos tus Excel a la nube (sin moverlos de su lugar actual).</text>
+    </g>
+    <g transform="translate(24,108)">
+      <circle cx="8" cy="8" r="4" fill="#3B82F6"/>
+      <text x="22" y="12" font-size="12" fill="#374151">Mapeamos tus 36–40 formatos a un lenguaje común y consultable.</text>
+    </g>
+    <g transform="translate(24,130)">
+      <circle cx="8" cy="8" r="4" fill="#3B82F6"/>
+      <text x="22" y="12" font-size="12" fill="#374151">Cada gasto se clasifica contra tu catálogo (11 categorías, ~70 subcat.).</text>
+    </g>
+    <g transform="translate(24,152)">
+      <circle cx="8" cy="8" r="4" fill="#3B82F6"/>
+      <text x="22" y="12" font-size="12" fill="#374151">Construimos una base de datos limpia con todas tus obras.</text>
+    </g>
+
+    <!-- Outcome callout -->
+    <g transform="translate(24,180)">
+      <rect width="650" height="46" fill="#FFFFFF" stroke="#10B981" stroke-width="2" rx="6"/>
+      <text x="14" y="20" font-size="12" font-weight="bold" fill="#065F46">Hito intermedio (semana 6):</text>
+      <text x="14" y="36" font-size="11" fill="#374151">Tu primer dashboard con el estado financiero consolidado de todas las obras.</text>
+    </g>
+  </g>
+
+  <!-- Phase 1.2 -->
+  <g transform="translate(760,490)" filter="url(#softShadow)">
+    <rect width="700" height="240" fill="#FFFBEB" stroke="#D97706" stroke-width="2" rx="14"/>
+    <rect width="700" height="44" fill="#D97706" rx="14"/>
+    <rect y="32" width="700" height="12" fill="#D97706"/>
+    <text x="20" y="29" font-size="16" font-weight="bold" fill="#FFFFFF">SUB-FASE 1.2 · Cruzamos información y te alertamos</text>
+    <text x="540" y="29" font-size="13" fill="#FEF3C7">Semanas 7–12</text>
+
+    <text x="24" y="74" font-size="13" fill="#92400E" font-weight="bold">Aquí entra My Clawster (la inteligencia artificial):</text>
+    <g transform="translate(24,86)">
+      <circle cx="8" cy="8" r="4" fill="#D97706"/>
+      <text x="22" y="12" font-size="12" fill="#374151">Cruza remisiones contra facturas (cierra la ventana del caso Zamora).</text>
+    </g>
+    <g transform="translate(24,108)">
+      <circle cx="8" cy="8" r="4" fill="#D97706"/>
+      <text x="22" y="12" font-size="12" fill="#374151">Compara CFDI contra egresos bancarios y detecta discrepancias.</text>
+    </g>
+    <g transform="translate(24,130)">
+      <circle cx="8" cy="8" r="4" fill="#D97706"/>
+      <text x="22" y="12" font-size="12" fill="#374151">Vigila los rangos paramétricos por tipo de obra y avisa si una partida se sale.</text>
+    </g>
+    <g transform="translate(24,152)">
+      <circle cx="8" cy="8" r="4" fill="#D97706"/>
+      <text x="22" y="12" font-size="12" fill="#374151">Lleva los saldos vivos de los préstamos entre obras y de la caja chica.</text>
+    </g>
+
+    <!-- Outcome callout -->
+    <g transform="translate(24,180)">
+      <rect width="650" height="46" fill="#FFFFFF" stroke="#DC2626" stroke-width="2" rx="6"/>
+      <text x="14" y="20" font-size="12" font-weight="bold" fill="#7F1D1D">Entrega final (semana 12):</text>
+      <text x="14" y="36" font-size="11" fill="#374151">Alertas automáticas en el momento — no semanas después de que algo se salió de control.</text>
+    </g>
+  </g>
+
+  <!-- ============== ROW 3: Promesas (autonomy conditions) ============== -->
+  <text x="750" y="780" font-size="18" font-weight="bold" fill="#1E3A5F" text-anchor="middle">Cómo se respeta tu autonomía</text>
+  <text x="750" y="804" font-size="13" fill="#6B7280" text-anchor="middle" font-style="italic">Las cuatro condiciones que pediste, traducidas al diseño del sistema.</text>
+
+  <g transform="translate(40,820)">
+    <!-- Promise 1 -->
+    <g transform="translate(0,0)" filter="url(#softShadow)">
+      <rect width="340" height="170" fill="#FFFFFF" stroke="#10B981" stroke-width="2" rx="12"/>
+      <rect width="340" height="44" fill="#ECFDF5" rx="12"/>
+      <rect y="32" width="340" height="12" fill="#ECFDF5"/>
+      <text x="170" y="29" font-size="14" font-weight="bold" fill="#065F46" text-anchor="middle">1 · Propiedad total</text>
+      <text x="20" y="68" font-size="12" fill="#374151">La base de datos vive en un servidor</text>
+      <text x="20" y="86" font-size="12" fill="#374151">tuyo. Tus Excel siguen en tu OneDrive.</text>
+      <text x="20" y="104" font-size="12" fill="#374151">El código se entrega con licencia</text>
+      <text x="20" y="122" font-size="12" fill="#374151">irrevocable a IBIDEM al cierre.</text>
+      <text x="20" y="148" font-size="11" fill="#6B7280" font-style="italic">No hay nada nuestro que tú no controles.</text>
+    </g>
+
+    <!-- Promise 2 -->
+    <g transform="translate(360,0)" filter="url(#softShadow)">
+      <rect width="340" height="170" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2" rx="12"/>
+      <rect width="340" height="44" fill="#EFF6FF" rx="12"/>
+      <rect y="32" width="340" height="12" fill="#EFF6FF"/>
+      <text x="170" y="29" font-size="14" font-weight="bold" fill="#1E40AF" text-anchor="middle">2 · Sin pagos recurrentes obligatorios</text>
+      <text x="20" y="68" font-size="12" fill="#374151">El proyecto se paga una sola vez.</text>
+      <text x="20" y="86" font-size="12" fill="#374151">Costo operativo mensual estimado:</text>
+      <text x="20" y="104" font-size="12" fill="#374151">USD $200–300+ (tokens de IA + hosting),</text>
+      <text x="20" y="122" font-size="12" fill="#374151">según volumen — no es pago a Evolution.</text>
+      <text x="20" y="148" font-size="11" fill="#6B7280" font-style="italic">Alternativa: usar IA open-source en infra propia.</text>
+    </g>
+
+    <!-- Promise 3 -->
+    <g transform="translate(720,0)" filter="url(#softShadow)">
+      <rect width="340" height="170" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2" rx="12"/>
+      <rect width="340" height="44" fill="#F5F3FF" rx="12"/>
+      <rect y="32" width="340" height="12" fill="#F5F3FF"/>
+      <text x="170" y="29" font-size="14" font-weight="bold" fill="#5B21B6" text-anchor="middle">3 · Lógica visible y editable</text>
+      <text x="20" y="68" font-size="12" fill="#374151">Las reglas (las 9 tuyas + las que se</text>
+      <text x="20" y="86" font-size="12" fill="#374151">agreguen) viven en archivos legibles.</text>
+      <text x="20" y="104" font-size="12" fill="#374151">Tú o tu equipo las leen, las cambian</text>
+      <text x="20" y="122" font-size="12" fill="#374151">y las ven aplicadas inmediatamente.</text>
+      <text x="20" y="148" font-size="11" fill="#6B7280" font-style="italic">Nada queda en una "caja negra".</text>
+    </g>
+
+    <!-- Promise 4 -->
+    <g transform="translate(1080,0)" filter="url(#softShadow)">
+      <rect width="340" height="170" fill="#FFFFFF" stroke="#D97706" stroke-width="2" rx="12"/>
+      <rect width="340" height="44" fill="#FFFBEB" rx="12"/>
+      <rect y="32" width="340" height="12" fill="#FFFBEB"/>
+      <text x="170" y="29" font-size="14" font-weight="bold" fill="#92400E" text-anchor="middle">4 · Independencia del proveedor</text>
+      <text x="20" y="68" font-size="12" fill="#374151">Capacitación al equipo interno y</text>
+      <text x="20" y="86" font-size="12" fill="#374151">documentación en español. La 1.1</text>
+      <text x="20" y="104" font-size="12" fill="#374151">sigue funcionando aunque My Clawster</text>
+      <text x="20" y="122" font-size="12" fill="#374151">no esté disponible.</text>
+      <text x="20" y="148" font-size="11" fill="#6B7280" font-style="italic">"Traje a la medida" — no traje rentado.</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="750" y="1024" font-size="11" fill="#9CA3AF" text-anchor="middle">Evolution DataSoft · Propuesta confidencial para IBIDEM Co. · v1.0 · Mayo 2026</text>
+
+</svg>

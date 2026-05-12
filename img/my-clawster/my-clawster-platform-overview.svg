@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="800" viewBox="0 0 1440 800" role="img" aria-labelledby="ov-title ov-desc">
+  <title id="ov-title">My Clawster platform overview</title>
+  <desc id="ov-desc">Layered diagram: Products, OSS core, Community packages, Enterprise operator layer.</desc>
+  <defs>
+    <style>.bg{fill:#f7fafc}.lane{fill:#fff;stroke:#d8e0ec;stroke-width:1.5}.lb{fill:#eef4fb;stroke:#c9d6e8;stroke-width:1.5}.cb{fill:#dceeff;stroke:#5c93d6;stroke-width:2}.cd{fill:#17354e}.c1{fill:#edf6ff;stroke:#9bc7f2;stroke-width:1.4}.c2{fill:#edf9f0;stroke:#9cd7ab;stroke-width:1.4}.c3{fill:#f6efff;stroke:#bca7ec;stroke-width:1.4}.c4{fill:#ecfbfb;stroke:#8ed2d6;stroke-width:1.4}.c5{fill:#fff8e8;stroke:#e6bd62;stroke-width:1.4}</style>
+    <filter id="sh" x="-8%" y="-15%" width="116%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#1e293b" flood-opacity="0.10"/></filter>
+  </defs>
+  <rect class="bg" width="1440" height="800"/>
+  <rect fill="#17354e" width="1440" height="110"/>
+  <text x="56" y="54" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" fill="#fff">My Clawster &#xB7; Platform overview</text>
+  <text x="56" y="83" font-family="Inter,Arial,sans-serif" font-size="16" fill="#cde1ef">Four surfaces, one platform: a user product, an open-source core, community packages, and an enterprise operator layer.</text>
+  <g transform="translate(56 130)">
+    <rect class="lane" width="1328" height="108" rx="16"/>
+    <rect class="lb" x="18" y="18" width="178" height="72" rx="10"/>
+    <text x="107" y="50" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#152238">Products</text>
+    <text x="107" y="68" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748b">What users see</text>
+    <rect class="cd" x="260" y="14" width="480" height="80" rx="14" filter="url(#sh)"/>
+    <text x="500" y="49" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="700" fill="#fff">Clawne Me</text>
+    <text x="500" y="68" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#cde1ef">Guided assistant experience built on My Clawster for non-technical users.</text>
+    <rect class="c1" x="768" y="18" width="238" height="72" rx="12"/>
+    <text x="887" y="52" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#263044">my-clawster-apps</text>
+    <text x="887" y="68" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b">Private and member-only shells</text>
+    <rect class="c1" x="1030" y="18" width="270" height="72" rx="12"/>
+    <text x="1165" y="52" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#263044">Your product</text>
+    <text x="1165" y="68" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b">Any app built on the platform</text>
+  </g>
+  <g transform="translate(56 250)">
+    <rect class="lane" width="1328" height="172" rx="16"/>
+    <rect class="lb" x="18" y="28" width="178" height="72" rx="10"/>
+    <text x="107" y="60" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#152238">OSS core</text>
+    <text x="107" y="78" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748b">Open source</text>
+    <rect class="cb" x="260" y="20" width="247" height="132" rx="14" filter="url(#sh)"/>
+    <text x="383" y="56" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">API</text>
+    <text x="383" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Elysia worker, route handlers,</text>
+    <text x="383" y="93" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">provider integration surface,</text>
+    <text x="383" y="110" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">and plug-in registry.</text>
+    <rect class="cb" x="518" y="20" width="247" height="132" rx="14" filter="url(#sh)"/>
+    <text x="641" y="56" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">Web shell</text>
+    <text x="641" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">React app shell, UI extension</text>
+    <text x="641" y="93" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">discovery, auth surface, and</text>
+    <text x="641" y="110" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">cluster dashboard.</text>
+    <rect class="cb" x="776" y="20" width="247" height="132" rx="14" filter="url(#sh)"/>
+    <text x="899" y="56" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">Catalog model</text>
+    <text x="899" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Offers, product offerings,</text>
+    <text x="899" y="93" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">service specs, activation maps,</text>
+    <text x="899" y="110" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">and normalized provider IDs.</text>
+    <rect class="cb" x="1034" y="20" width="276" height="132" rx="14" filter="url(#sh)"/>
+    <text x="1172" y="56" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">Provider runtime</text>
+    <text x="1172" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">Generic HTTP, plug-in lanes,</text>
+    <text x="1172" y="93" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">activation to resource lifecycle,</text>
+    <text x="1172" y="110" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#526276">and claw-state management.</text>
+  </g>
+  <g transform="translate(56 434)">
+    <rect class="lane" width="1328" height="124" rx="16"/>
+    <rect class="lb" x="18" y="22" width="178" height="80" rx="10"/>
+    <text x="107" y="58" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#152238">Community</text>
+    <text x="107" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748b">Open to all builders</text>
+    <rect class="c1" x="260" y="22" width="240" height="80" rx="12"/>
+    <text x="380" y="58" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#263044">@clawster/core</text>
+    <text x="380" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b">Shared types, models, errors</text>
+    <rect class="c2" x="516" y="22" width="240" height="80" rx="12"/>
+    <text x="636" y="58" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#263044">Provider plug-ins</text>
+    <text x="636" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b">@clawster/plugin-* packages</text>
+    <rect class="c3" x="772" y="22" width="240" height="80" rx="12"/>
+    <text x="892" y="58" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#263044">UI extensions</text>
+    <text x="892" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b">Feature panels injected at runtime</text>
+    <rect class="c4" x="1028" y="22" width="272" height="80" rx="12"/>
+    <text x="1164" y="58" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#263044">SDK + marketplace</text>
+    <text x="1164" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b">API client SDK and MCP shell</text>
+  </g>
+  <g transform="translate(56 570)">
+    <rect class="lane" width="1328" height="124" rx="16"/>
+    <rect class="lb" x="18" y="22" width="178" height="80" rx="10"/>
+    <text x="107" y="58" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#152238">Enterprise</text>
+    <text x="107" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#64748b">Private operator layer</text>
+    <rect class="c5" x="260" y="22" width="240" height="80" rx="12"/>
+    <text x="380" y="58" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#263044">Admin portal</text>
+    <text x="380" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b">Platform operator workspace</text>
+    <rect class="c5" x="516" y="22" width="240" height="80" rx="12"/>
+    <text x="636" y="58" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#263044">Product-to-Resource</text>
+    <text x="636" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b">Catalog governance and mapping</text>
+    <rect class="c5" x="772" y="22" width="240" height="80" rx="12"/>
+    <text x="892" y="58" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#263044">Provider governance</text>
+    <text x="892" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b">Discovery, readiness, lane oversight</text>
+    <rect class="c5" x="1028" y="22" width="272" height="80" rx="12"/>
+    <text x="1164" y="58" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#263044">Audit and health</text>
+    <text x="1164" y="76" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="11" fill="#64748b">Change history and telemetry</text>
+  </g>
+  <text x="720" y="762" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="13" fill="#64748b">End users start in the product tier &#xB7; Developers extend via packages &#xB7; Operators govern via the enterprise layer</text>
+</svg>

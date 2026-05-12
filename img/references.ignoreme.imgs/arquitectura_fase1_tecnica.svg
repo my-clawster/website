@@ -1,0 +1,435 @@
+<svg viewBox="0 0 1500 1340" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="1500" height="1340" fill="#FAFAFA"/>
+
+  <!-- ============== HEADER ============== -->
+  <text x="40" y="44" font-size="26" font-weight="bold" fill="#1E3A5F">IBIDEM Co. — Arquitectura Fase 1 (Técnica)</text>
+  <text x="40" y="70" font-size="14" fill="#6B7280">Evolution DataSoft · plataforma My Clawster · v1.0 · Mayo 2026</text>
+  <text x="40" y="90" font-size="13" fill="#6B7280" font-style="italic">Fase 1 = entregable único. Sub-fase 1.1 (normalización, determinística) + sub-fase 1.2 (cruce + anomalías, con IA). Diagrama para el equipo de desarrollo.</text>
+
+  <!-- Legend -->
+  <g transform="translate(960,30)">
+    <rect x="0" y="0" width="500" height="70" fill="#FFFFFF" stroke="#E5E7EB" rx="6"/>
+    <text x="14" y="20" font-size="12" font-weight="bold" fill="#374151">Leyenda</text>
+    <rect x="14" y="32" width="16" height="14" fill="#DBEAFE" stroke="#2563EB"/>
+    <text x="36" y="44" font-size="12" fill="#374151">Componente determinístico</text>
+    <rect x="190" y="32" width="16" height="14" fill="#EDE9FE" stroke="#7C3AED"/>
+    <text x="212" y="44" font-size="12" fill="#374151">Agente My Clawster (IA)</text>
+    <rect x="370" y="32" width="16" height="14" fill="#F3F4F6" stroke="#6B7280"/>
+    <text x="392" y="44" font-size="12" fill="#374151">Persistencia / cola</text>
+    <line x1="14" y1="58" x2="40" y2="58" stroke="#374151" stroke-width="2" marker-end="url(#arrowSmall)"/>
+    <text x="46" y="62" font-size="11" fill="#374151">Flujo de datos</text>
+    <line x1="180" y1="58" x2="206" y2="58" stroke="#7C3AED" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="212" y="62" font-size="11" fill="#374151">Llamada a IA (asíncrona)</text>
+  </g>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#374151"/>
+    </marker>
+    <marker id="arrowSmall" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#374151"/>
+    </marker>
+    <marker id="arrowAI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7C3AED"/>
+    </marker>
+  </defs>
+
+  <!-- ============== LAYER 1: FUENTES ============== -->
+  <g transform="translate(40,120)">
+    <rect width="1420" height="120" fill="#EFF6FF" stroke="#BFDBFE" rx="10"/>
+    <text x="14" y="22" font-size="14" font-weight="bold" fill="#1E40AF">1. Fuentes de datos — repositorio en la nube (a definir en sesión 0)</text>
+    <text x="14" y="40" font-size="11" fill="#6B7280">Opciones: SharePoint empresarial · OneDrive · Dropbox · OwnCloud (VPS propio). Versionado, respaldo y permisos por rol — el cliente elige.</text>
+
+    <!-- Excel files -->
+    <g transform="translate(20,55)">
+      <g transform="translate(0,0)">
+        <rect width="170" height="48" fill="#FFFFFF" stroke="#10B981" stroke-width="2" rx="4"/>
+        <rect x="0" y="0" width="170" height="14" fill="#10B981" rx="4"/>
+        <text x="85" y="11" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">XLSX</text>
+        <text x="85" y="30" font-size="11" fill="#111827" text-anchor="middle" font-weight="bold">Control financiero</text>
+        <text x="85" y="42" font-size="10" fill="#6B7280" text-anchor="middle">Excel maestro de Jorge</text>
+      </g>
+      <g transform="translate(180,0)">
+        <rect width="170" height="48" fill="#FFFFFF" stroke="#10B981" stroke-width="2" rx="4"/>
+        <rect x="0" y="0" width="170" height="14" fill="#10B981" rx="4"/>
+        <text x="85" y="11" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">XLSX</text>
+        <text x="85" y="30" font-size="11" fill="#111827" text-anchor="middle" font-weight="bold">Concentrado materiales</text>
+        <text x="85" y="42" font-size="10" fill="#6B7280" text-anchor="middle">Lcda. Goretti</text>
+      </g>
+      <g transform="translate(360,0)">
+        <rect width="170" height="48" fill="#FFFFFF" stroke="#10B981" stroke-width="2" rx="4"/>
+        <rect x="0" y="0" width="170" height="14" fill="#10B981" rx="4"/>
+        <text x="85" y="11" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">XLSX</text>
+        <text x="85" y="30" font-size="11" fill="#111827" text-anchor="middle" font-weight="bold">Caja chica / viáticos</text>
+        <text x="85" y="42" font-size="10" fill="#6B7280" text-anchor="middle">Reportes de residentes</text>
+      </g>
+      <g transform="translate(540,0)">
+        <rect width="170" height="48" fill="#FFFFFF" stroke="#10B981" stroke-width="2" rx="4"/>
+        <rect x="0" y="0" width="170" height="14" fill="#10B981" rx="4"/>
+        <text x="85" y="11" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">XLSX</text>
+        <text x="85" y="30" font-size="11" fill="#111827" text-anchor="middle" font-weight="bold">Nómina destajo + REPSE</text>
+        <text x="85" y="42" font-size="10" fill="#6B7280" text-anchor="middle">Subcontratos por obra</text>
+      </g>
+      <g transform="translate(720,0)">
+        <rect width="170" height="48" fill="#FFFFFF" stroke="#10B981" stroke-width="2" rx="4"/>
+        <rect x="0" y="0" width="170" height="14" fill="#10B981" rx="4"/>
+        <text x="85" y="11" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">XLSX</text>
+        <text x="85" y="30" font-size="11" fill="#111827" text-anchor="middle" font-weight="bold">Cuentas bancarias por obra</text>
+        <text x="85" y="42" font-size="10" fill="#6B7280" text-anchor="middle">10–17 cuentas activas</text>
+      </g>
+      <g transform="translate(900,0)">
+        <rect width="170" height="48" fill="#FFFFFF" stroke="#10B981" stroke-width="2" rx="4"/>
+        <rect x="0" y="0" width="170" height="14" fill="#10B981" rx="4"/>
+        <text x="85" y="11" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">XLSX</text>
+        <text x="85" y="30" font-size="11" fill="#111827" text-anchor="middle" font-weight="bold">Préstamos entre obras</text>
+        <text x="85" y="42" font-size="10" fill="#6B7280" text-anchor="middle">Saldos activos</text>
+      </g>
+      <g transform="translate(1080,0)">
+        <rect width="170" height="48" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="4,3" rx="4"/>
+        <rect x="0" y="0" width="170" height="14" fill="#9CA3AF" rx="4"/>
+        <text x="85" y="11" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">+ N formatos</text>
+        <text x="85" y="30" font-size="11" fill="#111827" text-anchor="middle" font-weight="bold">36–40 formatos totales</text>
+        <text x="85" y="42" font-size="10" fill="#6B7280" text-anchor="middle">Agrupables en ~6–8 plantillas</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow Sources -> Ingestion -->
+  <line x1="750" y1="245" x2="750" y2="270" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============== LAYER 2: INGESTA ============== -->
+  <g transform="translate(40,275)">
+    <rect width="1420" height="100" fill="#FFFFFF" stroke="#E5E7EB" rx="10"/>
+    <text x="14" y="22" font-size="14" font-weight="bold" fill="#1E3A5F">2. Capa de ingesta</text>
+    <text x="14" y="40" font-size="11" fill="#6B7280">Detección de cambios y descarga controlada — sin tocar el archivo del usuario</text>
+
+    <g transform="translate(40,52)">
+      <rect width="220" height="38" fill="#DBEAFE" stroke="#2563EB" rx="4"/>
+      <text x="110" y="17" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">Conector de fuente</text>
+      <text x="110" y="31" font-size="10" fill="#6B7280" text-anchor="middle">Graph / WebDAV / S3 según fuente</text>
+    </g>
+    <line x1="262" y1="71" x2="297" y2="71" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(300,52)">
+      <rect width="220" height="38" fill="#DBEAFE" stroke="#2563EB" rx="4"/>
+      <text x="110" y="17" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">File watcher / poll</text>
+      <text x="110" y="31" font-size="10" fill="#6B7280" text-anchor="middle">webhook + fallback cada 5 min</text>
+    </g>
+    <line x1="522" y1="71" x2="557" y2="71" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(560,52)">
+      <rect width="220" height="38" fill="#DBEAFE" stroke="#2563EB" rx="4"/>
+      <text x="110" y="17" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">Hash + dedup</text>
+      <text x="110" y="31" font-size="10" fill="#6B7280" text-anchor="middle">SHA256 — evita reproceso inútil</text>
+    </g>
+    <line x1="782" y1="71" x2="817" y2="71" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(820,52)">
+      <rect width="220" height="38" fill="#F3F4F6" stroke="#6B7280" rx="4"/>
+      <text x="110" y="17" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">Cola de ingesta</text>
+      <text x="110" y="31" font-size="10" fill="#6B7280" text-anchor="middle">Redis / RabbitMQ · reintentos</text>
+    </g>
+    <line x1="1042" y1="71" x2="1077" y2="71" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(1080,52)">
+      <rect width="220" height="38" fill="#F3F4F6" stroke="#6B7280" rx="4"/>
+      <text x="110" y="17" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">Staging local</text>
+      <text x="110" y="31" font-size="10" fill="#6B7280" text-anchor="middle">copia inmutable + metadata</text>
+    </g>
+  </g>
+
+  <!-- Arrow Ingestion -> Phase 1.1 -->
+  <line x1="750" y1="380" x2="750" y2="410" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============== LAYER 3: FASE 1.1 NORMALIZACIÓN ============== -->
+  <g transform="translate(40,415)">
+    <rect width="1420" height="240" fill="#F0F9FF" stroke="#3B82F6" stroke-width="2" rx="10"/>
+    <rect width="1420" height="32" fill="#3B82F6" rx="10"/>
+    <rect y="20" width="1420" height="12" fill="#3B82F6"/>
+    <text x="14" y="22" font-size="14" font-weight="bold" fill="#FFFFFF">FASE 1.1 — Normalización (semanas 1–6)</text>
+    <text x="500" y="22" font-size="12" fill="#DBEAFE">Objetivo: convertir 36–40 formatos heterogéneos en datos canónicos consultables.</text>
+
+    <!-- Components -->
+    <g transform="translate(30,55)">
+      <!-- Data Contracts -->
+      <rect width="200" height="80" fill="#DBEAFE" stroke="#2563EB" rx="6"/>
+      <text x="100" y="22" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">Data Contracts</text>
+      <text x="100" y="40" font-size="10" fill="#374151" text-anchor="middle">YAML por plantilla</text>
+      <text x="100" y="54" font-size="10" fill="#6B7280" text-anchor="middle">sheet, columnas,</text>
+      <text x="100" y="66" font-size="10" fill="#6B7280" text-anchor="middle">tipos, alias aceptables</text>
+    </g>
+    <line x1="232" y1="95" x2="267" y2="95" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(270,55)">
+      <!-- Parser -->
+      <rect width="200" height="80" fill="#DBEAFE" stroke="#2563EB" rx="6"/>
+      <text x="100" y="22" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">Parser tolerante</text>
+      <text x="100" y="40" font-size="10" fill="#374151" text-anchor="middle">Python · pandas · openpyxl</text>
+      <text x="100" y="54" font-size="10" fill="#6B7280" text-anchor="middle">Detecta header, ignora</text>
+      <text x="100" y="66" font-size="10" fill="#6B7280" text-anchor="middle">filas de totales y notas</text>
+    </g>
+    <line x1="472" y1="95" x2="507" y2="95" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(510,55)">
+      <!-- Schema mapper -->
+      <rect width="200" height="80" fill="#DBEAFE" stroke="#2563EB" rx="6"/>
+      <text x="100" y="22" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">Schema mapper</text>
+      <text x="100" y="40" font-size="10" fill="#374151" text-anchor="middle">column aliasing</text>
+      <text x="100" y="54" font-size="10" fill="#6B7280" text-anchor="middle">"Mat." → "material"</text>
+      <text x="100" y="66" font-size="10" fill="#6B7280" text-anchor="middle">type coercion + null policy</text>
+    </g>
+    <line x1="712" y1="95" x2="747" y2="95" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(750,55)">
+      <!-- Deterministic Classifier (no AI in Phase 1.1) -->
+      <rect width="240" height="80" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" rx="6"/>
+      <text x="120" y="20" font-size="11" font-weight="bold" fill="#111827" text-anchor="middle">Clasificador determinístico</text>
+      <text x="120" y="38" font-size="10" fill="#374151" text-anchor="middle">concepto → categoría/subcategoría</text>
+      <text x="120" y="52" font-size="10" fill="#6B7280" text-anchor="middle">Catálogo de productos + diccionario</text>
+      <text x="120" y="64" font-size="10" fill="#6B7280" text-anchor="middle">+ cola humana (sin IA en 1.1)</text>
+    </g>
+    <line x1="992" y1="95" x2="1027" y2="95" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(1030,55)">
+      <!-- Normalizer -->
+      <rect width="200" height="80" fill="#DBEAFE" stroke="#2563EB" rx="6"/>
+      <text x="100" y="22" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">Normalizer</text>
+      <text x="100" y="40" font-size="10" fill="#374151" text-anchor="middle">moneda, fechas, RFC</text>
+      <text x="100" y="54" font-size="10" fill="#6B7280" text-anchor="middle">obra_id resuelto contra</text>
+      <text x="100" y="66" font-size="10" fill="#6B7280" text-anchor="middle">catálogo maestro</text>
+    </g>
+    <line x1="1232" y1="95" x2="1267" y2="95" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(1270,55)">
+      <!-- Validador determinístico -->
+      <rect width="140" height="80" fill="#DBEAFE" stroke="#2563EB" rx="6"/>
+      <text x="70" y="22" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">Validador</text>
+      <text x="70" y="40" font-size="10" fill="#374151" text-anchor="middle">tipo, rango, NOT NULL</text>
+      <text x="70" y="54" font-size="10" fill="#6B7280" text-anchor="middle">9 reglas de Jorge</text>
+      <text x="70" y="66" font-size="10" fill="#6B7280" text-anchor="middle">+ contrato fiscal</text>
+    </g>
+
+    <!-- Catálogos / Referencias -->
+    <g transform="translate(30,150)">
+      <rect width="450" height="76" fill="#FFFFFF" stroke="#9CA3AF" stroke-dasharray="4,3" rx="6"/>
+      <text x="14" y="20" font-size="11" font-weight="bold" fill="#374151">Catálogos de referencia (lectura)</text>
+      <text x="14" y="38" font-size="10" fill="#6B7280">· obras (ID, nombre, cliente, presupuesto, tipo, responsable)</text>
+      <text x="14" y="52" font-size="10" fill="#6B7280">· categorías y subcategorías (11 + ~70)</text>
+      <text x="14" y="66" font-size="10" fill="#6B7280">· proveedores · cuentas bancarias · oficios REPSE</text>
+    </g>
+
+    <!-- Cola de revisión humana -->
+    <g transform="translate(500,150)">
+      <rect width="350" height="76" fill="#FEF3C7" stroke="#D97706" rx="6"/>
+      <text x="14" y="20" font-size="11" font-weight="bold" fill="#92400E">Cola de revisión humana</text>
+      <text x="14" y="38" font-size="10" fill="#92400E">Filas con confidence &lt; umbral o validación rota</text>
+      <text x="14" y="52" font-size="10" fill="#92400E">UI mínima → aprobación de Goretti / Rogelio</text>
+      <text x="14" y="66" font-size="10" fill="#92400E">→ se persiste el mapping para futuras filas similares</text>
+    </g>
+
+    <!-- Output annotation -->
+    <g transform="translate(880,150)">
+      <rect width="510" height="76" fill="#FFFFFF" stroke="#10B981" stroke-width="2" rx="6"/>
+      <text x="14" y="20" font-size="11" font-weight="bold" fill="#065F46">Salida de la sub-fase 1.1 (toda determinística)</text>
+      <text x="14" y="38" font-size="10" fill="#374151">→ Tablas pobladas: raw_ingest, obras, movimientos, categorias, eventos</text>
+      <text x="14" y="52" font-size="10" fill="#374151">→ Dashboard ya puede consultar KPIs (gasto x partida, % vs presupuesto)</text>
+      <text x="14" y="66" font-size="10" fill="#374151">→ Sigue funcionando aunque My Clawster esté caído (resiliencia operativa)</text>
+    </g>
+  </g>
+
+  <!-- Arrow Phase 1.1 -> Phase 1.2 -->
+  <line x1="750" y1="660" x2="750" y2="690" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="760" y="680" font-size="11" fill="#6B7280">datos normalizados</text>
+
+  <!-- ============== LAYER 4: FASE 1.2 CRUCE + ANOMALÍAS ============== -->
+  <g transform="translate(40,695)">
+    <rect width="1420" height="250" fill="#FFFBEB" stroke="#D97706" stroke-width="2" rx="10"/>
+    <rect width="1420" height="32" fill="#D97706" rx="10"/>
+    <rect y="20" width="1420" height="12" fill="#D97706"/>
+    <text x="14" y="22" font-size="14" font-weight="bold" fill="#FFFFFF">FASE 1.2 — Cruce de información y detección de anomalías (semanas 7–12)</text>
+    <text x="610" y="22" font-size="12" fill="#FEF3C7">Objetivo: detectar fraudes (caso Zamora), desviaciones paramétricas y saldos.</text>
+
+    <!-- Rules engine -->
+    <g transform="translate(30,55)">
+      <rect width="240" height="170" fill="#DBEAFE" stroke="#2563EB" rx="6"/>
+      <text x="120" y="22" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">Motor de reglas declarativo</text>
+      <text x="120" y="42" font-size="10" fill="#6B7280" text-anchor="middle">Lee rules.yaml versionado en Git</text>
+      <line x1="14" y1="52" x2="226" y2="52" stroke="#9CA3AF" stroke-dasharray="3,2"/>
+      <text x="14" y="68" font-size="10" fill="#374151">· egreso requiere obra_id</text>
+      <text x="14" y="82" font-size="10" fill="#374151">· CFDI obligatorio &gt; $X</text>
+      <text x="14" y="96" font-size="10" fill="#374151">· caja chica reporte &lt; 24h</text>
+      <text x="14" y="110" font-size="10" fill="#374151">· REPSE activo en subcontrato</text>
+      <text x="14" y="124" font-size="10" fill="#374151">· materiales con remisión</text>
+      <text x="14" y="138" font-size="10" fill="#374151">· margen 8–12% por tipo obra</text>
+      <text x="14" y="152" font-size="10" fill="#6B7280" font-style="italic">+ las que Rogelio agregue</text>
+    </g>
+
+    <!-- AI Matcher -->
+    <g transform="translate(290,55)">
+      <rect width="320" height="170" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2" rx="6"/>
+      <text x="160" y="22" font-size="12" font-weight="bold" fill="#5B21B6" text-anchor="middle">My Clawster · Agente "Matcher"</text>
+      <text x="160" y="40" font-size="10" fill="#6B7280" text-anchor="middle">Cruza documentos por correspondencia difusa</text>
+      <line x1="14" y1="50" x2="306" y2="50" stroke="#C4B5FD" stroke-dasharray="3,2"/>
+      <g transform="translate(14,60)">
+        <rect width="290" height="32" fill="#FFFFFF" stroke="#C4B5FD" rx="4"/>
+        <text x="10" y="14" font-size="10" font-weight="bold" fill="#374151">Remisión ↔ Factura</text>
+        <text x="10" y="26" font-size="10" fill="#6B7280">detecta nº de remisión repetido (caso Zamora)</text>
+      </g>
+      <g transform="translate(14,98)">
+        <rect width="290" height="32" fill="#FFFFFF" stroke="#C4B5FD" rx="4"/>
+        <text x="10" y="14" font-size="10" font-weight="bold" fill="#374151">CFDI ↔ Egreso bancario</text>
+        <text x="10" y="26" font-size="10" fill="#6B7280">monto + RFC + fecha ± 3 días</text>
+      </g>
+      <g transform="translate(14,136)">
+        <rect width="290" height="22" fill="#FFFFFF" stroke="#C4B5FD" rx="4"/>
+        <text x="10" y="14" font-size="10" font-weight="bold" fill="#374151">Requisición ↔ Material recibido (Goretti)</text>
+      </g>
+    </g>
+
+    <!-- AI Anomaly detector -->
+    <g transform="translate(630,55)">
+      <rect width="320" height="170" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2" rx="6"/>
+      <text x="160" y="22" font-size="12" font-weight="bold" fill="#5B21B6" text-anchor="middle">My Clawster · Agente "Anomaly"</text>
+      <text x="160" y="40" font-size="10" fill="#6B7280" text-anchor="middle">Detecta desviaciones del comportamiento esperado</text>
+      <line x1="14" y1="50" x2="306" y2="50" stroke="#C4B5FD" stroke-dasharray="3,2"/>
+      <g transform="translate(14,60)">
+        <rect width="290" height="32" fill="#FFFFFF" stroke="#C4B5FD" rx="4"/>
+        <text x="10" y="14" font-size="10" font-weight="bold" fill="#374151">Partida fuera de rango paramétrico</text>
+        <text x="10" y="26" font-size="10" fill="#6B7280">ej: MO &gt; 22% en obra mormona</text>
+      </g>
+      <g transform="translate(14,98)">
+        <rect width="290" height="32" fill="#FFFFFF" stroke="#C4B5FD" rx="4"/>
+        <text x="10" y="14" font-size="10" font-weight="bold" fill="#374151">Precio anómalo vs histórico</text>
+        <text x="10" y="26" font-size="10" fill="#6B7280">ej: cemento +30% del promedio 90 días</text>
+      </g>
+      <g transform="translate(14,136)">
+        <rect width="290" height="22" fill="#FFFFFF" stroke="#C4B5FD" rx="4"/>
+        <text x="10" y="14" font-size="10" font-weight="bold" fill="#374151">Gasto duplicado · proveedor sin alta</text>
+      </g>
+    </g>
+
+    <!-- Reconciliations -->
+    <g transform="translate(970,55)">
+      <rect width="220" height="170" fill="#DBEAFE" stroke="#2563EB" rx="6"/>
+      <text x="110" y="22" font-size="12" font-weight="bold" fill="#111827" text-anchor="middle">Conciliaciones</text>
+      <text x="110" y="40" font-size="10" fill="#6B7280" text-anchor="middle">Determinísticas en SQL</text>
+      <line x1="14" y1="50" x2="206" y2="50" stroke="#9CA3AF" stroke-dasharray="3,2"/>
+      <text x="14" y="68" font-size="10" fill="#374151">· Préstamos entre obras</text>
+      <text x="14" y="80" font-size="10" fill="#6B7280">  prestamo - devuelto = saldo</text>
+      <text x="14" y="98" font-size="10" fill="#374151">· Caja chica abierta &gt; 24h</text>
+      <text x="14" y="116" font-size="10" fill="#374151">· Estimación vs avance</text>
+      <text x="14" y="134" font-size="10" fill="#374151">· Saldo bancario por obra</text>
+      <text x="14" y="152" font-size="10" fill="#374151">· Crédito proveedor (días)</text>
+    </g>
+
+    <!-- Alert engine -->
+    <g transform="translate(1210,55)">
+      <rect width="180" height="170" fill="#FECACA" stroke="#DC2626" rx="6"/>
+      <text x="90" y="22" font-size="12" font-weight="bold" fill="#7F1D1D" text-anchor="middle">Motor de alertas</text>
+      <text x="90" y="40" font-size="10" fill="#7F1D1D" text-anchor="middle">Severidad + ruteo</text>
+      <line x1="14" y1="50" x2="166" y2="50" stroke="#FCA5A5" stroke-dasharray="3,2"/>
+      <text x="14" y="68" font-size="10" fill="#7F1D1D">· Crítica → Jorge</text>
+      <text x="14" y="84" font-size="10" fill="#7F1D1D">· Operativa → Goretti</text>
+      <text x="14" y="100" font-size="10" fill="#7F1D1D">· Campo → residente</text>
+      <text x="14" y="118" font-size="10" fill="#7F1D1D">· Fiscal → contadora</text>
+      <text x="14" y="138" font-size="10" fill="#7F1D1D">Canales: dashboard,</text>
+      <text x="14" y="150" font-size="10" fill="#7F1D1D">email, WhatsApp opt-in</text>
+    </g>
+  </g>
+
+  <!-- Arrow Phase 1.2 -> Persistence -->
+  <line x1="750" y1="950" x2="750" y2="980" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============== LAYER 5: PERSISTENCIA + API ============== -->
+  <g transform="translate(40,985)">
+    <rect width="1420" height="160" fill="#F3F4F6" stroke="#6B7280" rx="10"/>
+    <text x="14" y="22" font-size="14" font-weight="bold" fill="#1E3A5F">3. Persistencia canónica + API — la BD vive con el cliente, IBIDEM elige el motor</text>
+    <text x="14" y="40" font-size="11" fill="#6B7280">Opciones: PostgreSQL en VPS · Supabase · SQLite (D1 / Cloudflare) · backups diarios · cifrado en reposo. My Clawster (en infra Evolution) escribe vía API segura.</text>
+
+    <!-- Tables -->
+    <g transform="translate(30,55)">
+      <rect width="140" height="44" fill="#FFFFFF" stroke="#6B7280" rx="4"/>
+      <text x="70" y="20" font-size="11" font-weight="bold" fill="#111827" text-anchor="middle">raw_ingest</text>
+      <text x="70" y="34" font-size="9" fill="#6B7280" text-anchor="middle">copia inmutable</text>
+    </g>
+    <g transform="translate(180,55)">
+      <rect width="120" height="44" fill="#FFFFFF" stroke="#6B7280" rx="4"/>
+      <text x="60" y="20" font-size="11" font-weight="bold" fill="#111827" text-anchor="middle">obras</text>
+      <text x="60" y="34" font-size="9" fill="#6B7280" text-anchor="middle">catálogo maestro</text>
+    </g>
+    <g transform="translate(310,55)">
+      <rect width="140" height="44" fill="#FFFFFF" stroke="#6B7280" rx="4"/>
+      <text x="70" y="20" font-size="11" font-weight="bold" fill="#111827" text-anchor="middle">movimientos</text>
+      <text x="70" y="34" font-size="9" fill="#6B7280" text-anchor="middle">hechos financieros</text>
+    </g>
+    <g transform="translate(460,55)">
+      <rect width="140" height="44" fill="#FFFFFF" stroke="#6B7280" rx="4"/>
+      <text x="70" y="20" font-size="11" font-weight="bold" fill="#111827" text-anchor="middle">categorías</text>
+      <text x="70" y="34" font-size="9" fill="#6B7280" text-anchor="middle">11 + subcategorías</text>
+    </g>
+    <g transform="translate(610,55)">
+      <rect width="140" height="44" fill="#FFFFFF" stroke="#6B7280" rx="4"/>
+      <text x="70" y="20" font-size="11" font-weight="bold" fill="#111827" text-anchor="middle">validaciones</text>
+      <text x="70" y="34" font-size="9" fill="#6B7280" text-anchor="middle">resultado de reglas</text>
+    </g>
+    <g transform="translate(760,55)">
+      <rect width="140" height="44" fill="#FFFFFF" stroke="#6B7280" rx="4"/>
+      <text x="70" y="20" font-size="11" font-weight="bold" fill="#111827" text-anchor="middle">conciliaciones</text>
+      <text x="70" y="34" font-size="9" fill="#6B7280" text-anchor="middle">matches y saldos</text>
+    </g>
+    <g transform="translate(910,55)">
+      <rect width="120" height="44" fill="#FFFFFF" stroke="#6B7280" rx="4"/>
+      <text x="60" y="20" font-size="11" font-weight="bold" fill="#111827" text-anchor="middle">alertas</text>
+      <text x="60" y="34" font-size="9" fill="#6B7280" text-anchor="middle">severidad + estado</text>
+    </g>
+    <g transform="translate(1040,55)">
+      <rect width="160" height="44" fill="#FFFFFF" stroke="#6B7280" rx="4"/>
+      <text x="80" y="20" font-size="11" font-weight="bold" fill="#111827" text-anchor="middle">events (audit)</text>
+      <text x="80" y="34" font-size="9" fill="#6B7280" text-anchor="middle">lineage inmutable</text>
+    </g>
+    <g transform="translate(1210,55)">
+      <rect width="180" height="44" fill="#FFFFFF" stroke="#6B7280" rx="4"/>
+      <text x="90" y="20" font-size="11" font-weight="bold" fill="#111827" text-anchor="middle">rule_versions</text>
+      <text x="90" y="34" font-size="9" fill="#6B7280" text-anchor="middle">historial de reglas</text>
+    </g>
+
+    <!-- API Layer -->
+    <g transform="translate(30,110)">
+      <rect width="1360" height="38" fill="#1E3A5F" rx="4"/>
+      <text x="680" y="17" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">API REST/GraphQL · FastAPI · JWT + RBAC (Jorge ve todo · Goretti operativo · residente solo su obra · contadora fiscal)</text>
+      <text x="680" y="32" font-size="10" fill="#DBEAFE" text-anchor="middle">Endpoints: /obras · /kpis · /alertas · /movimientos/{id}/lineage · /reglas (lectura)</text>
+    </g>
+  </g>
+
+  <!-- Arrow API -> Consumers -->
+  <line x1="380" y1="1150" x2="380" y2="1180" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="750" y1="1150" x2="750" y2="1180" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1120" y1="1150" x2="1120" y2="1180" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============== LAYER 6: CONSUMIDORES ============== -->
+  <g transform="translate(40,1185)">
+    <g transform="translate(0,0)">
+      <rect width="450" height="120" fill="#FFFFFF" stroke="#10B981" stroke-width="2" rx="10"/>
+      <text x="225" y="24" font-size="13" font-weight="bold" fill="#065F46" text-anchor="middle">Dashboard (responsabilidad de Antonio + dev)</text>
+      <text x="14" y="46" font-size="10" fill="#374151">· KPIs por obra y consolidados (ingreso, egreso, utilidad, % vs presupuesto)</text>
+      <text x="14" y="62" font-size="10" fill="#374151">· Estado financiero en tiempo real con drill-down a movimiento</text>
+      <text x="14" y="78" font-size="10" fill="#374151">· Lineage: cada número rastreable hasta el archivo Excel y la fila origen</text>
+      <text x="14" y="94" font-size="10" fill="#374151">· Vistas: ejecutivo (Jorge) · operativo (Goretti) · campo (residente)</text>
+      <text x="14" y="110" font-size="10" fill="#6B7280" font-style="italic">Stack sugerido: React + Tailwind · PWA para móvil</text>
+    </g>
+
+    <g transform="translate(485,0)">
+      <rect width="450" height="120" fill="#FFFFFF" stroke="#D97706" stroke-width="2" rx="10"/>
+      <text x="225" y="24" font-size="13" font-weight="bold" fill="#92400E" text-anchor="middle">Cola de revisión humana</text>
+      <text x="14" y="46" font-size="10" fill="#374151">· Filas con confidence baja del Clasificador (revisar y aprobar mapping)</text>
+      <text x="14" y="62" font-size="10" fill="#374151">· Matches dudosos del Matcher (¿esta remisión es esta factura?)</text>
+      <text x="14" y="78" font-size="10" fill="#374151">· Alertas que requieren contexto humano antes de notificar a Jorge</text>
+      <text x="14" y="94" font-size="10" fill="#374151">· Rogelio / Goretti operan; cada decisión retroalimenta los modelos</text>
+      <text x="14" y="110" font-size="10" fill="#6B7280" font-style="italic">UI mínima inicial (puede ser Streamlit / tabla web simple)</text>
+    </g>
+
+    <g transform="translate(970,0)">
+      <rect width="450" height="120" fill="#FFFFFF" stroke="#DC2626" stroke-width="2" rx="10"/>
+      <text x="225" y="24" font-size="13" font-weight="bold" fill="#7F1D1D" text-anchor="middle">Notificaciones de alerta</text>
+      <text x="14" y="46" font-size="10" fill="#374151">· Email transaccional (SendGrid / SES)</text>
+      <text x="14" y="62" font-size="10" fill="#374151">· WhatsApp opt-in vía API oficial (canal natural del equipo IBIDEM)</text>
+      <text x="14" y="78" font-size="10" fill="#374151">· Push al dashboard (badge + bell)</text>
+      <text x="14" y="94" font-size="10" fill="#374151">· Reglas de ruteo por severidad y rol</text>
+      <text x="14" y="110" font-size="10" fill="#6B7280" font-style="italic">Sin spam: cap de N alertas/día con priorización</text>
+    </g>
+  </g>
+
+</svg>

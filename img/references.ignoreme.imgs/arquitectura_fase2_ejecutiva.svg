@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1500 1180" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="webGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DBEAFE"/>
+      <stop offset="100%" stop-color="#BFDBFE"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowBig" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#1E3A5F"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1500" height="1180" fill="#FFFFFF"/>
+
+  <!-- Header band -->
+  <rect width="1500" height="110" fill="#1E3A5F"/>
+  <text x="50" y="50" font-size="28" font-weight="bold" fill="#FFFFFF">IBIDEM Co. — Tu equipo deja la talacha atrás (Fase 2)</text>
+  <text x="50" y="80" font-size="16" fill="#BFDBFE">Captura única desde campo · web app para oficina · móvil para residentes · ligado a la Fase 1</text>
+  <text x="50" y="100" font-size="12" fill="#93C5FD" font-style="italic">Propuesta preparada por Evolution DataSoft · plataforma My Clawster</text>
+
+  <!-- Right header tagline -->
+  <g transform="translate(1100,30)">
+    <rect width="370" height="64" fill="#FFFFFF" rx="8" opacity="0.95"/>
+    <text x="185" y="26" font-size="14" font-weight="bold" fill="#1E3A5F" text-anchor="middle">"Una sola captura — y se acabó."</text>
+    <text x="185" y="46" font-size="12" fill="#374151" text-anchor="middle">Adiós papel, Word y recapturas. Tu equipo</text>
+    <text x="185" y="60" font-size="12" fill="#374151" text-anchor="middle">captura donde ocurre el dato, una sola vez.</text>
+  </g>
+
+  <!-- ============== ROW 1: El recorrido del dato ============== -->
+  <text x="750" y="150" font-size="18" font-weight="bold" fill="#1E3A5F" text-anchor="middle">El recorrido del dato en la Fase 2</text>
+
+  <!-- 1. Campo (residente con móvil) -->
+  <g transform="translate(40,180)" filter="url(#softShadow)">
+    <rect width="280" height="240" fill="#F9FAFB" stroke="#10B981" stroke-width="2" rx="12"/>
+    <text x="140" y="32" font-size="16" font-weight="bold" fill="#065F46" text-anchor="middle">1. En la obra</text>
+    <text x="140" y="52" font-size="11" fill="#6B7280" text-anchor="middle">Residente con celular · React Native</text>
+
+    <!-- Phone illustration -->
+    <g transform="translate(95,72)">
+      <rect width="90" height="140" fill="url(#phoneGrad)" rx="14"/>
+      <rect x="6" y="18" width="78" height="106" fill="#FFFFFF" rx="3"/>
+      <!-- Screen content -->
+      <text x="45" y="32" font-size="7" fill="#065F46" text-anchor="middle" font-weight="bold">Avance · Hoy</text>
+      <rect x="12" y="38" width="66" height="22" fill="#ECFDF5" stroke="#10B981"/>
+      <text x="16" y="50" font-size="6" fill="#065F46" font-weight="bold">📷 Foto + GPS</text>
+      <text x="16" y="58" font-size="6" fill="#374151">Cimentación 80%</text>
+      <rect x="12" y="64" width="66" height="22" fill="#FEF3C7" stroke="#D97706"/>
+      <text x="16" y="76" font-size="6" fill="#92400E" font-weight="bold">Requisición</text>
+      <text x="16" y="84" font-size="6" fill="#374151">Cemento 20 sacos</text>
+      <rect x="12" y="90" width="66" height="22" fill="#EFF6FF" stroke="#3B82F6"/>
+      <text x="16" y="102" font-size="6" fill="#1E40AF" font-weight="bold">Caja chica</text>
+      <text x="16" y="110" font-size="6" fill="#374151">$450 — viáticos</text>
+      <!-- Home button -->
+      <circle cx="45" cy="132" r="3" fill="#FFFFFF" stroke="#047857"/>
+    </g>
+
+    <text x="140" y="232" font-size="10" fill="#6B7280" text-anchor="middle" font-style="italic">Captura en el momento. Sin papel.</text>
+  </g>
+
+  <!-- Arrow 1->2 -->
+  <line x1="330" y1="300" x2="380" y2="300" stroke="#1E3A5F" stroke-width="3" marker-end="url(#arrowBig)"/>
+
+  <!-- 2. La nube (Fase 1 + 2) -->
+  <g transform="translate(390,180)" filter="url(#softShadow)">
+    <rect width="320" height="240" fill="url(#cloudGrad)" stroke="#2563EB" stroke-width="2" rx="12"/>
+    <text x="160" y="32" font-size="16" font-weight="bold" fill="#1E40AF" text-anchor="middle">2. En la nube</text>
+    <text x="160" y="52" font-size="11" fill="#1E40AF" text-anchor="middle">API segura · BD canónica de la Fase 1</text>
+
+    <!-- Cloud + DB illustration -->
+    <g transform="translate(80,68)">
+      <path d="M 30,60 Q 0,60 0,40 Q 0,20 25,18 Q 30,0 60,5 Q 90,0 95,25 Q 120,25 120,45 Q 120,60 100,60 Z" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+      <text x="60" y="46" font-size="22" fill="#2563EB" text-anchor="middle">☁</text>
+    </g>
+
+    <!-- DB stack icon -->
+    <g transform="translate(115,150)">
+      <ellipse cx="45" cy="6" rx="44" ry="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+      <rect x="1" y="6" width="88" height="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+      <ellipse cx="45" cy="20" rx="44" ry="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+      <rect x="1" y="20" width="88" height="14" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+      <ellipse cx="45" cy="34" rx="44" ry="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+      <text x="45" y="14" font-size="9" fill="#1E40AF" text-anchor="middle" font-weight="bold">BD canónica</text>
+      <text x="45" y="29" font-size="8" fill="#1E40AF" text-anchor="middle">Fase 1 + Fase 2</text>
+    </g>
+
+    <text x="160" y="222" font-size="10" fill="#6B7280" text-anchor="middle" font-style="italic">My Clawster sigue vigilando todo.</text>
+  </g>
+
+  <!-- Arrow 2->3 -->
+  <line x1="720" y1="300" x2="770" y2="300" stroke="#1E3A5F" stroke-width="3" marker-end="url(#arrowBig)"/>
+
+  <!-- 3. En oficina (Goretti, contadora, Jorge) -->
+  <g transform="translate(780,180)" filter="url(#softShadow)">
+    <rect width="320" height="240" fill="#F9FAFB" stroke="#3B82F6" stroke-width="2" rx="12"/>
+    <text x="160" y="32" font-size="16" font-weight="bold" fill="#1E40AF" text-anchor="middle">3. En la oficina</text>
+    <text x="160" y="52" font-size="11" fill="#6B7280" text-anchor="middle">Web app · React + TypeScript · PWA</text>
+
+    <!-- Browser window mockup -->
+    <g transform="translate(50,72)">
+      <rect width="220" height="146" fill="#FFFFFF" stroke="#1E40AF" stroke-width="1.5" rx="6"/>
+      <rect width="220" height="22" fill="url(#webGrad)" rx="6"/>
+      <rect y="12" width="220" height="10" fill="#1D4ED8"/>
+      <circle cx="12" cy="11" r="3" fill="#EF4444"/>
+      <circle cx="22" cy="11" r="3" fill="#F59E0B"/>
+      <circle cx="32" cy="11" r="3" fill="#10B981"/>
+      <text x="120" y="15" font-size="8" fill="#FFFFFF" text-anchor="middle">Materiales · IBIDEM</text>
+
+      <!-- Tabs -->
+      <rect x="6" y="28" width="48" height="14" fill="#3B82F6" rx="2"/>
+      <text x="30" y="37" font-size="7" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Materiales</text>
+      <text x="68" y="37" font-size="7" fill="#6B7280">Avance</text>
+      <text x="100" y="37" font-size="7" fill="#6B7280">Almacén</text>
+      <text x="138" y="37" font-size="7" fill="#6B7280">Proveed.</text>
+
+      <!-- Content rows -->
+      <rect x="6" y="48" width="208" height="18" fill="#EFF6FF"/>
+      <text x="10" y="60" font-size="7" fill="#1E40AF" font-weight="bold">Req. #4521</text>
+      <text x="120" y="60" font-size="7" fill="#374151">Eva Park · cemento</text>
+      <text x="208" y="60" font-size="7" fill="#10B981" text-anchor="end" font-weight="bold">✓ recibido</text>
+
+      <rect x="6" y="68" width="208" height="18" fill="#FFFBEB"/>
+      <text x="10" y="80" font-size="7" fill="#92400E" font-weight="bold">OC #4523</text>
+      <text x="120" y="80" font-size="7" fill="#374151">Mormona · acero</text>
+      <text x="208" y="80" font-size="7" fill="#D97706" text-anchor="end" font-weight="bold">⏳ pendiente</text>
+
+      <rect x="6" y="88" width="208" height="18" fill="#FFFFFF"/>
+      <text x="10" y="100" font-size="7" fill="#374151" font-weight="bold">Req. #4524</text>
+      <text x="120" y="100" font-size="7" fill="#374151">OXXO Zamora · varilla</text>
+      <text x="208" y="100" font-size="7" fill="#6B7280" text-anchor="end">capturada</text>
+
+      <!-- Footer KPIs -->
+      <rect x="6" y="112" width="208" height="28" fill="#F3F4F6"/>
+      <text x="56" y="124" font-size="7" fill="#6B7280" text-anchor="middle">Pendientes hoy</text>
+      <text x="56" y="135" font-size="11" fill="#1E40AF" text-anchor="middle" font-weight="bold">12</text>
+      <text x="160" y="124" font-size="7" fill="#6B7280" text-anchor="middle">Para pagar viernes</text>
+      <text x="160" y="135" font-size="11" fill="#D97706" text-anchor="middle" font-weight="bold">$284K</text>
+    </g>
+
+    <text x="160" y="234" font-size="10" fill="#6B7280" text-anchor="middle" font-style="italic">Goretti deja Excel. Jorge ve sus viernes en pantalla.</text>
+  </g>
+
+  <!-- Arrow 3->4 (vertical down to dashboard) -->
+  <line x1="1110" y1="300" x2="1160" y2="300" stroke="#1E3A5F" stroke-width="3" marker-end="url(#arrowBig)"/>
+
+  <!-- 4. Dashboard Fase 1 (existing) -->
+  <g transform="translate(1170,180)" filter="url(#softShadow)">
+    <rect width="290" height="240" fill="#F9FAFB" stroke="#1E3A5F" stroke-width="2" stroke-dasharray="6,3" rx="12"/>
+    <text x="145" y="32" font-size="16" font-weight="bold" fill="#1E3A5F" text-anchor="middle">4. Dashboard Fase 1</text>
+    <text x="145" y="52" font-size="11" fill="#6B7280" text-anchor="middle">El que ya tienes — ahora con datos en vivo</text>
+
+    <!-- Dashboard mockup -->
+    <g transform="translate(50,72)">
+      <rect width="190" height="146" fill="#FFFFFF" stroke="#1E3A5F" rx="6"/>
+      <rect width="190" height="22" fill="#1E3A5F" rx="6"/>
+      <rect y="12" width="190" height="10" fill="#1E3A5F"/>
+      <text x="95" y="16" font-size="9" fill="#FFFFFF" text-anchor="middle" font-weight="bold">IBIDEM · Hoy</text>
+
+      <rect x="6" y="28" width="178" height="22" fill="#ECFDF5" stroke="#10B981"/>
+      <text x="10" y="42" font-size="8" fill="#065F46" font-weight="bold">Avance físico promedio</text>
+      <text x="178" y="42" font-size="8" fill="#065F46" text-anchor="end" font-weight="bold">62%</text>
+
+      <rect x="6" y="54" width="178" height="22" fill="#FEF3C7" stroke="#D97706"/>
+      <text x="10" y="68" font-size="8" fill="#92400E" font-weight="bold">Estimaciones por cobrar</text>
+      <text x="178" y="68" font-size="8" fill="#92400E" text-anchor="end" font-weight="bold">$2.1M</text>
+
+      <text x="10" y="90" font-size="7" fill="#6B7280">Avance × obra</text>
+      <rect x="10" y="94" width="100" height="6" fill="#10B981"/>
+      <rect x="10" y="104" width="140" height="6" fill="#10B981"/>
+      <rect x="10" y="114" width="60" height="6" fill="#D97706"/>
+      <rect x="10" y="124" width="120" height="6" fill="#10B981"/>
+      <rect x="10" y="134" width="40" height="6" fill="#DC2626"/>
+    </g>
+
+    <text x="145" y="234" font-size="10" fill="#6B7280" text-anchor="middle" font-style="italic">Mismo dashboard, ahora alimentado en tiempo real.</text>
+  </g>
+
+  <!-- ============== ROW 2: Los cuatro módulos ============== -->
+  <text x="750" y="464" font-size="18" font-weight="bold" fill="#1E3A5F" text-anchor="middle">Los cuatro módulos, en el orden correcto</text>
+  <text x="750" y="484" font-size="12" fill="#6B7280" text-anchor="middle" font-style="italic">Cada uno entrega valor al cerrar — no esperas a la última semana para ver resultados.</text>
+
+  <!-- Module 2.1 Materiales -->
+  <g transform="translate(40,500)" filter="url(#softShadow)">
+    <rect width="340" height="180" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2" rx="12"/>
+    <rect width="340" height="44" fill="#3B82F6" rx="12"/>
+    <rect y="32" width="340" height="12" fill="#3B82F6"/>
+    <text x="20" y="29" font-size="14" font-weight="bold" fill="#FFFFFF">2.1 · Materiales y compras</text>
+    <text x="270" y="29" font-size="12" fill="#DBEAFE">Sem 1–8</text>
+    <text x="20" y="68" font-size="12" font-weight="bold" fill="#1E40AF">Goretti deja su Excel.</text>
+    <g transform="translate(20,80)">
+      <circle cx="6" cy="8" r="3" fill="#3B82F6"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Requisición digital desde campo</text>
+    </g>
+    <g transform="translate(20,98)">
+      <circle cx="6" cy="8" r="3" fill="#3B82F6"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Orden de compra con un clic</text>
+    </g>
+    <g transform="translate(20,116)">
+      <circle cx="6" cy="8" r="3" fill="#3B82F6"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Recepción cruzada con remisión</text>
+    </g>
+    <g transform="translate(20,134)">
+      <circle cx="6" cy="8" r="3" fill="#3B82F6"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Carpeta digital por obra (no más papel)</text>
+    </g>
+    <text x="20" y="168" font-size="10" fill="#1E40AF" font-style="italic">Cierra el dolor #2: captura duplicada.</text>
+  </g>
+
+  <!-- Module 2.2 Avance -->
+  <g transform="translate(395,500)" filter="url(#softShadow)">
+    <rect width="340" height="180" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="12"/>
+    <rect width="340" height="44" fill="#10B981" rx="12"/>
+    <rect y="32" width="340" height="12" fill="#10B981"/>
+    <text x="20" y="29" font-size="14" font-weight="bold" fill="#FFFFFF">2.2 · Avance de obra (móvil)</text>
+    <text x="260" y="29" font-size="12" fill="#D1FAE5">Sem 9–16</text>
+    <text x="20" y="68" font-size="12" font-weight="bold" fill="#065F46">Residentes capturan donde ocurre.</text>
+    <g transform="translate(20,80)">
+      <circle cx="6" cy="8" r="3" fill="#10B981"/>
+      <text x="18" y="12" font-size="11" fill="#374151">App nativa con foto + GPS + fecha</text>
+    </g>
+    <g transform="translate(20,98)">
+      <circle cx="6" cy="8" r="3" fill="#10B981"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Avance físico ligado al financiero</text>
+    </g>
+    <g transform="translate(20,116)">
+      <circle cx="6" cy="8" r="3" fill="#10B981"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Estimaciones de cobro automáticas</text>
+    </g>
+    <g transform="translate(20,134)">
+      <circle cx="6" cy="8" r="3" fill="#10B981"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Reporte fotográfico por obra</text>
+    </g>
+    <text x="20" y="168" font-size="10" fill="#065F46" font-style="italic">Convierte avance en cobro sin recapturar.</text>
+  </g>
+
+  <!-- Module 2.3 Almacén -->
+  <g transform="translate(750,500)" filter="url(#softShadow)">
+    <rect width="340" height="180" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2" rx="12"/>
+    <rect width="340" height="44" fill="#F59E0B" rx="12"/>
+    <rect y="32" width="340" height="12" fill="#F59E0B"/>
+    <text x="20" y="29" font-size="14" font-weight="bold" fill="#FFFFFF">2.3 · Almacén</text>
+    <text x="255" y="29" font-size="12" fill="#FEF3C7">Sem 17–20</text>
+    <text x="20" y="68" font-size="12" font-weight="bold" fill="#92400E">Stock real, sin sorpresas.</text>
+    <g transform="translate(20,80)">
+      <circle cx="6" cy="8" r="3" fill="#F59E0B"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Entradas y salidas en tiempo real</text>
+    </g>
+    <g transform="translate(20,98)">
+      <circle cx="6" cy="8" r="3" fill="#F59E0B"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Stock por obra y central</text>
+    </g>
+    <g transform="translate(20,116)">
+      <circle cx="6" cy="8" r="3" fill="#F59E0B"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Cruce con remisiones automático</text>
+    </g>
+    <g transform="translate(20,134)">
+      <circle cx="6" cy="8" r="3" fill="#F59E0B"/>
+      <text x="18" y="12" font-size="11" fill="#374151">QR opcional para ingreso/salida</text>
+    </g>
+    <text x="20" y="168" font-size="10" fill="#92400E" font-style="italic">Refuerza la prevención del caso Zamora.</text>
+  </g>
+
+  <!-- Module 2.4 Proveedores -->
+  <g transform="translate(1105,500)" filter="url(#softShadow)">
+    <rect width="355" height="180" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" rx="12"/>
+    <rect width="355" height="44" fill="#8B5CF6" rx="12"/>
+    <rect y="32" width="355" height="12" fill="#8B5CF6"/>
+    <text x="20" y="29" font-size="14" font-weight="bold" fill="#FFFFFF">2.4 · Proveedores y crédito</text>
+    <text x="270" y="29" font-size="12" fill="#EDE9FE">Sem 21–24</text>
+    <text x="20" y="68" font-size="12" font-weight="bold" fill="#5B21B6">Tu viernes en una sola pantalla.</text>
+    <g transform="translate(20,80)">
+      <circle cx="6" cy="8" r="3" fill="#8B5CF6"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Líneas de crédito y plazos vivos</text>
+    </g>
+    <g transform="translate(20,98)">
+      <circle cx="6" cy="8" r="3" fill="#8B5CF6"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Programación de pagos del viernes</text>
+    </g>
+    <g transform="translate(20,116)">
+      <circle cx="6" cy="8" r="3" fill="#8B5CF6"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Alertas si un proveedor llega al límite</text>
+    </g>
+    <g transform="translate(20,134)">
+      <circle cx="6" cy="8" r="3" fill="#8B5CF6"/>
+      <text x="18" y="12" font-size="11" fill="#374151">Histórico para negociar mejores plazos</text>
+    </g>
+    <text x="20" y="168" font-size="10" fill="#5B21B6" font-style="italic">Tu viernes deja de bloquear tu agenda.</text>
+  </g>
+
+  <!-- ============== ROW 3: Promesas ============== -->
+  <text x="750" y="730" font-size="18" font-weight="bold" fill="#1E3A5F" text-anchor="middle">Cuatro promesas — extendidas desde la Fase 1</text>
+  <text x="750" y="754" font-size="13" fill="#6B7280" text-anchor="middle" font-style="italic">Las mismas condiciones de autonomía que pediste, ahora aplicadas al campo y al móvil.</text>
+
+  <g transform="translate(40,776)">
+    <!-- Promise 1 -->
+    <g transform="translate(0,0)" filter="url(#softShadow)">
+      <rect width="340" height="170" fill="#FFFFFF" stroke="#10B981" stroke-width="2" rx="12"/>
+      <rect width="340" height="44" fill="#ECFDF5" rx="12"/>
+      <rect y="32" width="340" height="12" fill="#ECFDF5"/>
+      <text x="170" y="29" font-size="14" font-weight="bold" fill="#065F46" text-anchor="middle">1 · Captura única, donde ocurre</text>
+      <text x="20" y="68" font-size="12" fill="#374151">Residentes ya no llenan papel.</text>
+      <text x="20" y="86" font-size="12" fill="#374151">Goretti ya no concentra Excel.</text>
+      <text x="20" y="104" font-size="12" fill="#374151">Jorge ya no recaptura los viernes.</text>
+      <text x="20" y="122" font-size="12" fill="#374151">El dato fluye una sola vez.</text>
+      <text x="20" y="148" font-size="11" fill="#6B7280" font-style="italic">Cierra los dolores #1 y #2 que aún sobreviven.</text>
+    </g>
+
+    <!-- Promise 2 -->
+    <g transform="translate(360,0)" filter="url(#softShadow)">
+      <rect width="340" height="170" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2" rx="12"/>
+      <rect width="340" height="44" fill="#EFF6FF" rx="12"/>
+      <rect y="32" width="340" height="12" fill="#EFF6FF"/>
+      <text x="170" y="29" font-size="14" font-weight="bold" fill="#1E40AF" text-anchor="middle">2 · Tecnología abierta, no atada</text>
+      <text x="20" y="68" font-size="12" fill="#374151">Stack moderno, multiplataforma:</text>
+      <text x="20" y="86" font-size="12" fill="#374151">TypeScript + React + React Native.</text>
+      <text x="20" y="104" font-size="12" fill="#374151">Web responsive y app móvil nativa.</text>
+      <text x="20" y="122" font-size="12" fill="#374151">Código que cualquier equipo puede operar.</text>
+      <text x="20" y="148" font-size="11" fill="#6B7280" font-style="italic">Sin licencias propietarias en el camino crítico.</text>
+    </g>
+
+    <!-- Promise 3 -->
+    <g transform="translate(720,0)" filter="url(#softShadow)">
+      <rect width="340" height="170" fill="#FFFFFF" stroke="#F59E0B" stroke-width="2" rx="12"/>
+      <rect width="340" height="44" fill="#FFFBEB" rx="12"/>
+      <rect y="32" width="340" height="12" fill="#FFFBEB"/>
+      <text x="170" y="29" font-size="14" font-weight="bold" fill="#92400E" text-anchor="middle">3 · Suma sobre la Fase 1</text>
+      <text x="20" y="68" font-size="12" fill="#374151">Misma BD canónica.</text>
+      <text x="20" y="86" font-size="12" fill="#374151">Mismas reglas y alertas.</text>
+      <text x="20" y="104" font-size="12" fill="#374151">Mismo dashboard de Jorge —</text>
+      <text x="20" y="122" font-size="12" fill="#374151">ahora con datos en tiempo real.</text>
+      <text x="20" y="148" font-size="11" fill="#6B7280" font-style="italic">Cero rehacer. Cero migrar.</text>
+    </g>
+
+    <!-- Promise 4 -->
+    <g transform="translate(1080,0)" filter="url(#softShadow)">
+      <rect width="340" height="170" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="2" rx="12"/>
+      <rect width="340" height="44" fill="#F5F3FF" rx="12"/>
+      <rect y="32" width="340" height="12" fill="#F5F3FF"/>
+      <text x="170" y="29" font-size="14" font-weight="bold" fill="#5B21B6" text-anchor="middle">4 · Propiedad total al cierre</text>
+      <text x="20" y="68" font-size="12" fill="#374151">Código, BD, app móvil y web</text>
+      <text x="20" y="86" font-size="12" fill="#374151">son tuyos al cierre del proyecto.</text>
+      <text x="20" y="104" font-size="12" fill="#374151">Capacitación al equipo interno y</text>
+      <text x="20" y="122" font-size="12" fill="#374151">documentación en español.</text>
+      <text x="20" y="148" font-size="11" fill="#6B7280" font-style="italic">"Traje a la medida" — extendido a todo tu equipo.</text>
+    </g>
+  </g>
+
+  <!-- ============== ROW 4: Hito final ============== -->
+  <g transform="translate(40,980)">
+    <rect width="1420" height="130" fill="#1E3A5F" rx="14"/>
+    <rect x="6" y="6" width="1408" height="118" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="3,3" rx="10" opacity="0.4"/>
+    <text x="710" y="36" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Al cerrar las 24 semanas — el sistema que querías hace 20 años</text>
+    <text x="710" y="62" font-size="13" fill="#BFDBFE" text-anchor="middle">Captura única en campo y oficina · información financiera y física en tiempo real · pagos del viernes en una sola pantalla</text>
+    <text x="710" y="84" font-size="13" fill="#BFDBFE" text-anchor="middle">Estimaciones automáticas desde el avance · stock vivo de almacén · proveedores y crédito a la vista</text>
+    <text x="710" y="108" font-size="12" fill="#93C5FD" text-anchor="middle" font-style="italic">"Imagínate cuando tenemos 17 obras." — Sí, con esto sí.</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="750" y="1158" font-size="11" fill="#9CA3AF" text-anchor="middle">Evolution DataSoft · Propuesta confidencial Fase 2 para IBIDEM Co. · v1.0 · Mayo 2026</text>
+
+</svg>

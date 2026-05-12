@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1500 1480" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="1500" height="1480" fill="#FAFAFA"/>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#374151"/>
+    </marker>
+    <marker id="arrowSmall" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#374151"/>
+    </marker>
+  </defs>
+
+  <!-- ============== HEADER ============== -->
+  <text x="40" y="44" font-size="26" font-weight="bold" fill="#1E3A5F">IBIDEM Co. — Arquitectura Fase 2 (Técnica)</text>
+  <text x="40" y="70" font-size="14" fill="#6B7280">Evolution DataSoft · plataforma My Clawster · v1.0 · Mayo 2026</text>
+  <text x="40" y="90" font-size="13" fill="#6B7280" font-style="italic">Stack TypeScript end-to-end · Bun + Elysia (API) · React + Vite (web) · React Native + Expo (móvil) · misma BD canónica de la Fase 1.</text>
+
+  <!-- Legend -->
+  <g transform="translate(960,30)">
+    <rect x="0" y="0" width="500" height="78" fill="#FFFFFF" stroke="#E5E7EB" rx="6"/>
+    <text x="14" y="20" font-size="12" font-weight="bold" fill="#374151">Leyenda · módulos por color</text>
+    <rect x="14" y="32" width="16" height="14" fill="#DBEAFE" stroke="#3B82F6"/>
+    <text x="36" y="44" font-size="11" fill="#374151">2.1 Materiales</text>
+    <rect x="140" y="32" width="16" height="14" fill="#D1FAE5" stroke="#10B981"/>
+    <text x="162" y="44" font-size="11" fill="#374151">2.2 Avance (móvil)</text>
+    <rect x="290" y="32" width="16" height="14" fill="#FEF3C7" stroke="#F59E0B"/>
+    <text x="312" y="44" font-size="11" fill="#374151">2.3 Almacén</text>
+    <rect x="400" y="32" width="16" height="14" fill="#EDE9FE" stroke="#8B5CF6"/>
+    <text x="422" y="44" font-size="11" fill="#374151">2.4 Proveedores</text>
+    <rect x="14" y="56" width="16" height="14" fill="#F3F4F6" stroke="#6B7280"/>
+    <text x="36" y="68" font-size="11" fill="#374151">Compartido</text>
+    <rect x="140" y="56" width="16" height="14" fill="#FFFFFF" stroke="#1E3A5F" stroke-dasharray="3,2"/>
+    <text x="162" y="68" font-size="11" fill="#374151">Heredado de Fase 1</text>
+    <line x1="290" y1="63" x2="316" y2="63" stroke="#374151" stroke-width="2" marker-end="url(#arrowSmall)"/>
+    <text x="322" y="67" font-size="11" fill="#374151">Flujo de datos</text>
+  </g>
+
+  <!-- ============== LAYER 1: CLIENTES ============== -->
+  <g transform="translate(40,120)">
+    <rect width="1420" height="180" fill="#FFFFFF" stroke="#E5E7EB" rx="10"/>
+    <text x="14" y="22" font-size="14" font-weight="bold" fill="#1E3A5F">1. Capa de cliente — multiplataforma TypeScript</text>
+    <text x="14" y="40" font-size="11" fill="#6B7280">Web responsive (PWA) para oficina y dirección · App nativa móvil para residentes en campo. Mismo backend, vistas distintas.</text>
+
+    <!-- Web app card -->
+    <g transform="translate(40,55)">
+      <rect width="660" height="115" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2" rx="8"/>
+      <text x="14" y="22" font-size="13" font-weight="bold" fill="#1E40AF">Web App — oficina y dirección</text>
+      <text x="14" y="38" font-size="10" fill="#374151">React 18 + TypeScript · Vite · Tailwind · React Router · TanStack Query · Zustand</text>
+      <text x="14" y="52" font-size="10" fill="#374151">PWA con offline-first para vistas de lectura · WebSocket cliente para actualizaciones en vivo</text>
+      <line x1="14" y1="60" x2="646" y2="60" stroke="#BFDBFE"/>
+
+      <g transform="translate(14,68)">
+        <rect width="140" height="38" fill="#FFFFFF" stroke="#3B82F6" rx="4"/>
+        <text x="70" y="16" font-size="10" font-weight="bold" fill="#1E40AF" text-anchor="middle">Materiales</text>
+        <text x="70" y="30" font-size="9" fill="#6B7280" text-anchor="middle">Goretti</text>
+      </g>
+      <g transform="translate(160,68)">
+        <rect width="140" height="38" fill="#FFFFFF" stroke="#10B981" rx="4"/>
+        <text x="70" y="16" font-size="10" font-weight="bold" fill="#065F46" text-anchor="middle">Avance · vista oficina</text>
+        <text x="70" y="30" font-size="9" fill="#6B7280" text-anchor="middle">Gerente · Jorge</text>
+      </g>
+      <g transform="translate(306,68)">
+        <rect width="140" height="38" fill="#FFFFFF" stroke="#F59E0B" rx="4"/>
+        <text x="70" y="16" font-size="10" font-weight="bold" fill="#92400E" text-anchor="middle">Almacén</text>
+        <text x="70" y="30" font-size="9" fill="#6B7280" text-anchor="middle">Bodeguero · Goretti</text>
+      </g>
+      <g transform="translate(452,68)">
+        <rect width="180" height="38" fill="#FFFFFF" stroke="#8B5CF6" rx="4"/>
+        <text x="90" y="16" font-size="10" font-weight="bold" fill="#5B21B6" text-anchor="middle">Proveedores y pagos</text>
+        <text x="90" y="30" font-size="9" fill="#6B7280" text-anchor="middle">Jorge · contadora</text>
+      </g>
+    </g>
+
+    <!-- Mobile app card -->
+    <g transform="translate(710,55)">
+      <rect width="670" height="115" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="8"/>
+      <text x="14" y="22" font-size="13" font-weight="bold" fill="#065F46">Mobile App — residentes en campo</text>
+      <text x="14" y="38" font-size="10" fill="#374151">React Native + Expo · TypeScript · React Navigation · TanStack Query · MMKV (offline storage)</text>
+      <text x="14" y="52" font-size="10" fill="#374151">Cámara + GPS + sincronización cuando hay red · cola local resiliente · push notifications (Expo)</text>
+      <line x1="14" y1="60" x2="656" y2="60" stroke="#A7F3D0"/>
+
+      <g transform="translate(14,68)">
+        <rect width="140" height="38" fill="#FFFFFF" stroke="#3B82F6" rx="4"/>
+        <text x="70" y="16" font-size="10" font-weight="bold" fill="#1E40AF" text-anchor="middle">Requisición</text>
+        <text x="70" y="30" font-size="9" fill="#6B7280" text-anchor="middle">desde la obra</text>
+      </g>
+      <g transform="translate(160,68)">
+        <rect width="180" height="38" fill="#FFFFFF" stroke="#10B981" rx="4"/>
+        <text x="90" y="16" font-size="10" font-weight="bold" fill="#065F46" text-anchor="middle">Reporte de avance + foto</text>
+        <text x="90" y="30" font-size="9" fill="#6B7280" text-anchor="middle">GPS + timestamp</text>
+      </g>
+      <g transform="translate(346,68)">
+        <rect width="140" height="38" fill="#FFFFFF" stroke="#F59E0B" rx="4"/>
+        <text x="70" y="16" font-size="10" font-weight="bold" fill="#92400E" text-anchor="middle">Recepción / almacén</text>
+        <text x="70" y="30" font-size="9" fill="#6B7280" text-anchor="middle">QR opcional</text>
+      </g>
+      <g transform="translate(492,68)">
+        <rect width="160" height="38" fill="#FFFFFF" stroke="#10B981" rx="4"/>
+        <text x="80" y="16" font-size="10" font-weight="bold" fill="#065F46" text-anchor="middle">Caja chica reporte</text>
+        <text x="80" y="30" font-size="9" fill="#6B7280" text-anchor="middle">política &lt; 24h</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow Clients -> API -->
+  <line x1="370" y1="305" x2="370" y2="335" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="380" y="325" font-size="11" fill="#6B7280">HTTPS · JWT</text>
+  <line x1="1050" y1="305" x2="1050" y2="335" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1060" y="325" font-size="11" fill="#6B7280">HTTPS · JWT · WS</text>
+
+  <!-- ============== LAYER 2: API ============== -->
+  <g transform="translate(40,340)">
+    <rect width="1420" height="170" fill="#F0F9FF" stroke="#1E3A5F" stroke-width="2" rx="10"/>
+    <rect width="1420" height="32" fill="#1E3A5F" rx="10"/>
+    <rect y="20" width="1420" height="12" fill="#1E3A5F"/>
+    <text x="14" y="22" font-size="14" font-weight="bold" fill="#FFFFFF">2. Capa API — Bun + Elysia + TypeScript</text>
+    <text x="600" y="22" font-size="12" fill="#DBEAFE">Mismo motor para web y móvil. Tipado fuerte end-to-end.</text>
+
+    <!-- Components -->
+    <g transform="translate(20,46)">
+      <rect width="220" height="116" fill="#FFFFFF" stroke="#1E3A5F" rx="6"/>
+      <text x="110" y="20" font-size="12" font-weight="bold" fill="#1E3A5F" text-anchor="middle">REST API (Elysia)</text>
+      <line x1="14" y1="26" x2="206" y2="26" stroke="#E5E7EB"/>
+      <text x="14" y="42" font-size="10" fill="#374151">· Bun runtime nativo</text>
+      <text x="14" y="56" font-size="10" fill="#374151">· OpenAPI auto-generado</text>
+      <text x="14" y="70" font-size="10" fill="#374151">· Validación con Zod</text>
+      <text x="14" y="84" font-size="10" fill="#374151">· tRPC opcional para web</text>
+      <text x="14" y="100" font-size="10" fill="#374151">· Same RBAC de la Fase 1</text>
+    </g>
+
+    <g transform="translate(250,46)">
+      <rect width="220" height="116" fill="#FFFFFF" stroke="#1E3A5F" rx="6"/>
+      <text x="110" y="20" font-size="12" font-weight="bold" fill="#1E3A5F" text-anchor="middle">WebSocket gateway</text>
+      <line x1="14" y1="26" x2="206" y2="26" stroke="#E5E7EB"/>
+      <text x="14" y="42" font-size="10" fill="#374151">· Bun WebSocket nativo</text>
+      <text x="14" y="56" font-size="10" fill="#374151">· Canales por obra y por rol</text>
+      <text x="14" y="70" font-size="10" fill="#374151">· Push de cambios en vivo</text>
+      <text x="14" y="84" font-size="10" fill="#374151">· Reconexión automática</text>
+      <text x="14" y="100" font-size="10" fill="#6B7280" font-style="italic">Dashboard en tiempo real</text>
+    </g>
+
+    <g transform="translate(480,46)">
+      <rect width="220" height="116" fill="#FFFFFF" stroke="#1E3A5F" rx="6"/>
+      <text x="110" y="20" font-size="12" font-weight="bold" fill="#1E3A5F" text-anchor="middle">Auth + RBAC</text>
+      <line x1="14" y1="26" x2="206" y2="26" stroke="#E5E7EB"/>
+      <text x="14" y="42" font-size="10" fill="#374151">· JWT con refresh tokens</text>
+      <text x="14" y="56" font-size="10" fill="#374151">· Roles: Director, Coordinador,</text>
+      <text x="14" y="70" font-size="10" fill="#374151">  Residente, Contadora,</text>
+      <text x="14" y="84" font-size="10" fill="#374151">  Bodeguero, Auditor</text>
+      <text x="14" y="100" font-size="10" fill="#374151">· Permisos por obra y módulo</text>
+    </g>
+
+    <g transform="translate(710,46)">
+      <rect width="220" height="116" fill="#FFFFFF" stroke="#1E3A5F" rx="6"/>
+      <text x="110" y="20" font-size="12" font-weight="bold" fill="#1E3A5F" text-anchor="middle">Upload service</text>
+      <line x1="14" y1="26" x2="206" y2="26" stroke="#E5E7EB"/>
+      <text x="14" y="42" font-size="10" fill="#374151">· Pre-signed URLs a object</text>
+      <text x="14" y="56" font-size="10" fill="#374151">  storage</text>
+      <text x="14" y="70" font-size="10" fill="#374151">· Compresión + EXIF</text>
+      <text x="14" y="84" font-size="10" fill="#374151">· Validación de GPS y fecha</text>
+      <text x="14" y="100" font-size="10" fill="#374151">· Soporta uploads en cola</text>
+    </g>
+
+    <g transform="translate(940,46)">
+      <rect width="220" height="116" fill="#FFFFFF" stroke="#1E3A5F" rx="6"/>
+      <text x="110" y="20" font-size="12" font-weight="bold" fill="#1E3A5F" text-anchor="middle">Background workers</text>
+      <line x1="14" y1="26" x2="206" y2="26" stroke="#E5E7EB"/>
+      <text x="14" y="42" font-size="10" fill="#374151">· Bun workers</text>
+      <text x="14" y="56" font-size="10" fill="#374151">· Generación de estimaciones</text>
+      <text x="14" y="70" font-size="10" fill="#374151">· Notificaciones (WhatsApp,</text>
+      <text x="14" y="84" font-size="10" fill="#374151">  email, push)</text>
+      <text x="14" y="100" font-size="10" fill="#374151">· Cron jobs scheduled</text>
+    </g>
+
+    <g transform="translate(1170,46)">
+      <rect width="230" height="116" fill="#FFFFFF" stroke="#1E3A5F" rx="6"/>
+      <text x="115" y="20" font-size="12" font-weight="bold" fill="#1E3A5F" text-anchor="middle">Shared core</text>
+      <line x1="14" y1="26" x2="216" y2="26" stroke="#E5E7EB"/>
+      <text x="14" y="42" font-size="10" fill="#374151">· Tipos compartidos web ↔</text>
+      <text x="14" y="56" font-size="10" fill="#374151">  móvil ↔ API (monorepo)</text>
+      <text x="14" y="70" font-size="10" fill="#374151">· Bun workspaces / pnpm</text>
+      <text x="14" y="84" font-size="10" fill="#374151">· Errores tipados</text>
+      <text x="14" y="100" font-size="10" fill="#374151">· Logs estructurados (pino)</text>
+    </g>
+  </g>
+
+  <!-- ============== LAYER 3: SERVICIOS POR MÓDULO ============== -->
+  <g transform="translate(40,530)">
+    <rect width="1420" height="320" fill="#FFFFFF" stroke="#E5E7EB" rx="10"/>
+    <text x="14" y="22" font-size="14" font-weight="bold" fill="#1E3A5F">3. Servicios por módulo (TypeScript) — orden de implementación</text>
+    <text x="14" y="40" font-size="11" fill="#6B7280">Cada módulo tiene su domain logic, sus endpoints API y sus vistas en web/móvil. Despliegue independiente por módulo.</text>
+
+    <!-- Sub-fase 2.1 Materiales -->
+    <g transform="translate(20,55)">
+      <rect width="335" height="252" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2" rx="6"/>
+      <rect width="335" height="32" fill="#3B82F6" rx="6"/>
+      <rect y="20" width="335" height="12" fill="#3B82F6"/>
+      <text x="167" y="22" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2.1 Materiales (sem 1–8)</text>
+      <text x="14" y="50" font-size="11" font-weight="bold" fill="#1E40AF">Endpoints clave</text>
+      <text x="14" y="64" font-size="10" fill="#374151">POST /requisiciones</text>
+      <text x="14" y="78" font-size="10" fill="#374151">POST /ordenes-compra (genera de req.)</text>
+      <text x="14" y="92" font-size="10" fill="#374151">POST /recepciones (foto remisión)</text>
+      <text x="14" y="106" font-size="10" fill="#374151">GET /materiales?obra_id=X</text>
+      <text x="14" y="124" font-size="11" font-weight="bold" fill="#1E40AF">Tablas nuevas en BD</text>
+      <text x="14" y="138" font-size="10" fill="#374151">requisiciones, lineas_requisicion,</text>
+      <text x="14" y="152" font-size="10" fill="#374151">ordenes_compra, recepciones,</text>
+      <text x="14" y="166" font-size="10" fill="#374151">expedientes_obra (carpeta digital)</text>
+      <text x="14" y="184" font-size="11" font-weight="bold" fill="#1E40AF">UI</text>
+      <text x="14" y="198" font-size="10" fill="#374151">Web: panel de Goretti (kanban Req →</text>
+      <text x="14" y="212" font-size="10" fill="#374151">OC → Recepción → Pago)</text>
+      <text x="14" y="226" font-size="10" fill="#374151">Móvil: residente captura requisición</text>
+      <text x="14" y="244" font-size="10" fill="#3B82F6" font-style="italic">Deps: BD canónica Fase 1</text>
+    </g>
+
+    <!-- Sub-fase 2.2 Avance -->
+    <g transform="translate(370,55)">
+      <rect width="335" height="252" fill="#ECFDF5" stroke="#10B981" stroke-width="2" rx="6"/>
+      <rect width="335" height="32" fill="#10B981" rx="6"/>
+      <rect y="20" width="335" height="12" fill="#10B981"/>
+      <text x="167" y="22" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2.2 Avance + móvil (sem 9–16)</text>
+      <text x="14" y="50" font-size="11" font-weight="bold" fill="#065F46">Endpoints clave</text>
+      <text x="14" y="64" font-size="10" fill="#374151">POST /avances (con foto + GPS)</text>
+      <text x="14" y="78" font-size="10" fill="#374151">POST /uploads/foto (multipart)</text>
+      <text x="14" y="92" font-size="10" fill="#374151">POST /estimaciones (auto desde avance)</text>
+      <text x="14" y="106" font-size="10" fill="#374151">GET /reporte-fotografico?obra_id=X</text>
+      <text x="14" y="124" font-size="11" font-weight="bold" fill="#065F46">Tablas nuevas en BD</text>
+      <text x="14" y="138" font-size="10" fill="#374151">avances_fisicos, fotos (metadata),</text>
+      <text x="14" y="152" font-size="10" fill="#374151">estimaciones, partidas_avance</text>
+      <text x="14" y="166" font-size="10" fill="#6B7280">+ object storage para binarios</text>
+      <text x="14" y="184" font-size="11" font-weight="bold" fill="#065F46">UI</text>
+      <text x="14" y="198" font-size="10" fill="#374151">Móvil: cámara + galería + cola offline</text>
+      <text x="14" y="212" font-size="10" fill="#374151">Web: viewer con timeline y comparador</text>
+      <text x="14" y="226" font-size="10" fill="#374151">Web: generador de estimación de cobro</text>
+      <text x="14" y="244" font-size="10" fill="#10B981" font-style="italic">Deps: módulo 2.1 (requisiciones)</text>
+    </g>
+
+    <!-- Sub-fase 2.3 Almacén -->
+    <g transform="translate(720,55)">
+      <rect width="335" height="252" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2" rx="6"/>
+      <rect width="335" height="32" fill="#F59E0B" rx="6"/>
+      <rect y="20" width="335" height="12" fill="#F59E0B"/>
+      <text x="167" y="22" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2.3 Almacén (sem 17–20)</text>
+      <text x="14" y="50" font-size="11" font-weight="bold" fill="#92400E">Endpoints clave</text>
+      <text x="14" y="64" font-size="10" fill="#374151">POST /almacen/entrada</text>
+      <text x="14" y="78" font-size="10" fill="#374151">POST /almacen/salida</text>
+      <text x="14" y="92" font-size="10" fill="#374151">GET /stock?ubicacion=obra|central</text>
+      <text x="14" y="106" font-size="10" fill="#374151">GET /movimientos-almacen?periodo=X</text>
+      <text x="14" y="124" font-size="11" font-weight="bold" fill="#92400E">Tablas nuevas en BD</text>
+      <text x="14" y="138" font-size="10" fill="#374151">almacen_movimientos, stock_actual,</text>
+      <text x="14" y="152" font-size="10" fill="#374151">ubicaciones_almacen, codigos_qr</text>
+      <text x="14" y="166" font-size="10" fill="#6B7280">VIEW: stock_consolidado</text>
+      <text x="14" y="184" font-size="11" font-weight="bold" fill="#92400E">UI</text>
+      <text x="14" y="198" font-size="10" fill="#374151">Web: kárdex por obra y central</text>
+      <text x="14" y="212" font-size="10" fill="#374151">Móvil: scanner QR (Expo BarCodeScanner)</text>
+      <text x="14" y="226" font-size="10" fill="#374151">para entradas/salidas en obra</text>
+      <text x="14" y="244" font-size="10" fill="#F59E0B" font-style="italic">Deps: 2.1 (recepciones), 2.2 (consumo)</text>
+    </g>
+
+    <!-- Sub-fase 2.4 Proveedores -->
+    <g transform="translate(1070,55)">
+      <rect width="335" height="252" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2" rx="6"/>
+      <rect width="335" height="32" fill="#8B5CF6" rx="6"/>
+      <rect y="20" width="335" height="12" fill="#8B5CF6"/>
+      <text x="167" y="22" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2.4 Proveedores (sem 21–24)</text>
+      <text x="14" y="50" font-size="11" font-weight="bold" fill="#5B21B6">Endpoints clave</text>
+      <text x="14" y="64" font-size="10" fill="#374151">GET /proveedores/{id}/credito</text>
+      <text x="14" y="78" font-size="10" fill="#374151">POST /pagos-programados</text>
+      <text x="14" y="92" font-size="10" fill="#374151">GET /pagos-del-viernes</text>
+      <text x="14" y="106" font-size="10" fill="#374151">GET /alertas/credito</text>
+      <text x="14" y="124" font-size="11" font-weight="bold" fill="#5B21B6">Tablas nuevas en BD</text>
+      <text x="14" y="138" font-size="10" fill="#374151">proveedores_credito (líneas, plazos),</text>
+      <text x="14" y="152" font-size="10" fill="#374151">pagos_programados, historial_pagos,</text>
+      <text x="14" y="166" font-size="10" fill="#374151">condiciones_negociadas</text>
+      <text x="14" y="184" font-size="11" font-weight="bold" fill="#5B21B6">UI</text>
+      <text x="14" y="198" font-size="10" fill="#374151">Web: vista del viernes (Jorge)</text>
+      <text x="14" y="212" font-size="10" fill="#374151">— una pantalla, todos los pagos</text>
+      <text x="14" y="226" font-size="10" fill="#374151">Web: score por proveedor (puntualidad)</text>
+      <text x="14" y="244" font-size="10" fill="#8B5CF6" font-style="italic">Deps: 2.1 (OC), histórico de pagos</text>
+    </g>
+  </g>
+
+  <!-- Arrow Services -> Storage -->
+  <line x1="750" y1="855" x2="750" y2="885" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============== LAYER 4: STORAGE ============== -->
+  <g transform="translate(40,890)">
+    <rect width="1420" height="180" fill="#F3F4F6" stroke="#6B7280" rx="10"/>
+    <text x="14" y="22" font-size="14" font-weight="bold" fill="#1E3A5F">4. Persistencia — la BD canónica de la Fase 1 + object storage para fotos</text>
+    <text x="14" y="40" font-size="11" fill="#6B7280">No se duplica nada. La Fase 2 escribe a las mismas tablas + tablas nuevas, en el motor que IBIDEM ya eligió en la Fase 1.</text>
+
+    <!-- DB extended -->
+    <g transform="translate(20,55)">
+      <rect width="900" height="110" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5" stroke-dasharray="6,3" rx="6"/>
+      <text x="14" y="20" font-size="12" font-weight="bold" fill="#1E3A5F">BD canónica · misma elección de Fase 1 (Postgres VPS · Supabase · SQLite)</text>
+
+      <text x="14" y="42" font-size="10" font-weight="bold" fill="#6B7280">Tablas heredadas Fase 1</text>
+      <g transform="translate(14,48)">
+        <rect width="120" height="22" fill="#F3F4F6" stroke="#9CA3AF"/>
+        <text x="60" y="15" font-size="9" fill="#374151" text-anchor="middle">obras · movimientos</text>
+      </g>
+      <g transform="translate(140,48)">
+        <rect width="120" height="22" fill="#F3F4F6" stroke="#9CA3AF"/>
+        <text x="60" y="15" font-size="9" fill="#374151" text-anchor="middle">categorías · validaciones</text>
+      </g>
+      <g transform="translate(266,48)">
+        <rect width="120" height="22" fill="#F3F4F6" stroke="#9CA3AF"/>
+        <text x="60" y="15" font-size="9" fill="#374151" text-anchor="middle">alertas · events (audit)</text>
+      </g>
+
+      <text x="14" y="84" font-size="10" font-weight="bold" fill="#1E40AF">Tablas nuevas Fase 2</text>
+      <g transform="translate(14,90)">
+        <rect width="120" height="16" fill="#DBEAFE" stroke="#3B82F6"/>
+        <text x="60" y="11" font-size="8" fill="#1E40AF" text-anchor="middle">requisiciones · OC</text>
+      </g>
+      <g transform="translate(140,90)">
+        <rect width="120" height="16" fill="#D1FAE5" stroke="#10B981"/>
+        <text x="60" y="11" font-size="8" fill="#065F46" text-anchor="middle">avances · fotos · estimaciones</text>
+      </g>
+      <g transform="translate(266,90)">
+        <rect width="120" height="16" fill="#FEF3C7" stroke="#F59E0B"/>
+        <text x="60" y="11" font-size="8" fill="#92400E" text-anchor="middle">almacén_mov · stock</text>
+      </g>
+      <g transform="translate(392,90)">
+        <rect width="135" height="16" fill="#EDE9FE" stroke="#8B5CF6"/>
+        <text x="67" y="11" font-size="8" fill="#5B21B6" text-anchor="middle">proveedores_credito · pagos</text>
+      </g>
+    </g>
+
+    <!-- Object storage -->
+    <g transform="translate(940,55)">
+      <rect width="460" height="110" fill="#FFFFFF" stroke="#6B7280" stroke-width="2" rx="6"/>
+      <text x="14" y="20" font-size="12" font-weight="bold" fill="#1E3A5F">Object storage — fotos y archivos binarios</text>
+      <text x="14" y="38" font-size="10" fill="#374151">Opciones (S3-compatible): Cloudflare R2 · Supabase Storage</text>
+      <text x="14" y="52" font-size="10" fill="#374151">MinIO autohospedado en VPS de IBIDEM</text>
+      <text x="14" y="68" font-size="10" fill="#6B7280">— el cliente elige en sesión 0 de Fase 2</text>
+      <text x="14" y="86" font-size="10" fill="#374151">· Buckets: fotos-avance · remisiones · expedientes</text>
+      <text x="14" y="100" font-size="10" fill="#374151">· Pre-signed URLs · TTL · cifrado en reposo</text>
+    </g>
+  </g>
+
+  <!-- Arrow Storage -> Phase 1 integration -->
+  <line x1="750" y1="1075" x2="750" y2="1105" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="760" y="1095" font-size="11" fill="#6B7280">datos enriquecidos</text>
+
+  <!-- ============== LAYER 5: INTEGRACIÓN CON FASE 1 ============== -->
+  <g transform="translate(40,1110)">
+    <rect width="1420" height="170" fill="#F0F9FF" stroke="#1E3A5F" stroke-width="2" stroke-dasharray="6,3" rx="10"/>
+    <text x="14" y="22" font-size="14" font-weight="bold" fill="#1E3A5F">5. Integración con la Fase 1 — sin reemplazar nada</text>
+    <text x="14" y="40" font-size="11" fill="#6B7280">Los componentes de la Fase 1 siguen vigentes. La Fase 2 los alimenta con datos en tiempo real (no más Excel intermedio).</text>
+
+    <g transform="translate(20,55)">
+      <rect width="280" height="100" fill="#EDE9FE" stroke="#7C3AED" stroke-width="2" rx="6"/>
+      <text x="140" y="22" font-size="12" font-weight="bold" fill="#5B21B6" text-anchor="middle">My Clawster (Fase 1)</text>
+      <text x="140" y="38" font-size="10" fill="#6B7280" text-anchor="middle">sigue cruzando y vigilando</text>
+      <line x1="14" y1="46" x2="266" y2="46" stroke="#C4B5FD"/>
+      <text x="14" y="62" font-size="10" fill="#374151">· Matcher: ahora con remisión digital</text>
+      <text x="14" y="76" font-size="10" fill="#374151">· Anomaly: sobre datos en vivo</text>
+      <text x="14" y="90" font-size="10" fill="#374151">· Misma cola de revisión humana</text>
+    </g>
+
+    <g transform="translate(310,55)">
+      <rect width="260" height="100" fill="#DBEAFE" stroke="#2563EB" rx="6"/>
+      <text x="130" y="22" font-size="12" font-weight="bold" fill="#1E40AF" text-anchor="middle">Reglas declarativas</text>
+      <text x="130" y="38" font-size="10" fill="#6B7280" text-anchor="middle">YAML que tu equipo ya conoce</text>
+      <line x1="14" y1="46" x2="246" y2="46" stroke="#9CA3AF"/>
+      <text x="14" y="62" font-size="10" fill="#374151">· Mismas 9 reglas + nuevas:</text>
+      <text x="14" y="76" font-size="10" fill="#374151">  remisión sin recepción digital,</text>
+      <text x="14" y="90" font-size="10" fill="#374151">  avance &gt; 100%, pago doble, etc.</text>
+    </g>
+
+    <g transform="translate(580,55)">
+      <rect width="260" height="100" fill="#F3F4F6" stroke="#6B7280" rx="6"/>
+      <text x="130" y="22" font-size="12" font-weight="bold" fill="#1E3A5F" text-anchor="middle">Dashboard Fase 1</text>
+      <text x="130" y="38" font-size="10" fill="#6B7280" text-anchor="middle">mismo, ahora alimentado en vivo</text>
+      <line x1="14" y1="46" x2="246" y2="46" stroke="#D1D5DB"/>
+      <text x="14" y="62" font-size="10" fill="#374151">· Avance físico se suma a KPIs</text>
+      <text x="14" y="76" font-size="10" fill="#374151">· Estimaciones generadas auto</text>
+      <text x="14" y="90" font-size="10" fill="#374151">· Saldo bancario por viernes vivo</text>
+    </g>
+
+    <g transform="translate(850,55)">
+      <rect width="260" height="100" fill="#FEF3C7" stroke="#D97706" rx="6"/>
+      <text x="130" y="22" font-size="12" font-weight="bold" fill="#92400E" text-anchor="middle">Cola de revisión humana</text>
+      <text x="130" y="38" font-size="10" fill="#6B7280" text-anchor="middle">misma UI, casos nuevos</text>
+      <line x1="14" y1="46" x2="246" y2="46" stroke="#FCD34D"/>
+      <text x="14" y="62" font-size="10" fill="#374151">· Foto sin GPS válido</text>
+      <text x="14" y="76" font-size="10" fill="#374151">· Avance sin requisición esperada</text>
+      <text x="14" y="90" font-size="10" fill="#374151">· OC sin línea de crédito vigente</text>
+    </g>
+
+    <g transform="translate(1120,55)">
+      <rect width="280" height="100" fill="#FECACA" stroke="#DC2626" rx="6"/>
+      <text x="140" y="22" font-size="12" font-weight="bold" fill="#7F1D1D" text-anchor="middle">Notificaciones</text>
+      <text x="140" y="38" font-size="10" fill="#7F1D1D" text-anchor="middle">canales nuevos por móvil</text>
+      <line x1="14" y1="46" x2="266" y2="46" stroke="#FCA5A5"/>
+      <text x="14" y="62" font-size="10" fill="#7F1D1D">· Push (Expo) a residentes</text>
+      <text x="14" y="76" font-size="10" fill="#7F1D1D">· Push a Goretti para nuevas req.</text>
+      <text x="14" y="90" font-size="10" fill="#7F1D1D">· Email + WhatsApp opt-in</text>
+    </g>
+  </g>
+
+  <!-- ============== LAYER 6: DEVOPS / OPERACIÓN ============== -->
+  <g transform="translate(40,1300)">
+    <rect width="1420" height="160" fill="#FFFFFF" stroke="#E5E7EB" rx="10"/>
+    <text x="14" y="22" font-size="14" font-weight="bold" fill="#1E3A5F">6. Operación — el cliente es dueño del despliegue</text>
+    <text x="14" y="40" font-size="11" fill="#6B7280">Mismo principio de la Fase 1: nada propietario en el camino crítico. IBIDEM controla el despliegue al final.</text>
+
+    <g transform="translate(20,55)">
+      <rect width="335" height="90" fill="#FAFAFA" stroke="#9CA3AF" rx="4"/>
+      <text x="14" y="20" font-size="11" font-weight="bold" fill="#1E3A5F">Despliegue API + workers</text>
+      <text x="14" y="38" font-size="10" fill="#374151">VPS propio (Hetzner, DO, Linode)</text>
+      <text x="14" y="52" font-size="10" fill="#374151">o PaaS (Railway, Render, Fly.io)</text>
+      <text x="14" y="66" font-size="10" fill="#374151">Docker + Bun nativo</text>
+      <text x="14" y="80" font-size="10" fill="#6B7280" font-style="italic">El cliente elige.</text>
+    </g>
+
+    <g transform="translate(370,55)">
+      <rect width="335" height="90" fill="#FAFAFA" stroke="#9CA3AF" rx="4"/>
+      <text x="14" y="20" font-size="11" font-weight="bold" fill="#1E3A5F">Web app</text>
+      <text x="14" y="38" font-size="10" fill="#374151">Estática (Vercel, Netlify, Cloudflare</text>
+      <text x="14" y="52" font-size="10" fill="#374151">Pages) o servidor propio (nginx)</text>
+      <text x="14" y="66" font-size="10" fill="#374151">Build con Vite, dist/ portable</text>
+      <text x="14" y="80" font-size="10" fill="#6B7280" font-style="italic">Sin dependencia de proveedor.</text>
+    </g>
+
+    <g transform="translate(720,55)">
+      <rect width="335" height="90" fill="#FAFAFA" stroke="#9CA3AF" rx="4"/>
+      <text x="14" y="20" font-size="11" font-weight="bold" fill="#1E3A5F">Mobile app</text>
+      <text x="14" y="38" font-size="10" fill="#374151">Distribución vía Expo EAS:</text>
+      <text x="14" y="52" font-size="10" fill="#374151">Android (APK directo o Play Store)</text>
+      <text x="14" y="66" font-size="10" fill="#374151">iOS (TestFlight + App Store)</text>
+      <text x="14" y="80" font-size="10" fill="#6B7280" font-style="italic">Cuentas de IBIDEM.</text>
+    </g>
+
+    <g transform="translate(1070,55)">
+      <rect width="335" height="90" fill="#FAFAFA" stroke="#9CA3AF" rx="4"/>
+      <text x="14" y="20" font-size="11" font-weight="bold" fill="#1E3A5F">Observabilidad</text>
+      <text x="14" y="38" font-size="10" fill="#374151">Logs estructurados (pino → loki)</text>
+      <text x="14" y="52" font-size="10" fill="#374151">Métricas (Prometheus + Grafana)</text>
+      <text x="14" y="66" font-size="10" fill="#374151">Crash reporting (Sentry self-hosted</text>
+      <text x="14" y="80" font-size="10" fill="#374151">o GlitchTip)</text>
+    </g>
+  </g>
+
+</svg>
