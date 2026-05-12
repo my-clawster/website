@@ -1,41 +1,61 @@
-# Website
+# My Clawster Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+The Clawster Website is the public docs and marketing surface for the Clawster ecosystem. It explains the product model, showcases the platform visually, and gives users a guided path through My Clawster, Clawne Me, Enterprise, Developers, and Operations.
 
-## Installation
+It is built with [Docusaurus](https://docusaurus.io/) and uses a custom visual layer tailored to the Clawster brand.
 
-```bash
-yarn
-```
+## What this site is for
 
-## Local Development
+- Introduce the platform clearly to new users
+- Document the product and operator workflows
+- Give developers and operators a structured starting point
+- Publish a branded static site that can be deployed easily
 
-```bash
-yarn start
-```
+## Getting started
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
+Install dependencies:
 
 ```bash
-yarn build
+bun install
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Start the local development server:
+
+```bash
+bun run start
+```
+
+This launches the docs site locally with live reload so content and style changes appear immediately.
+
+## Production build
+
+Create a static production build:
+
+```bash
+bun run build
+```
+
+The generated site is written to `build/` and can be deployed to any static hosting platform.
+
+## Project structure
+
+- `docs/` contains the documentation content
+- `blog/` contains blog content when used
+- `static/` contains images, icons, and other public assets
+- `src/` contains custom theme components and CSS overrides
 
 ## Deployment
 
-Using SSH:
+Deploy with SSH:
 
 ```bash
-USE_SSH=true yarn deploy
+USE_SSH=true bun run deploy
 ```
 
-Not using SSH:
+Deploy without SSH:
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+GIT_USER=<Your GitHub username> bun run deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+If the project is configured for GitHub Pages, this publishes the built site to the `gh-pages` branch.

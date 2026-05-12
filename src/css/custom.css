@@ -304,7 +304,7 @@ img {
 
 .lr-home-hero__copy h1,
 .lr-subscribe-hero h1 {
-  font-size: clamp(2.3rem, 5vw, 3rem);
+  font-size: clamp(1.55rem, 3.35vw, 2rem);
   max-width: 18ch;
   margin-top: 0.65rem;
 }
@@ -616,7 +616,7 @@ img {
 
 .lr-section-heading h2,
 .lr-newsletter h2 {
-  font-size: clamp(2.4rem, 4.5vw, 2.5rem);
+  font-size: clamp(1.6rem, 3vw, 1.67rem);
   margin-top: 0.45rem;
 }
 
@@ -1177,7 +1177,7 @@ img {
 
 .lr-post-title,
 .markdown h1 {
-  font-size: clamp(3rem, 5vw, 4rem);
+  font-size: clamp(2rem, 3.35vw, 2.67rem);
 }
 
 .lr-post-description {
@@ -1210,11 +1210,11 @@ img {
 }
 
 .markdown h2 {
-  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 2.68vw, 2rem);
 }
 
 .markdown h3 {
-  font-size: clamp(1.7rem, 3vw, 2rem);
+  font-size: clamp(1.15rem, 2vw, 1.34rem);
 }
 
 .markdown ul,
