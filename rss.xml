@@ -351,14 +351,5 @@ it belongs to YOU.</p>
             <category>Managed Agents</category>
             <category>AI Assistants</category>
         </item>
-        <item>
-            <title><![CDATA[posts]]></title>
-            <link>https://clawster.my/posts</link>
-            <guid>https://clawster.my/posts</guid>
-            <pubDate>Sat, 25 Apr 2026 16:24:41 GMT</pubDate>
-            <description><![CDATA[Field notes, launch updates, and deployment writeups for My Clawster.]]></description>
-            <content:encoded><![CDATA[<p>Field notes, launch updates, and deployment writeups for My Clawster.</p>
-<p>The actual articles live in this directory as Markdown posts.</p>]]></content:encoded>
-        </item>
     </channel>
 </rss>
