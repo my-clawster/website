@@ -200,15 +200,14 @@ const config: Config = {
 
   customFields: {
     clawster: {
-      controlPlane: 'https://claws.clawster.my',
+      controlPlane: 'https://claws.clawster.my/signup',
       description:
         'My Clawster is a self-hostable cluster management platform for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.',
     },
     brand: {
       phrase: 'Run the agents. Keep the keys. Own the cluster.',
       summary:
-        'Self-hostable cluster management for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.',
-      foundedYear: 2021,
+        'Self-hostable cluster management for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.'
     },
     clawne: {
       description:

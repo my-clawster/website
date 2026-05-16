@@ -700,7 +700,6 @@ function BlogListPageContent(props: Props): ReactNode {
   const {clawster, brand, social} = useSiteData();
   const latestPost = items[0]?.content;
   const topTags = getTopTags(props);
-  const yearsOfWriting = new Date().getFullYear() - brand.foundedYear + 1;
   const lanes = ['OpenClaw', 'Hermes', 'Ollama', 'Kubernetes', 'VPS', 'BYOK'];
 
   return (

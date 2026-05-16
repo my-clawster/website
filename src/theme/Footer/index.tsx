@@ -28,6 +28,16 @@ export default function Footer() {
             <Link href={social.rss}>RSS</Link>
           </div>
         </div>
+        
+        <div className="border-t border-white/8 pt-6 flex items-center justify-between">
+          <p className="text-[12px] text-white/30">
+            © {new Date().getFullYear()} Clawne Me. Part of <span className="text-white/50"><a href="https://rebelion.la" className="hover:underline">La Rebelion Labs</a></span>.
+          </p>
+          <div className="flex items-center gap-1.5 text-[12px] text-white/30">
+            <span className="text-white/50 font-semibold"><a href="https://clawne.me" className="hover:underline">Clawne Me</a></span>
+            <span> runs on My Clawster</span>
+          </div>
+        </div>
       </div>
     </footer>
   );

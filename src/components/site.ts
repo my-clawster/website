@@ -3,7 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 type BrandConfig = {
   phrase: string;
   summary: string;
-  foundedYear: number;
+  foundedYear?: number;
 };
 
 type NewsletterConfig = {
@@ -38,11 +38,10 @@ const defaults: SiteData = {
   brand: {
     phrase: 'Run the agents. Keep the keys. Own the cluster.',
     summary:
-      'Self-hostable cluster management for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.',
-    foundedYear: 2022,
+      'Self-hostable cluster management for teams running OpenClaw, Hermes, and custom agent frameworks across isolated workspaces.'
   },
   newsletter: {
-    subscribeUrl: 'https://go.rebelion.la/subscribe',
+    subscribeUrl: '/subscribe',
     emailParam: 'email',
     title: 'Stay close to the cluster',
     description:
