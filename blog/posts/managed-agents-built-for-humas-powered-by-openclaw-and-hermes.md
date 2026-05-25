@@ -4,6 +4,7 @@ description: "Discover how Clawne Me transforms complex AI agent infrastructure 
 tags: [Clawne Me, OpenClaw, Hermes, Managed Agents, AI Assistants]
 keywords: [Clawne Me, OpenClaw, Hermes, Managed AI Agents, AI Assistants, MCP, AI Workflow Automation, Personal Operational Intelligence]
 date: 2026-05-11T00:00:00Z
+author: adrianescutia
 ---
 
 ## Clawne Me: Managed AI Agents for Real People, Not Just Engineers

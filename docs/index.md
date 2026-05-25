@@ -71,7 +71,8 @@ The platform has four layers:
 
 ## Access model
 
-:::info OSS, Community, and Enterprise tiers
+:::info
+OSS, Community, and Enterprise tiers
 These docs cover three capability tiers.
 
 - **OSS** — the open product surface required to run My Clawster end to end.
