@@ -2,6 +2,7 @@
 *.ignoreme.*
 # Dependencies
 /node_modules
+v-scripts
 
 # Production
 /build
