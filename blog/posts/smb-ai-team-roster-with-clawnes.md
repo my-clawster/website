@@ -34,7 +34,7 @@ keywords:
   ]
 date: 2026-06-02T00:00:00Z
 author: adrianescutia
-# image: /img/clawne-me/clawne-me-video-thumbnail.png
+image: /img/clawne-me/clawne-me-ai-team-roster-cover.png
 ---
 
 ## Your Business Already Has a Team. Now Give Every Role an AI Counterpart.
@@ -434,5 +434,5 @@ A chatbot answers static questions. A Clawne executes workflows, connects to you
 
 ## Related Reading
 
-- [From Chatbots to AI Workforces: WhatsApp AI Assistants for Business Automation](/blog/from-chatbots-to-ai-workforces)
-- [Clawne Me: Managed AI Agents Built for Humans, Powered by OpenClaw and Hermes](/blog/managed-agents-built-for-humas-powered-by-openclaw-and-hermes)
+- [From Chatbots to AI Workforces: WhatsApp AI Assistants for Business Automation](/posts/from-chatbots-to-ai-workforces)
+- [Clawne Me: Managed AI Agents Built for Humans, Powered by OpenClaw and Hermes](/posts/managed-agents-built-for-humas-powered-by-openclaw-and-hermes)
